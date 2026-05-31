@@ -11,6 +11,7 @@ interface ProfCardProps {
   role: string;
   coursesCount: number;
   rating: number;
+  satisfaction: string;
   bio: string;
   avatar: string;
   photo?: string;
@@ -25,6 +26,7 @@ export default function ProfCard({
   role,
   coursesCount,
   rating,
+  satisfaction,
   bio,
   avatar,
   photo,
@@ -154,7 +156,7 @@ export default function ProfCard({
             <div className="flex items-center gap-2 glass rounded-xl p-3 border border-white/5">
               <Star size={14} className="text-gold" />
               <div>
-                <div className="font-bold text-white text-sm">100%</div>
+                <div className="font-bold text-white text-sm">{satisfaction}</div>
                 <div className="text-xs text-slate-500">satisfaction</div>
               </div>
             </div>
