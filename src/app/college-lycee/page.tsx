@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CTASection from "@/components/sections/CTASection";
 import { BookOpen, Target, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
@@ -58,16 +59,27 @@ export default function CollegeLyceePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[65vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
+        {/* Photo de cours en fond droit */}
+        <div className="absolute inset-y-0 right-0 w-1/2 hidden lg:block">
+          <Image
+            src="/images/coursdemaths.webp"
+            alt="Cours de maths"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-900 via-navy-900/70 to-transparent" />
+        </div>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 30% 40%, rgba(91,141,239,0.12) 0%, transparent 50%), radial-gradient(circle at 70% 60%, rgba(255,187,10,0.08) 0%, transparent 50%)",
+              "radial-gradient(circle at 30% 40%, rgba(91,141,239,0.12) 0%, transparent 50%)",
           }}
         />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,7 +91,7 @@ export default function CollegeLyceePage() {
               <br />
               <span className="text-gradient">on t&apos;accompagne.</span>
             </h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+            <p className="text-xl text-slate-400 max-w-xl mb-10">
               Des cours particuliers adaptés à chaque niveau, avec une méthode éprouvée et des profs qui s&apos;investissent vraiment.
             </p>
             <Link href="/tarifs#booking" className="btn-gold text-base inline-flex items-center gap-2 group">

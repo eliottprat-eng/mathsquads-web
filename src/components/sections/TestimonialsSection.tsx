@@ -1,77 +1,122 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { Star, Quote } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const testimonials = [
   {
     name: "Emma L.",
-    grade: "Collégienne — 3ème",
+    grade: "Collégienne, 3ème",
     result: "20/20 au Brevet de maths",
+    resultEmoji: "🏆",
     avatar: "E",
     color: "#5B8DEF",
+    stars: 5,
     quote:
       "Une méthode claire, des supports complets, et un prof toujours à l'écoute. Je ne comprenais rien aux équations avant, maintenant j'adore résoudre des problèmes. J'ai eu 20/20 au Brevet et je n'aurais jamais cru ça possible il y a 6 mois.",
-    stars: 5,
   },
   {
     name: "Yanis M.",
-    grade: "Étudiant — Grande École",
+    grade: "Prépa HEC → Admis ESCP",
     result: "Admis à l'ESCP",
+    resultEmoji: "🎓",
     avatar: "Y",
     color: "#FFBB0A",
-    quote:
-      "Je partais de loin en maths, mais les cours bien structurés m'ont permis de gagner en confiance pas à pas. Mon prof a su identifier mes lacunes et m'a donné des techniques pour les concours. Résultat : admis à l'ESCP. C'est la meilleure décision que j'ai prise.",
     stars: 5,
+    quote:
+      "Grâce à MathSquads j'ai pu combler mes lacunes en maths avant les écrits. Mon prof comprenait exactement où je bloquais et repartait toujours de la base sans me faire sentir nul. Résultat : admis à l'ESCP.",
   },
   {
-    name: "Thomas D.",
-    grade: "Lycéen — 1ère",
-    result: "De 7 à 13 de moyenne",
-    avatar: "T",
+    name: "Lucas D.",
+    grade: "Terminale Spécialité Maths",
+    result: "De 8 à 16 en maths",
+    resultEmoji: "📈",
+    avatar: "L",
     color: "#10B981",
-    quote:
-      "La plateforme m'a permis d'organiser mon travail plus efficacement. Mon prof m'a aidé à comprendre les bases que j'avais ratées, et on a progressé ensemble de façon très structurée. Je suis passé de 7 à 13 de moyenne en quelques mois. Ça change tout pour la terminale.",
     stars: 5,
+    quote:
+      "En septembre j'avais 8 de moyenne. En mars j'étais à 16. Marin a tout simplement changé ma façon de voir les maths : au lieu de réciter des formules, je comprends maintenant pourquoi elles marchent.",
+  },
+  {
+    name: "Sophie L.",
+    grade: "Mère d'élève, Lycée (Lyon)",
+    result: "Confiance retrouvée",
+    resultEmoji: "✅",
+    avatar: "S",
+    color: "#A78BFA",
+    stars: 5,
+    quote:
+      "Ma fille détestait les maths. Après 4 séances avec MathSquads, elle nous demande d'elle-même à faire ses exercices. La qualité des profs est vraiment différente — on sent qu'ils adorent enseigner.",
   },
 ];
 
+function TestimonialCard({ t, delay }: { t: typeof testimonials[number]; delay: number }) {
+  return (
+    <ScrollReveal delay={delay}>
+      <motion.div
+        className="glass-card rounded-2xl border border-white/6 p-6 h-full flex flex-col gap-4 relative overflow-hidden group cursor-default"
+        whileHover={{ rotateX: 2, rotateY: -2, scale: 1.01, y: -4 }}
+        style={{ transformPerspective: 900 }}
+        transition={{ duration: 0.25 }}
+      >
+        {/* Glow bg on hover */}
+        <motion.div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{
+            background: `radial-gradient(circle at 20% 20%, ${t.color}12 0%, transparent 60%)`,
+          }}
+        />
+
+        {/* Decorative quote */}
+        <div className="absolute top-4 right-4 opacity-8">
+          <Quote size={48} style={{ color: t.color }} className="opacity-10" />
+        </div>
+
+        {/* Top row: stars + badge */}
+        <div className="relative flex items-start justify-between gap-2">
+          <div className="flex gap-0.5">
+            {Array.from({ length: t.stars }).map((_, i) => (
+              <Star key={i} size={13} className="text-gold fill-gold" />
+            ))}
+          </div>
+          <div
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold flex-shrink-0"
+            style={{
+              background: `${t.color}18`,
+              border: `1px solid ${t.color}30`,
+              color: t.color,
+            }}
+          >
+            {t.resultEmoji} {t.result}
+          </div>
+        </div>
+
+        {/* Quote */}
+        <blockquote className="relative text-sm text-slate-300 leading-relaxed flex-1 italic">
+          &ldquo;{t.quote}&rdquo;
+        </blockquote>
+
+        {/* Author */}
+        <div className="relative flex items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-xl flex items-center justify-center font-display font-bold text-base text-white flex-shrink-0"
+            style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}88)` }}
+          >
+            {t.avatar}
+          </div>
+          <div>
+            <div className="font-display font-bold text-white text-sm">{t.name}</div>
+            <div className="text-xs text-slate-500">{t.grade}</div>
+          </div>
+        </div>
+      </motion.div>
+    </ScrollReveal>
+  );
+}
+
 export default function TestimonialsSection() {
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const prev = () => {
-    setDirection(-1);
-    setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const next = () => {
-    setDirection(1);
-    setCurrent((c) => (c + 1) % testimonials.length);
-  };
-
-  const slideVariants = {
-    enter: (dir: number) => ({
-      x: dir > 0 ? 200 : -200,
-      opacity: 0,
-      scale: 0.96,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-    },
-    exit: (dir: number) => ({
-      x: dir > 0 ? -200 : 200,
-      opacity: 0,
-      scale: 0.96,
-    }),
-  };
-
-  const t = testimonials[current];
-
   return (
     <section className="relative py-24 overflow-hidden">
       <div
@@ -82,126 +127,29 @@ export default function TestimonialsSection() {
         }}
       />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <ScrollReveal className="text-center mb-16">
-          <div className="section-tag mb-4 inline-flex">Témoignages</div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollReveal className="text-center mb-14">
+          <SectionLabel number="04" label="Témoignages" />
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white">
             Ils ont{" "}
             <span className="text-gradient">transformé leurs résultats</span>
           </h2>
         </ScrollReveal>
 
-        {/* Slider */}
-        <div className="relative">
-          <div className="overflow-hidden rounded-3xl">
-            <AnimatePresence mode="wait" custom={direction}>
-              <motion.div
-                key={current}
-                custom={direction}
-                variants={slideVariants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <div className="glass-card rounded-3xl border border-white/6 p-8 sm:p-12 relative overflow-hidden">
-                  {/* Decorative quote */}
-                  <div className="absolute top-6 right-8 opacity-10">
-                    <Quote size={80} className="text-electric" />
-                  </div>
+        {/* Desktop: 2x2 grid / Mobile: horizontal scroll carousel */}
+        <div className="hidden md:grid grid-cols-2 gap-5">
+          {testimonials.map((t, i) => (
+            <TestimonialCard key={i} t={t} delay={i * 0.1} />
+          ))}
+        </div>
 
-                  {/* Glow bg */}
-                  <div
-                    className="absolute inset-0 opacity-30 pointer-events-none"
-                    style={{
-                      background: `radial-gradient(circle at 10% 10%, ${t.color}20 0%, transparent 50%)`,
-                    }}
-                  />
-
-                  <div className="relative z-10">
-                    {/* Stars */}
-                    <div className="flex gap-1 mb-6">
-                      {Array.from({ length: t.stars }).map((_, i) => (
-                        <Star key={i} size={16} className="text-gold fill-gold" />
-                      ))}
-                    </div>
-
-                    {/* Result badge */}
-                    <div
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6"
-                      style={{
-                        background: `${t.color}18`,
-                        border: `1px solid ${t.color}30`,
-                        color: t.color,
-                      }}
-                    >
-                      🏆 {t.result}
-                    </div>
-
-                    {/* Quote */}
-                    <blockquote className="text-lg sm:text-xl text-slate-200 leading-relaxed mb-8 font-medium italic">
-                      &ldquo;{t.quote}&rdquo;
-                    </blockquote>
-
-                    {/* Author */}
-                    <div className="flex items-center gap-4">
-                      <div
-                        className="w-12 h-12 rounded-2xl flex items-center justify-center font-display font-bold text-lg text-white"
-                        style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}99)` }}
-                      >
-                        {t.avatar}
-                      </div>
-                      <div>
-                        <div className="font-display font-bold text-white">{t.name}</div>
-                        <div className="text-sm text-slate-400">{t.grade}</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Controls */}
-          <div className="flex items-center justify-between mt-8">
-            {/* Dots */}
-            <div className="flex gap-2">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => {
-                    setDirection(i > current ? 1 : -1);
-                    setCurrent(i);
-                  }}
-                  className={`transition-all duration-300 rounded-full ${
-                    i === current
-                      ? "w-8 h-2 bg-electric"
-                      : "w-2 h-2 bg-white/20 hover:bg-white/40"
-                  }`}
-                />
-              ))}
+        {/* Mobile carousel */}
+        <div className="md:hidden flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory -mx-4 px-4">
+          {testimonials.map((t, i) => (
+            <div key={i} className="flex-shrink-0 w-[85vw] snap-center">
+              <TestimonialCard t={t} delay={0} />
             </div>
-
-            {/* Arrow buttons */}
-            <div className="flex gap-3">
-              <motion.button
-                onClick={prev}
-                className="w-11 h-11 rounded-xl glass border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-electric/30 transition-colors"
-                whileTap={{ scale: 0.92 }}
-              >
-                <ChevronLeft size={18} />
-              </motion.button>
-              <motion.button
-                onClick={next}
-                className="w-11 h-11 rounded-xl bg-electric flex items-center justify-center text-white shadow-glow"
-                whileTap={{ scale: 0.92 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <ChevronRight size={18} />
-              </motion.button>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

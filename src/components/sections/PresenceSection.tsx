@@ -13,11 +13,11 @@ export default function PresenceSection() {
           <ScrollReveal direction="left">
             <div className="section-tag mb-6 inline-flex">Notre présence</div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white leading-tight mb-6">
-              À Lyon et{" "}
+              Lyon, Lille, Paris et{" "}
               <span className="text-gradient">partout en France</span>
             </h2>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              Que tu sois à Lyon pour un cours en présentiel, ou n&apos;importe où en France pour une session en visio,
+              Cours en présentiel dans 3 grandes villes, ou en visio depuis n&apos;importe où en France.
               MathSquads s&apos;adapte à ton emploi du temps et ton lieu de vie.
             </p>
 
@@ -25,21 +25,27 @@ export default function PresenceSection() {
               {[
                 {
                   icon: MapPin,
-                  title: "Lyon",
-                  desc: "Cours en présentiel chez toi ou dans un espace dédié",
+                  title: "Lyon & Lille",
+                  desc: "Cours en présentiel chez toi ou dans un espace dédié — dès 20€/h",
                   color: "#5B8DEF",
+                },
+                {
+                  icon: MapPin,
+                  title: "Paris",
+                  desc: "Présentiel dans la capitale — dès 25€/h (Collège), 30€/h (Lycée)",
+                  color: "#FFBB0A",
                 },
                 {
                   icon: Globe,
                   title: "Toute la France",
-                  desc: "Sessions visio avec tableau blanc interactif partagé",
-                  color: "#FFBB0A",
+                  desc: "Sessions visio avec tableau blanc interactif partagé — dès 20€/h",
+                  color: "#10B981",
                 },
                 {
                   icon: Wifi,
                   title: "Flexible & à la demande",
                   desc: "Réservation simple, sans engagement, selon tes disponibilités",
-                  color: "#10B981",
+                  color: "#A78BFA",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -63,15 +69,13 @@ export default function PresenceSection() {
             </div>
           </ScrollReveal>
 
-          {/* Visual side */}
+          {/* Visual side — France map */}
           <ScrollReveal direction="right" delay={0.2}>
             <div className="relative aspect-square max-w-md mx-auto">
-              {/* Map-like visualization */}
               <div className="w-full h-full rounded-3xl glass-card border border-white/8 overflow-hidden relative">
-                {/* France silhouette approximation */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative w-64 h-72">
-                    {/* Hexagonal France visualization */}
+                    {/* Hexagonal France outline */}
                     <svg viewBox="0 0 200 240" className="w-full h-full opacity-20">
                       <polygon
                         points="100,10 170,50 170,130 130,200 70,200 30,130 30,50"
@@ -87,43 +91,62 @@ export default function PresenceSection() {
                       />
                     </svg>
 
+                    {/* Lille dot — nord */}
+                    <motion.div
+                      className="absolute"
+                      style={{ top: "15%", left: "52%" }}
+                      animate={{ scale: [1, 1.35, 1] }}
+                      transition={{ duration: 2.8, repeat: Infinity, delay: 1 }}
+                    >
+                      <div className="w-4 h-4 rounded-full bg-electric relative">
+                        <div className="absolute inset-0 rounded-full bg-electric/40 animate-ping" />
+                      </div>
+                      <div className="absolute -top-7 left-5 text-xs font-semibold text-electric whitespace-nowrap">
+                        Lille ★
+                      </div>
+                    </motion.div>
+
                     {/* Paris dot */}
                     <motion.div
                       className="absolute"
-                      style={{ top: "38%", left: "55%" }}
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{ duration: 3, repeat: Infinity }}
+                      style={{ top: "36%", left: "54%" }}
+                      animate={{ scale: [1, 1.35, 1] }}
+                      transition={{ duration: 3, repeat: Infinity, delay: 0.3 }}
                     >
-                      <div className="w-3 h-3 rounded-full bg-white/60 relative">
-                        <div className="absolute inset-0 rounded-full bg-white/30 animate-ping" />
+                      <div className="w-4 h-4 rounded-full bg-gold relative">
+                        <div className="absolute inset-0 rounded-full bg-gold/40 animate-ping" />
                       </div>
-                      <div className="absolute -top-6 left-4 text-xs text-slate-400 whitespace-nowrap">Paris</div>
+                      <div className="absolute -top-7 left-5 text-xs font-semibold text-gold whitespace-nowrap">
+                        Paris ★
+                      </div>
                     </motion.div>
 
                     {/* Lyon dot */}
                     <motion.div
                       className="absolute"
-                      style={{ top: "58%", left: "62%" }}
+                      style={{ top: "60%", left: "60%" }}
                       animate={{ scale: [1, 1.4, 1] }}
-                      transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+                      transition={{ duration: 2.5, repeat: Infinity, delay: 0.7 }}
                     >
                       <div className="w-4 h-4 rounded-full bg-electric relative">
                         <div className="absolute inset-0 rounded-full bg-electric/40 animate-ping" />
                       </div>
-                      <div className="absolute -top-7 left-5 text-xs font-semibold text-electric whitespace-nowrap">Lyon ★</div>
+                      <div className="absolute -top-7 left-5 text-xs font-semibold text-electric whitespace-nowrap">
+                        Lyon ★
+                      </div>
                     </motion.div>
 
-                    {/* Other city dots */}
+                    {/* Other city dots (visio coverage) */}
                     {[
-                      { top: "30%", left: "25%", name: "Bordeaux" },
-                      { top: "72%", left: "42%", name: "Marseille" },
-                      { top: "20%", left: "70%", name: "Strasbourg" },
+                      { top: "30%", left: "22%", name: "Bordeaux" },
+                      { top: "75%", left: "40%", name: "Marseille" },
+                      { top: "20%", left: "72%", name: "Strasbourg" },
                     ].map((city, i) => (
                       <motion.div
                         key={i}
                         className="absolute"
                         style={{ top: city.top, left: city.left }}
-                        animate={{ opacity: [0.3, 0.8, 0.3] }}
+                        animate={{ opacity: [0.3, 0.7, 0.3] }}
                         transition={{ duration: 3, repeat: Infinity, delay: i * 0.8 }}
                       >
                         <div className="w-2 h-2 rounded-full bg-slate-400" />
@@ -135,7 +158,7 @@ export default function PresenceSection() {
                 {/* Coverage badge */}
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full glass border border-electric/20 text-sm font-medium text-electric whitespace-nowrap">
                   <Globe size={14} />
-                  Couverture nationale — 100% visio
+                  Présentiel + visio partout en France
                 </div>
               </div>
             </div>

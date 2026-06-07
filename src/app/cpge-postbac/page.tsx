@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CTASection from "@/components/sections/CTASection";
 import { GraduationCap, Zap, CheckCircle, ArrowRight, Trophy } from "lucide-react";
@@ -49,8 +50,18 @@ export default function CPGEPostBacPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[65vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
+        {/* Formules maths en fond */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/formules-maths.webp"
+            alt=""
+            fill
+            className="object-cover object-center opacity-[0.07]"
+            priority
+          />
+        </div>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

@@ -5,6 +5,7 @@ import ProfCard from "@/components/profs/ProfCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CTASection from "@/components/sections/CTASection";
 import { GraduationCap, MapPin, Star } from "lucide-react";
+import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
 
 const cities = [
   {
@@ -121,6 +122,7 @@ export default function ProfsPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
+        <FloatingMathSymbols />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

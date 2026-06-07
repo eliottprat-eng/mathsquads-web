@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Users, Clock, Euro, CheckCircle, Send, Trophy, Heart } from "lucide-react";
+import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
 
 const benefits = [
   {
@@ -65,6 +66,7 @@ export default function DevenirProfPage() {
       {/* Hero */}
       <section className="relative min-h-[65vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
+        <FloatingMathSymbols />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

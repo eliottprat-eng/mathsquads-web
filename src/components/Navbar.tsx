@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, BookOpen, Target, Trophy } from "lucide-react";
 
 const links = [
   { href: "/", label: "Accueil" },
@@ -12,8 +12,9 @@ const links = [
   {
     label: "Niveaux",
     children: [
-      { href: "/college-lycee", label: "Collège & Lycée" },
-      { href: "/cpge-postbac", label: "CPGE & Post-Bac" },
+      { href: "/college-lycee", label: "Collège", sub: "6ème → 3ème", icon: BookOpen },
+      { href: "/college-lycee", label: "Lycée", sub: "2nde → Terminale", icon: Target },
+      { href: "/cpge-postbac", label: "CPGE & Post-Bac", sub: "Grandes Écoles", icon: Trophy },
     ],
   },
   { href: "/tarifs", label: "Nos Tarifs" },
@@ -81,25 +82,39 @@ export default function Navbar() {
                     <AnimatePresence>
                       {dropdownOpen && (
                         <motion.div
-                          initial={{ opacity: 0, y: 8, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 8, scale: 0.95 }}
-                          transition={{ duration: 0.15 }}
-                          className="absolute top-full left-0 mt-2 w-52 glass-card rounded-xl overflow-hidden shadow-premium"
+                          initial={{ opacity: 0, y: -8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -8 }}
+                          transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+                          className="absolute top-full left-0 mt-2 w-60 rounded-xl overflow-hidden shadow-premium"
+                          style={{
+                            background: "#0F172A",
+                            border: "1px solid rgba(91,130,246,0.3)",
+                            borderRadius: "8px",
+                          }}
                         >
-                          {link.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className={`block px-4 py-3 text-sm font-medium transition-colors duration-150 ${
-                                pathname === child.href
-                                  ? "text-electric bg-electric/10"
-                                  : "text-slate-300 hover:text-white hover:bg-white/5"
-                              }`}
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
+                          {link.children.map((child) => {
+                            const Icon = child.icon;
+                            return (
+                              <Link
+                                key={child.href + child.label}
+                                href={child.href}
+                                className={`flex items-center gap-3 px-4 py-3 transition-colors duration-150 ${
+                                  pathname === child.href
+                                    ? "text-electric bg-electric/10"
+                                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                                }`}
+                              >
+                                <div className="w-7 h-7 rounded-lg bg-electric/10 flex items-center justify-center flex-shrink-0">
+                                  <Icon size={14} className="text-electric" />
+                                </div>
+                                <div>
+                                  <div className="text-sm font-semibold">{child.label}</div>
+                                  <div className="text-xs text-slate-500">{child.sub}</div>
+                                </div>
+                              </Link>
+                            );
+                          })}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -172,7 +187,7 @@ export default function Navbar() {
                       </div>
                       {link.children.map((child) => (
                         <Link
-                          key={child.href}
+                          key={child.href + child.label}
                           href={child.href}
                           className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                             pathname === child.href

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Brain, Heart, Compass, Zap, Trophy } from "lucide-react";
 
 const reasons = [
@@ -61,6 +62,7 @@ export default function WhySection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal className="text-center mb-16">
+          <SectionLabel number="02" label="Notre méthode" />
           <div className="section-tag mb-4 inline-flex">Pourquoi MathSquads ?</div>
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white leading-tight">
             Pas juste des cours.
