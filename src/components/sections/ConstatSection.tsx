@@ -12,7 +12,6 @@ const stats = [
     suffix: "%",
     label: "des lycéens en difficulté en maths ne trouvent pas d'aide adaptée",
     source: "Selon les études sur le soutien scolaire en France",
-    color: "#5B8DEF",
   },
   {
     icon: TrendingDown,
@@ -20,7 +19,6 @@ const stats = [
     suffix: "%",
     label: "des élèves perdent confiance en eux à cause des maths avant la Terminale — soit 1 élève sur 3",
     source: "Selon les études sur le soutien scolaire en France",
-    color: "#F59E0B",
   },
   {
     icon: BarChart3,
@@ -28,7 +26,6 @@ const stats = [
     suffix: "%",
     label: "du marché du soutien scolaire est dominé par des plateformes généralistes où la qualité est aléatoire et les prix opaques",
     source: "Notre estimation du marché du soutien scolaire",
-    color: "#EF4444",
   },
 ];
 
@@ -36,17 +33,10 @@ export default function ConstatSection() {
   return (
     <section id="constat" className="relative py-24 overflow-hidden">
       <div className="absolute inset-0" style={{ background: "#0D1B2E" }} />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 80%, rgba(91,141,239,0.07) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(239,68,68,0.04) 0%, transparent 40%)",
-        }}
-      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
-          <SectionLabel number="01" label="Le constat" />
+          <SectionLabel label="Le constat" />
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white leading-tight">
             Les maths en France :{" "}
             <span className="text-gradient">un vrai problème.</span>
@@ -58,37 +48,22 @@ export default function ConstatSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {stats.map((stat, i) => (
-            <ScrollReveal key={i} delay={i * 0.15}>
-              <div
-                className="glass-card rounded-2xl p-8 border-l-4 h-full flex flex-col gap-5"
-                style={{
-                  borderLeftColor: stat.color,
-                  borderTopColor: "transparent",
-                  borderRightColor: "transparent",
-                  borderBottomColor: "transparent",
-                }}
-              >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                  style={{ background: `${stat.color}18`, border: `1px solid ${stat.color}35` }}
-                >
-                  <stat.icon size={22} style={{ color: stat.color }} />
+            <ScrollReveal key={i} delay={i * 0.08} className="h-full">
+              <div className="glass-card rounded-2xl p-8 h-full flex flex-col gap-5">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-white/4 border border-white/8">
+                  <stat.icon size={22} className="text-electric" />
                 </div>
 
                 <div
-                  className="font-display font-black leading-none"
-                  style={{ fontSize: "3.5rem", color: stat.color }}
+                  className="font-display font-black leading-none text-white"
+                  style={{ fontSize: "3.5rem" }}
                 >
-                  <AnimatedCounter
-                    target={stat.target}
-                    suffix={stat.suffix}
-                    duration={1.8}
-                  />
+                  <AnimatedCounter target={stat.target} suffix={stat.suffix} duration={1.8} />
                 </div>
 
                 <p className="text-slate-300 text-sm leading-relaxed flex-1">{stat.label}</p>
 
-                <p className="text-xs text-slate-600 font-mono">{stat.source}</p>
+                <p className="text-xs text-slate-600">{stat.source}</p>
               </div>
             </ScrollReveal>
           ))}

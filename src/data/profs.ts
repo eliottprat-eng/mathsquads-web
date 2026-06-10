@@ -30,7 +30,9 @@ export const cities: CityGroup[] = [
         satisfaction: "97%",
         bio: "J'adore expliquer simplement des choses compliquées. Mon truc, c'est de te faire comprendre vite, progresser vraiment et pourquoi pas commencer à aimer les maths.",
         avatar: "MD",
-        photo: "https://static.wixstatic.com/media/dbf384_0c3e74a1dd3d4849bdb2a510026b6f01~mv2.jpg",
+        // TODO: ajouter la photo de Marin dans /public/profs/marin.jpg
+        // (ancienne source wixstatic supprimée — téléchargement bloqué depuis cet environnement)
+        photo: "",
         color: "#5B8DEF",
         city: "Lyon",
       },
@@ -43,7 +45,9 @@ export const cities: CityGroup[] = [
         satisfaction: "96%",
         bio: "Avec moi, chaque concept est abordé avec précision, chaque raisonnement s'appuie sur des démonstrations solides. Mon objectif : t'armer pour exceller dans les concours les plus exigeants.",
         avatar: "EP",
-        photo: "https://static.wixstatic.com/media/5bdef8_a2a97cdd2fb64b35b3e2ab028f520e5f~mv2.jpg",
+        // TODO: ajouter la photo d'Eliott dans /public/profs/eliott.jpg
+        // (ancienne source wixstatic supprimée — téléchargement bloqué depuis cet environnement)
+        photo: "",
         color: "#FFBB0A",
         city: "Lyon",
       },

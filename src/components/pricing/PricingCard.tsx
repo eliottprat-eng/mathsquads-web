@@ -28,7 +28,7 @@ export default function PricingCard({
   delay = 0,
 }: PricingCardProps) {
   const Icon = icon === "map" ? MapPin : Globe;
-  const color = highlight ? "#FFBB0A" : "#5B8DEF";
+  const color = highlight ? "#FFBB0A" : "#7E96BF";
 
   return (
     <motion.div
@@ -60,7 +60,7 @@ export default function PricingCard({
         style={{
           background: highlight
             ? "linear-gradient(90deg, #FFBB0A, #FFD147, transparent)"
-            : "linear-gradient(90deg, #5B8DEF, #82AEFF, transparent)",
+            : "linear-gradient(90deg, #7E96BF, #7E96BF, transparent)",
         }}
       />
 

@@ -29,7 +29,7 @@ export default function CityLanding({ city, intro, tiers, faqs }: CityLandingPro
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 25% 40%, rgba(91,141,239,0.12) 0%, transparent 50%)",
+              "radial-gradient(circle at 25% 40%, rgba(126,150,191,0.12) 0%, transparent 50%)",
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

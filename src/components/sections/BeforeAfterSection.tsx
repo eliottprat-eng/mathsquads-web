@@ -32,7 +32,7 @@ export default function BeforeAfterSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="p-8 sm:p-10 flex flex-col gap-6"
-            style={{ background: "#1E293B" }}
+            style={{ background: "#14213A" }}
           >
             <div className="text-xs font-mono uppercase tracking-[0.2em] text-red-400">
               Avant MathSquads
@@ -66,7 +66,7 @@ export default function BeforeAfterSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="p-8 sm:p-10 flex flex-col gap-6"
-            style={{ background: "#1E3A5F" }}
+            style={{ background: "#1A2D4E" }}
           >
             <div className="text-xs font-mono uppercase tracking-[0.2em] text-green-400">
               Après MathSquads

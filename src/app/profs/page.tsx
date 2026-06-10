@@ -5,7 +5,6 @@ import ProfCard from "@/components/profs/ProfCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CTASection from "@/components/sections/CTASection";
 import { GraduationCap, MapPin, Star } from "lucide-react";
-import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
 import { cities } from "@/data/profs";
 
 
@@ -15,12 +14,11 @@ export default function ProfsPage() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
-        <FloatingMathSymbols />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 30%, rgba(91,141,239,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,187,10,0.08) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 30%, rgba(126,150,191,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,187,10,0.08) 0%, transparent 50%)",
           }}
         />
         {/* Grid */}
@@ -126,19 +124,19 @@ export default function ProfsPage() {
                 step: "01",
                 title: "Tu nous contactes",
                 desc: "Remplis le formulaire de réservation avec ton niveau, tes objectifs et tes disponibilités.",
-                color: "#5B8DEF",
+                color: "#7E96BF",
               },
               {
                 step: "02",
                 title: "On te rappelle sous 24h",
                 desc: "Un prof adapté à ton niveau te contacte pour convenir d'un premier cours.",
-                color: "#FFBB0A",
+                color: "#7E96BF",
               },
               {
                 step: "03",
                 title: "1er cours gratuit",
                 desc: "Ta première heure est offerte. Si tu n'es pas satisfait, on te rembourse sans condition.",
-                color: "#10B981",
+                color: "#7E96BF",
               },
             ].map((s, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>

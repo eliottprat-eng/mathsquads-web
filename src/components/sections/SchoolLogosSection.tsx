@@ -20,7 +20,7 @@ export default function SchoolLogosSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 50% 50%, rgba(91,141,239,0.04) 0%, transparent 60%)",
+            "radial-gradient(circle at 50% 50%, rgba(126,150,191,0.04) 0%, transparent 60%)",
         }}
       />
 
@@ -31,7 +31,7 @@ export default function SchoolLogosSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <SectionLabel number="03" label="Nos profs" />
+          <SectionLabel label="Nos profs" />
           <p className="text-slate-500 text-xs uppercase tracking-[0.2em] font-medium">
             Nos profs sont issus des meilleures Grandes Écoles de commerce françaises
           </p>

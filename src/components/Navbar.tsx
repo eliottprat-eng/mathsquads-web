@@ -52,7 +52,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-electric to-electric-dark flex items-center justify-center shadow-glow">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-electric to-electric-dark flex items-center justify-center">
                 <span className="text-white font-display font-bold text-sm">M²</span>
               </div>
               <span className="font-display font-bold text-xl text-white group-hover:text-gradient transition-all duration-300">

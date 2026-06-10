@@ -4,87 +4,52 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Video, Star, Trophy } from "lucide-react";
 
-const stats = [
+const stats: { icon: typeof Video; value: string; detail?: string; label: string }[] = [
   {
     icon: Video,
     value: "Visio &",
     detail: "Présentiel",
-    valueLine2: "Présentiel",
-    label: "Cours à Lyon ou partout en France via visio",
-    color: "text-electric",
-    bg: "bg-electric/10",
-    border: "border-electric/20",
-    isText: true,
+    label: "Cours à Lyon, Lille, Paris ou partout en France via visio",
   },
   {
     icon: Star,
     value: "97%",
     label: "d'élèves satisfaits — et 1er cours remboursé si insatisfait",
-    color: "text-gold",
-    bg: "bg-gold/10",
-    border: "border-gold/20",
-    isText: false,
-    suffix: " satisfaits",
   },
   {
     icon: Trophy,
-    value: "Top 5",
+    value: "Grandes",
+    detail: "Écoles",
     label: "Nos profs issus des meilleures Grandes Écoles de commerce",
-    color: "text-green-400",
-    bg: "bg-green-400/10",
-    border: "border-green-400/20",
-    isText: true,
-    detail: "écoles de commerce",
   },
 ];
 
 export default function StatsSection() {
   return (
     <section className="relative py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-800/30 to-transparent pointer-events-none" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {stats.map((stat, i) => (
-            <ScrollReveal key={i} delay={i * 0.15}>
+            <ScrollReveal key={i} delay={i * 0.08} className="h-full">
               <motion.div
-                className={`relative glass-card rounded-2xl p-8 border ${stat.border} overflow-hidden group`}
-                whileHover={{ y: -4, scale: 1.01 }}
-                transition={{ duration: 0.25 }}
+                className="glass-card rounded-2xl p-8 h-full"
+                whileHover={{ y: -2 }}
+                transition={{ duration: 0.15, ease: "easeOut" }}
               >
-                {/* Glow bg */}
-                <div
-                  className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                  style={{
-                    background: `radial-gradient(circle at 50% 0%, ${
-                      stat.color === "text-electric"
-                        ? "rgba(91,141,239,0.08)"
-                        : stat.color === "text-gold"
-                        ? "rgba(255,187,10,0.08)"
-                        : "rgba(74,222,128,0.08)"
-                    } 0%, transparent 60%)`,
-                  }}
-                />
+                <div className="w-12 h-12 rounded-xl bg-white/4 border border-white/8 flex items-center justify-center mb-4">
+                  <stat.icon size={22} className="text-electric" />
+                </div>
 
-                <div className="relative z-10">
-                  <div className={`w-12 h-12 rounded-xl ${stat.bg} ${stat.border} border flex items-center justify-center mb-4`}>
-                    <stat.icon size={22} className={stat.color} />
-                  </div>
-
-                  {stat.isText ? (
-                    <div className={`font-display font-extrabold text-4xl leading-tight mb-1 ${stat.color}`}>
-                      {stat.value}
-                      {stat.detail && (
-                        <div className={`font-display font-extrabold text-4xl leading-tight ${stat.color}`}>{stat.detail}</div>
-                      )}
-                    </div>
-                  ) : (
-                    <div className={`font-display font-extrabold text-4xl leading-tight mb-1 ${stat.color}`}>
-                      {stat.value}
+                <div className="font-display font-extrabold text-4xl leading-tight mb-1 text-white">
+                  {stat.value}
+                  {stat.detail && (
+                    <div className="font-display font-extrabold text-4xl leading-tight text-white">
+                      {stat.detail}
                     </div>
                   )}
-
-                  <p className="text-sm text-slate-400 leading-relaxed mt-2">{stat.label}</p>
                 </div>
+
+                <p className="text-sm text-slate-400 leading-relaxed mt-2">{stat.label}</p>
               </motion.div>
             </ScrollReveal>
           ))}

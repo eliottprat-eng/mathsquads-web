@@ -12,7 +12,7 @@ const levels = [
     name: "Collège",
     grades: "6ème → 3ème",
     price: "dès 20€/h",
-    color: "#5B8DEF",
+    color: "#7E96BF",
     topics: [
       "Fractions et calcul algébrique",
       "Géométrie plane et dans l'espace",
@@ -26,7 +26,7 @@ const levels = [
     name: "Lycée",
     grades: "2nde → Terminale",
     price: "dès 25€/h",
-    color: "#FFBB0A",
+    color: "#7E96BF",
     topics: [
       "Analyse : dérivées, intégrales, limites",
       "Algèbre linéaire et matricielle",
@@ -44,14 +44,14 @@ const testimonials = [
     level: "3ème",
     result: "20/20 au Brevet",
     quote: "Une méthode claire et un prof toujours à l'écoute. J'ai eu 20/20 au Brevet !",
-    color: "#5B8DEF",
+    color: "#7E96BF",
   },
   {
     name: "Thomas D.",
     level: "Terminale",
     result: "+6 points de moyenne",
     quote: "De 7 à 13 de moyenne en quelques mois. La méthode fait vraiment la différence.",
-    color: "#FFBB0A",
+    color: "#7E96BF",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function CollegeLyceePage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 30% 40%, rgba(91,141,239,0.12) 0%, transparent 50%)",
+              "radial-gradient(circle at 30% 40%, rgba(126,150,191,0.12) 0%, transparent 50%)",
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,19 +170,19 @@ export default function CollegeLyceePage() {
                 icon: BookOpen,
                 title: "Diagnostic initial",
                 desc: "On identifie précisément tes lacunes et on construit un plan de travail personnalisé.",
-                color: "#5B8DEF",
+                color: "#7E96BF",
               },
               {
                 icon: TrendingUp,
                 title: "Progression structurée",
                 desc: "Chaque concept est vu, revu et maîtrisé avant de passer au suivant. Pas de survol.",
-                color: "#FFBB0A",
+                color: "#7E96BF",
               },
               {
                 icon: Target,
                 title: "Entraînement ciblé",
                 desc: "Des exercices calibrés sur le format des examens (Brevet, Bac) pour que tu sois prêt le jour J.",
-                color: "#10B981",
+                color: "#7E96BF",
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>

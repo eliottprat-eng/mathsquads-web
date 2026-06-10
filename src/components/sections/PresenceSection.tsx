@@ -27,7 +27,7 @@ export default function PresenceSection() {
                   icon: MapPin,
                   title: "Lyon & Lille",
                   desc: "Cours en présentiel chez toi ou dans un espace dédié — dès 20€/h",
-                  color: "#5B8DEF",
+                  color: "#7E96BF",
                 },
                 {
                   icon: MapPin,
@@ -39,13 +39,13 @@ export default function PresenceSection() {
                   icon: Globe,
                   title: "Toute la France",
                   desc: "Sessions visio avec tableau blanc interactif partagé — dès 20€/h",
-                  color: "#10B981",
+                  color: "#7E96BF",
                 },
                 {
                   icon: Wifi,
                   title: "Flexible & à la demande",
                   desc: "Réservation simple, sans engagement, selon tes disponibilités",
-                  color: "#A78BFA",
+                  color: "#7E96BF",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -80,13 +80,13 @@ export default function PresenceSection() {
                       <polygon
                         points="100,10 170,50 170,130 130,200 70,200 30,130 30,50"
                         fill="none"
-                        stroke="rgba(91,141,239,0.5)"
+                        stroke="rgba(126,150,191,0.5)"
                         strokeWidth="1.5"
                       />
                       <polygon
                         points="100,30 155,62 155,122 120,185 80,185 45,122 45,62"
-                        fill="rgba(91,141,239,0.03)"
-                        stroke="rgba(91,141,239,0.3)"
+                        fill="rgba(126,150,191,0.03)"
+                        stroke="rgba(126,150,191,0.3)"
                         strokeWidth="1"
                       />
                     </svg>

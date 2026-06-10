@@ -11,7 +11,7 @@ const programs = [
   {
     name: "CPGE",
     sub: "Classes Préparatoires",
-    color: "#5B8DEF",
+    color: "#7E96BF",
     topics: [
       "Analyse (séries, intégrales, équations diff.)",
       "Algèbre linéaire et réduction d'endomorphismes",
@@ -23,7 +23,7 @@ const programs = [
   {
     name: "Licence & BUT",
     sub: "Bac+1 → Bac+3",
-    color: "#FFBB0A",
+    color: "#7E96BF",
     topics: [
       "Analyse réelle et complexe",
       "Topologie et espaces métriques",
@@ -35,7 +35,7 @@ const programs = [
   {
     name: "BTS & IUT",
     sub: "Voie technologique",
-    color: "#10B981",
+    color: "#7E96BF",
     topics: [
       "Mathématiques appliquées",
       "Statistiques descriptives et inférentielles",
@@ -66,7 +66,7 @@ export default function CPGEPostBacPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 20% 50%, rgba(139,92,246,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(91,141,239,0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(126,150,191,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(126,150,191,0.1) 0%, transparent 50%)",
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -182,8 +182,8 @@ export default function CPGEPostBacPage() {
                 <div className="flex flex-col gap-4">
                   {[
                     { name: "Yanis M.", result: "Admis ESCP", color: "#FFBB0A" },
-                    { name: "Prépas HEC", result: "Accompagnés", color: "#5B8DEF" },
-                    { name: "Oraux concours", result: "Préparation intensive", color: "#10B981" },
+                    { name: "Prépas HEC", result: "Accompagnés", color: "#7E96BF" },
+                    { name: "Oraux concours", result: "Préparation intensive", color: "#7E96BF" },
                   ].map((r, i) => (
                     <div
                       key={i}

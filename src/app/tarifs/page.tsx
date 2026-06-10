@@ -1,11 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import PricingCard from "@/components/pricing/PricingCard";
+import PricingTable from "@/components/pricing/PricingTable";
 import BookingForm from "@/components/pricing/BookingForm";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Gift, Shield, Clock, Zap } from "lucide-react";
-import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
 
 export default function TarifsPage() {
   return (
@@ -13,7 +12,6 @@ export default function TarifsPage() {
       {/* Hero */}
       <section className="relative min-h-[55vh] flex items-center pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
-        <FloatingMathSymbols />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
@@ -53,9 +51,9 @@ export default function TarifsPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
               { icon: Gift, label: "1ère heure offerte", color: "#FFBB0A" },
-              { icon: Shield, label: "100% satisfait ou remboursé", color: "#10B981" },
-              { icon: Clock, label: "Annulation flexible", color: "#5B8DEF" },
-              { icon: Zap, label: "Réponse sous 24h", color: "#8B5CF6" },
+              { icon: Shield, label: "100% satisfait ou remboursé", color: "#7E96BF" },
+              { icon: Clock, label: "Annulation flexible", color: "#7E96BF" },
+              { icon: Zap, label: "Réponse sous 24h", color: "#7E96BF" },
             ].map((g, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="glass-card rounded-xl p-4 border border-white/5 text-center">
@@ -82,42 +80,9 @@ export default function TarifsPage() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <PricingCard
-              title="Lyon & Lille"
-              icon="map"
-              description="Cours en présentiel chez toi ou dans un espace dédié à Lyon et Lille"
-              tiers={[
-                { level: "Collège", price: 20, details: "6ème → 3ème" },
-                { level: "Lycée", price: 25, details: "2nde → Terminale" },
-                { level: "CPGE / Post-bac", price: 30, details: "Prépa, Licence, BTS..." },
-              ]}
-              delay={0}
-            />
-            <PricingCard
-              title="Paris"
-              icon="map"
-              description="Cours en présentiel dans la capitale — profs issus des meilleures écoles"
-              tiers={[
-                { level: "Collège", price: 25, details: "6ème → 3ème" },
-                { level: "Lycée", price: 30, details: "2nde → Terminale" },
-                { level: "CPGE / Post-bac", price: 35, details: "Prépa, Licence, BTS..." },
-              ]}
-              delay={0.1}
-            />
-            <PricingCard
-              title="Distanciel — Toute la France"
-              icon="globe"
-              description="Sessions visio haute qualité, tableau blanc partagé, supports numériques"
-              tiers={[
-                { level: "Collège", price: 20, details: "6ème → 3ème" },
-                { level: "Lycée", price: 20, details: "2nde → Terminale" },
-                { level: "CPGE / Post-bac", price: 25, details: "Prépa, Licence, BTS..." },
-              ]}
-              highlight
-              delay={0.2}
-            />
-          </div>
+          <ScrollReveal>
+            <PricingTable />
+          </ScrollReveal>
 
           {/* Comparison note */}
           <ScrollReveal delay={0.3}>

@@ -28,7 +28,7 @@ function FAQItem({
           ? "border-electric/40 bg-electric/5"
           : "border-white/6 bg-white/2 hover:border-white/10"
       }`}
-      style={isOpen ? { borderLeft: "3px solid #5B8DEF" } : {}}
+      style={isOpen ? { borderLeft: "3px solid #7E96BF" } : {}}
     >
       <button
         className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left cursor-pointer"
@@ -80,13 +80,13 @@ export default function FAQSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 60% 40%, rgba(91,141,239,0.05) 0%, transparent 50%)",
+            "radial-gradient(circle at 60% 40%, rgba(126,150,191,0.05) 0%, transparent 50%)",
         }}
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
-          <SectionLabel number="06" label="FAQ" />
+          <SectionLabel label="FAQ" />
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white">
             Questions{" "}
             <span className="text-gradient">fréquentes</span>

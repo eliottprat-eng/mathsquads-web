@@ -14,10 +14,10 @@ const symbols = [
 ];
 
 const quickLinks = [
-  { icon: Home,     label: "Accueil",         href: "/",             color: "#5B8DEF" },
+  { icon: Home,     label: "Accueil",         href: "/",             color: "#7E96BF" },
   { icon: Users,    label: "Nos Profs",        href: "/profs",        color: "#FFBB0A" },
-  { icon: CreditCard, label: "Nos Tarifs",     href: "/tarifs",       color: "#10B981" },
-  { icon: BookOpen, label: "Collège & Lycée",  href: "/college-lycee", color: "#A78BFA" },
+  { icon: CreditCard, label: "Nos Tarifs",     href: "/tarifs",       color: "#7E96BF" },
+  { icon: BookOpen, label: "Collège & Lycée",  href: "/college-lycee", color: "#7E96BF" },
 ];
 
 export default function NotFound() {

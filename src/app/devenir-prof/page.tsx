@@ -4,32 +4,27 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Users, Clock, Euro, CheckCircle, Send, Trophy, Heart } from "lucide-react";
-import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
 
 const benefits = [
   {
     icon: Euro,
     title: "Rémunération attractive",
     desc: "Des tarifs compétitifs, payés rapidement, avec une totale transparence.",
-    color: "#FFBB0A",
   },
   {
     icon: Clock,
     title: "Flexibilité totale",
     desc: "Tu choisis tes créneaux selon tes disponibilités. Aucun engagement minimum.",
-    color: "#5B8DEF",
   },
   {
     icon: Users,
     title: "Communauté de qualité",
     desc: "Rejoins une équipe de profs passionnés issus des meilleures écoles.",
-    color: "#10B981",
   },
   {
     icon: Heart,
     title: "Impact réel",
     desc: "Vois tes élèves progresser et transformer leur rapport aux maths.",
-    color: "#8B5CF6",
   },
 ];
 
@@ -66,12 +61,11 @@ export default function DevenirProfPage() {
       {/* Hero */}
       <section className="relative min-h-[65vh] flex items-center pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-navy-900" />
-        <FloatingMathSymbols />
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 60% 30%, rgba(139,92,246,0.12) 0%, transparent 50%), radial-gradient(circle at 20% 70%, rgba(91,141,239,0.08) 0%, transparent 50%)",
+              "radial-gradient(circle at 60% 30%, rgba(126,150,191,0.1) 0%, transparent 50%)",
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -111,11 +105,8 @@ export default function DevenirProfPage() {
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <div
-                    className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
-                    style={{ background: `${b.color}15`, border: `1px solid ${b.color}25` }}
-                  >
-                    <b.icon size={20} style={{ color: b.color }} />
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-white/4 border border-white/8">
+                    <b.icon size={20} className="text-electric" />
                   </div>
                   <h3 className="font-display font-bold text-base text-white mb-2">{b.title}</h3>
                   <p className="text-sm text-slate-400 leading-relaxed">{b.desc}</p>

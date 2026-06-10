@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Colonne 1 — À propos */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-electric to-electric-dark flex items-center justify-center shadow-glow">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-electric to-electric-dark flex items-center justify-center">
                 <span className="text-white font-display font-bold">M²</span>
               </div>
               <span className="font-display font-bold text-2xl text-white">MathSquads</span>
@@ -127,7 +127,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-gold" />
             <span className="text-xs text-slate-500">Disponible pour de nouveaux élèves</span>
           </div>
         </div>

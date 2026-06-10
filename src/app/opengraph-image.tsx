@@ -17,7 +17,7 @@ export default function OpenGraphImage() {
           justifyContent: "center",
           background: "#0F172A",
           backgroundImage:
-            "radial-gradient(circle at 15% 80%, rgba(91,141,239,0.18) 0%, rgba(15,23,42,0) 50%), radial-gradient(circle at 85% 20%, rgba(255,187,10,0.12) 0%, rgba(15,23,42,0) 45%)",
+            "radial-gradient(circle at 15% 80%, rgba(126,150,191,0.18) 0%, rgba(15,23,42,0) 50%), radial-gradient(circle at 85% 20%, rgba(255,187,10,0.12) 0%, rgba(15,23,42,0) 45%)",
           fontFamily: "sans-serif",
         }}
       >
@@ -34,7 +34,7 @@ export default function OpenGraphImage() {
               width: 110,
               height: 110,
               borderRadius: 28,
-              background: "linear-gradient(135deg, #82AEFF 0%, #5B8DEF 100%)",
+              background: "linear-gradient(135deg, #A7BCDD 0%, #7E96BF 100%)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
