@@ -18,13 +18,24 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "MathSquads — Les Maths Accessibles dès 20€/h",
+  metadataBase: new URL("https://mathsquads.com"),
+  title: {
+    default:
+      "MathSquads — Cours particuliers de maths dès 20€/h | Lyon, Lille, Paris & visio",
+    template: "%s | MathSquads",
+  },
   description:
-    "Cours particuliers de maths avec des profs issus des meilleures Grandes Écoles françaises (emlyon, EDHEC, ESCP). Visio & Présentiel, 1ère heure GRATUITE.",
+    "Cours particuliers de maths avec des profs issus des meilleures Grandes Écoles françaises (emlyon, EDHEC, ESCP). Visio & présentiel, 1ère heure gratuite.",
   openGraph: {
-    title: "MathSquads — Les Maths Accessibles dès 20€/h",
-    description: "Cours particuliers de maths avec des profs issus des meilleures Grandes Écoles françaises.",
+    siteName: "MathSquads",
+    title: "MathSquads — Cours particuliers de maths dès 20€/h",
+    description:
+      "Des profs issus des meilleures Grandes Écoles françaises. Lyon, Lille, Paris & visio partout en France. 1ère heure gratuite.",
     type: "website",
+    locale: "fr_FR",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
