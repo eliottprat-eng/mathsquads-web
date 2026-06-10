@@ -3,6 +3,7 @@ import { Inter, Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,10 +47,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${inter.variable} ${syne.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased pb-16 sm:pb-0">
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
