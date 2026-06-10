@@ -58,6 +58,7 @@ export default function CPGEPostBacPage() {
             src="/images/formules-maths.webp"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover object-center opacity-[0.07]"
             priority
           />

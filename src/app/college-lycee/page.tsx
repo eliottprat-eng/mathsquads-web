@@ -65,8 +65,9 @@ export default function CollegeLyceePage() {
         <div className="absolute inset-y-0 right-0 w-1/2 hidden lg:block">
           <Image
             src="/images/coursdemaths.webp"
-            alt="Cours de maths"
+            alt=""
             fill
+            sizes="(max-width: 1024px) 0px, 50vw"
             className="object-cover object-center"
             priority
           />
