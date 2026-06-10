@@ -151,7 +151,7 @@ export default function CPGEPostBacPage() {
                 Des profs qui ont vécu <span className="text-gradient">la prépa de l&apos;intérieur</span>
               </h2>
               <p className="text-slate-400 mb-6 leading-relaxed">
-                Nos fondateurs sont issus d&apos;emlyon, Top 5 des grandes écoles françaises. Ils ont traversé les mêmes khôlles,
+                Nos fondateurs sont issus d&apos;emlyon, l&apos;une des meilleures Grandes Écoles françaises. Ils ont traversé les mêmes khôlles,
                 les mêmes concours, les mêmes nuits à réviser. Ils savent ce qui fonctionne vraiment.
               </p>
               <div className="flex flex-col gap-3">

@@ -14,7 +14,7 @@ const cities = [
       {
         name: "Marin Delzoppo",
         school: "emlyon business school",
-        role: "CEO & Fondateur",
+        role: "Co-fondateur",
         coursesCount: 317,
         rating: 5,
         satisfaction: "97%",
@@ -27,7 +27,7 @@ const cities = [
       {
         name: "Eliott Prat",
         school: "emlyon business school",
-        role: "CEO & Fondateur",
+        role: "Co-fondateur",
         coursesCount: 158,
         rating: 5,
         satisfaction: "96%",
@@ -148,10 +148,10 @@ export default function ProfsPage() {
           >
             <div className="section-tag mb-6 inline-flex">Notre équipe</div>
             <h1 className="font-display font-extrabold text-5xl sm:text-6xl text-white leading-tight mb-6">
-              Des profs issus du{" "}
-              <span className="text-gradient">Top 5 des meilleures écoles</span>
+              Des profs issus des{" "}
+              <span className="text-gradient">meilleures Grandes Écoles</span>
               <br />
-              de France
+              françaises
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">
               Chaque prof MathSquads est sélectionné pour son excellence académique et sa passion pour la transmission.
@@ -166,7 +166,7 @@ export default function ProfsPage() {
             className="flex flex-wrap justify-center gap-6 mt-10"
           >
             {[
-              { icon: GraduationCap, label: "Top 5", sub: "Grandes Écoles de France" },
+              { icon: GraduationCap, label: "Grandes Écoles", sub: "emlyon · EDHEC · ESCP" },
               { icon: MapPin, label: "3 villes", sub: "Lyon · Lille · Paris" },
               { icon: Star, label: "5/5", sub: "Note moyenne" },
             ].map((item, i) => (

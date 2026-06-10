@@ -18,8 +18,8 @@ const stats = [
   },
   {
     icon: Star,
-    value: "100%",
-    label: "Élèves satisfaits ou remboursés — zéro risque",
+    value: "97%",
+    label: "d'élèves satisfaits — et 1er cours remboursé si insatisfait",
     color: "text-gold",
     bg: "bg-gold/10",
     border: "border-gold/20",
@@ -29,12 +29,12 @@ const stats = [
   {
     icon: Trophy,
     value: "Top 5",
-    label: "Nos profs issus des meilleures grandes écoles",
+    label: "Nos profs issus des meilleures Grandes Écoles de commerce",
     color: "text-green-400",
     bg: "bg-green-400/10",
     border: "border-green-400/20",
     isText: true,
-    detail: "écoles de France",
+    detail: "écoles de commerce",
   },
 ];
 

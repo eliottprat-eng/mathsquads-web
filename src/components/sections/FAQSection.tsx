@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Quelle est la différence avec Superprof ou Acadomia ?",
-    a: "Nos profs sont exclusivement issus du Top 5 des grandes écoles françaises (emlyon, ESCP, EDHEC...). Ce ne sont pas des étudiants lambda mais des profils d'exception, capables d'expliquer les maths de façon simple et efficace. Et nos tarifs commencent à 20€/h, bien en dessous du marché premium.",
+    a: "Nos profs sont exclusivement issus des meilleures Grandes Écoles de commerce françaises (emlyon, ESCP, EDHEC). Ce ne sont pas des étudiants lambda mais des profils d'exception, capables d'expliquer les maths de façon simple et efficace. Et nos tarifs commencent à 20€/h, bien en dessous du marché premium.",
   },
   {
     q: "Puis-je changer de prof si le courant ne passe pas ?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Les cours sont-ils disponibles partout en France ?",
-    a: "Oui ! En visio (tableau blanc interactif partagé), les cours sont disponibles partout en France. Les cours en présentiel sont disponibles à Lyon.",
+    a: "Oui ! En visio (tableau blanc interactif partagé), les cours sont disponibles partout en France. Les cours en présentiel sont disponibles à Lyon, Lille et Paris.",
   },
   {
     q: "Comment se passe le suivi entre les séances ?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "Comment réserver un cours ?",
-    a: "Utilise le formulaire sur la page Tarifs, ou contacte-nous directement par email (lamathsquad@gmail.com) ou téléphone (06 64 19 57 52). On te répond sous 24h.",
+    a: "Utilise le formulaire sur la page Tarifs, ou contacte-nous directement par email (contact@mathsquads.com) ou téléphone (06 64 19 57 52). On te répond sous 24h.",
   },
   {
     q: "Les cours sont-ils remboursés si je ne suis pas satisfait ?",

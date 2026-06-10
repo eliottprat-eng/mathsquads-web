@@ -20,11 +20,10 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "MathSquads — Les Maths Accessibles dès 20€/h",
   description:
-    "Cours particuliers de maths avec des profs issus du Top 5 des meilleures écoles de France. Visio & Présentiel, 1ère heure GRATUITE.",
-  keywords: "cours maths, cours particuliers, mathématiques, CPGE, prépa, lycée, collège, Lyon, distanciel",
+    "Cours particuliers de maths avec des profs issus des meilleures Grandes Écoles françaises (emlyon, EDHEC, ESCP). Visio & Présentiel, 1ère heure GRATUITE.",
   openGraph: {
     title: "MathSquads — Les Maths Accessibles dès 20€/h",
-    description: "Cours particuliers de maths avec des profs du Top 5 écoles de France.",
+    description: "Cours particuliers de maths avec des profs issus des meilleures Grandes Écoles françaises.",
     type: "website",
   },
 };

@@ -39,14 +39,15 @@ export default function Footer() {
               Des profs d&apos;exception pour rendre les maths accessibles à tous.
             </p>
             <div className="flex flex-col gap-3">
+              {/* TODO: configurer la redirection contact@mathsquads.com → boîte réelle */}
               <a
-                href="mailto:lamathsquad@gmail.com"
+                href="mailto:contact@mathsquads.com"
                 className="flex items-center gap-3 text-sm text-slate-400 hover:text-electric transition-colors"
               >
                 <div className="w-8 h-8 rounded-lg bg-electric/10 flex items-center justify-center flex-shrink-0">
                   <Mail size={14} className="text-electric" />
                 </div>
-                lamathsquad@gmail.com
+                contact@mathsquads.com
               </a>
               <a
                 href="tel:0664195752"

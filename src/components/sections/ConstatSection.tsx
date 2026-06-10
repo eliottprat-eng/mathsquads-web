@@ -11,7 +11,7 @@ const stats = [
     target: 65,
     suffix: "%",
     label: "des lycéens en difficulté en maths ne trouvent pas d'aide adaptée",
-    source: "Source : Ministère de l'Éducation nationale",
+    source: "Selon les études sur le soutien scolaire en France",
     color: "#5B8DEF",
   },
   {
@@ -19,7 +19,7 @@ const stats = [
     target: 33,
     suffix: "%",
     label: "des élèves perdent confiance en eux à cause des maths avant la Terminale — soit 1 élève sur 3",
-    source: "Enquête nationale sur la réussite scolaire",
+    source: "Selon les études sur le soutien scolaire en France",
     color: "#F59E0B",
   },
   {
@@ -27,7 +27,7 @@ const stats = [
     target: 90,
     suffix: "%",
     label: "du marché du soutien scolaire est dominé par des plateformes généralistes où la qualité est aléatoire et les prix opaques",
-    source: "Marché du soutien scolaire — France",
+    source: "Notre estimation du marché du soutien scolaire",
     color: "#EF4444",
   },
 ];

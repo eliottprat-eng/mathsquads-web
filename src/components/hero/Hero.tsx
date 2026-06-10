@@ -19,9 +19,9 @@ type StatItem =
 
 const stats: StatItem[] = [
   { kind: "counter", target: 475, suffix: "+", label: "cours donnés",  duration: 1.5 },
-  { kind: "counter", target: 100, suffix: "%", label: "satisfaits",    duration: 1.2 },
+  { kind: "counter", target: 97,  suffix: "%", label: "de satisfaction", duration: 1.2 },
   { kind: "counter", target: 20,  suffix: "€", label: "dès / heure",   duration: 1.0 },
-  { kind: "text",    value: "Top 5",            label: "écoles FR" },
+  { kind: "text",    value: "Top 5",            label: "écoles de commerce" },
 ];
 
 export default function Hero() {
@@ -115,7 +115,7 @@ export default function Hero() {
                   ))}
                 </div>
                 <span className="text-sm text-slate-300 font-medium">5/5</span>
-                <span className="text-sm text-slate-500">· 100% d&apos;élèves satisfaits</span>
+                <span className="text-sm text-slate-500">· 97% d&apos;élèves satisfaits</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-sm text-slate-500">
                 <span className="flex items-center gap-1.5">

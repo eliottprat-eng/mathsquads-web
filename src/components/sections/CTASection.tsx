@@ -5,7 +5,7 @@ import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { ArrowRight, Users } from "lucide-react";
 
-const socialProofItems = ["475+ élèves", "100% satisfaits", "Profs issus du Top 5"];
+const socialProofItems = ["475+ cours donnés", "97% de satisfaction", "Profs issus des meilleures Grandes Écoles"];
 
 export default function CTASection() {
   return (

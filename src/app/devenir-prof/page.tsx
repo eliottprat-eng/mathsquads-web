@@ -34,7 +34,7 @@ const benefits = [
 ];
 
 const requirements = [
-  "Être issu d'une grande école ou d'un parcours d'excellence (Top 5 écoles, ENS, Polytechnique...)",
+  "Être issu d'une grande école ou d'un parcours d'excellence (Grandes Écoles, ENS, Polytechnique...)",
   "Avoir une passion pour la transmission et la pédagogie",
   "Être disponible au minimum 4h/semaine",
   "Maîtriser les outils de cours en ligne (visio, tableau partagé)",
@@ -156,8 +156,8 @@ export default function DevenirProfPage() {
                   <span className="font-semibold text-white text-sm">Notre équipe actuelle</span>
                 </div>
                 <p className="text-xs text-slate-400">
-                  Marin Delzoppo & Eliott Prat — emlyon business school (Top 5 FR) —
-                  475+ cours donnés, 5/5 de satisfaction.
+                  Marin Delzoppo & Eliott Prat — emlyon business school —
+                  475+ cours donnés, 5/5 de note moyenne.
                 </p>
               </div>
             </ScrollReveal>

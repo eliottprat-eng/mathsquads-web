@@ -12,7 +12,7 @@ const beforeItems = [
 ];
 
 const afterItems = [
-  "Des profs issus du Top 5 des grandes écoles françaises (emlyon)",
+  "Des profs issus des meilleures Grandes Écoles françaises (emlyon, EDHEC, ESCP)",
   "Dès 20€/h, 1ère heure 100% gratuite, zéro risque",
   "Suivi personnalisé, bilan régulier, objectifs clairs",
   "Résultats concrets : notes en hausse, confiance retrouvée",
@@ -55,7 +55,7 @@ export default function BeforeAfterSection() {
                 Je passais d&apos;un prof à l&apos;autre, rien ne marchait. J&apos;étais découragé.
               </p>
               <cite className="text-xs text-slate-600 mt-2 block not-italic">
-                — Thomas R., Terminale S
+                — Thomas R., Terminale
               </cite>
             </blockquote>
           </motion.div>
@@ -86,10 +86,10 @@ export default function BeforeAfterSection() {
                 <Quote size={14} className="text-green-400/40" />
               </div>
               <p className="text-slate-200 italic text-sm leading-relaxed">
-                En 3 séances avec Marin j&apos;avais tout compris. 17/20 au bac.
+                En septembre j&apos;avais 8 de moyenne. En mars, 16. Marin a changé ma façon de voir les maths.
               </p>
               <cite className="text-xs text-slate-400 mt-2 block not-italic">
-                — Emma L., Collégienne
+                — Lucas D., Terminale Spécialité Maths
               </cite>
             </blockquote>
           </motion.div>
