@@ -55,7 +55,7 @@ export default function PricingTable() {
                 </th>
                 {columns.map((col) => (
                   <td key={col.key} className={`px-6 py-5 ${col.featured ? "bg-gold/6" : ""}`}>
-                    <span className={`font-display font-bold text-xl ${col.featured ? "text-gold" : "text-white"}`}>
+                    <span className={`font-display font-bold text-xl tabular-nums ${col.featured ? "text-gold" : "text-white"}`}>
                       {row[col.key]}€
                     </span>
                     <span className="text-xs text-slate-500">/h</span>

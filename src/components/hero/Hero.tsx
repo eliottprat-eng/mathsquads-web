@@ -81,7 +81,7 @@ export default function Hero() {
         >
           {stats.map((s, i) => (
             <div key={i} className="text-center">
-              <div className="font-display font-extrabold text-2xl text-white">
+              <div className="font-display font-extrabold text-2xl text-white tabular-nums">
                 <AnimatedCounter
                   target={s.target}
                   suffix={s.suffix}

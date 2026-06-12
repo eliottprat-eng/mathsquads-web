@@ -1,79 +1,75 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { BookOpen, Target, Trophy, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const profiles = [
   {
-    icon: BookOpen,
     title: "Collège",
-    subtitle: "Rattraper son retard, préparer le Brevet",
-    details: "Dès 20€/h · Lyon, Lille, Paris & visio",
-    href: "/college-lycee",
     levels: "6ème → 3ème",
-  },
-  {
-    icon: Target,
-    title: "Lycée",
-    subtitle: "Progresser vite, réussir le Bac",
-    details: "Dès 20€/h · Lyon, Lille, Paris & visio",
+    subtitle: "Rattraper son retard, reprendre confiance, préparer le Brevet.",
+    price: "dès 20€/h",
     href: "/college-lycee",
-    levels: "2nde → Terminale",
   },
   {
-    icon: Trophy,
+    title: "Lycée",
+    levels: "2nde → Terminale",
+    subtitle: "Progresser vite en spécialité maths, viser la mention au Bac.",
+    price: "dès 20€/h",
+    href: "/college-lycee",
+  },
+  {
     title: "CPGE & Post-bac",
-    subtitle: "Intégrer les meilleures écoles",
-    details: "Dès 25€/h · Lyon, Lille, Paris & visio",
+    levels: "Prépa, Licence, BTS",
+    subtitle: "Méthode concours par des profs passés par la prépa.",
+    price: "dès 25€/h",
     href: "/cpge-postbac",
-    levels: "Prépa & au-delà",
   },
 ];
 
 export default function ForWhoSection() {
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <SectionLabel label="Pour qui ?" />
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white">
             Un accompagnement{" "}
-            <span className="text-gradient">adapté à chaque niveau</span>
+            <span className="text-gradient">à chaque niveau</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {profiles.map((profile, i) => (
-            <ScrollReveal key={profile.title} delay={i * 0.08} className="h-full">
-              <Link href={profile.href} className="block h-full group">
-                <motion.div
-                  className="glass-card rounded-2xl p-7 h-full flex flex-col gap-5"
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.15, ease: "easeOut" }}
-                >
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 bg-white/4 border border-white/8">
-                    <profile.icon size={26} className="text-electric" />
+        <ScrollReveal>
+          <div className="border-t border-white/8">
+            {profiles.map((p) => (
+              <Link
+                key={p.title}
+                href={p.href}
+                className="group grid grid-cols-[1fr_auto] sm:grid-cols-[200px_1fr_auto_auto] items-center gap-x-6 gap-y-1 py-7 border-b border-white/8 transition-colors duration-150 hover:bg-white/[0.025] px-2 sm:px-4 -mx-2 sm:-mx-4"
+              >
+                <div>
+                  <div className="font-display font-bold text-2xl text-white leading-tight">
+                    {p.title}
                   </div>
-
-                  <div className="flex-1">
-                    <div className="text-xs font-mono text-slate-500 mb-1">{profile.levels}</div>
-                    <h3 className="font-display font-bold text-xl text-white mb-2">{profile.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed mb-3">{profile.subtitle}</p>
-                    <p className="text-xs font-semibold text-slate-300">{profile.details}</p>
-                  </div>
-
-                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-all duration-200 group-hover:gap-3">
-                    En savoir plus
-                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </motion.div>
+                  <div className="text-xs font-mono text-slate-500 mt-1">{p.levels}</div>
+                </div>
+                <p className="col-span-2 sm:col-span-1 order-3 sm:order-none text-sm text-slate-400 leading-relaxed max-w-sm">
+                  {p.subtitle}
+                </p>
+                <span className="hidden sm:block text-sm font-semibold text-slate-300 tabular-nums whitespace-nowrap">
+                  {p.price}
+                </span>
+                <ArrowRight
+                  size={18}
+                  className="text-slate-500 group-hover:text-gold transition-all duration-150 group-hover:translate-x-1 justify-self-end"
+                  aria-hidden
+                />
               </Link>
-            </ScrollReveal>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -108,6 +108,7 @@ h1, h2, h3 {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--hairline);
+    transition: border-color 0.2s ease-out;
   }
 
   /* Bordure dorée subtile — réservée à l'élément mis en avant */

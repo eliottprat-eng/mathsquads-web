@@ -39,7 +39,7 @@ export default function ProfCard({
       viewport={{ once: true, margin: "-60px" }}
       whileHover={{ y: -2 }}
       transition={{ duration: 0.5, delay, ease: "easeOut" }}
-      className="relative glass-card rounded-2xl overflow-hidden h-full"
+      className="relative glass-card rounded-2xl overflow-hidden h-full hover:border-white/15"
     >
       <div className="p-7">
         {/* Nom → école → ville : hiérarchie nette */}
@@ -51,7 +51,7 @@ export default function ProfCard({
                   src={photo}
                   alt={`${name} — prof de maths MathSquads à ${city}`}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top saturate-[0.92]"
                   sizes="96px"
                 />
               ) : (

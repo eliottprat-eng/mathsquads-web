@@ -62,7 +62,7 @@ export default function PricingHomepageSection() {
             <ScrollReveal key={card.subtitle} delay={i * 0.08} className="h-full">
               <motion.div
                 className={`relative rounded-2xl p-7 flex flex-col gap-5 h-full ${
-                  card.featured ? "gradient-border" : "glass-card"
+                  card.featured ? "gradient-border" : "glass-card hover:border-white/15"
                 }`}
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.15, ease: "easeOut" }}
@@ -90,7 +90,7 @@ export default function PricingHomepageSection() {
                       className="flex items-center justify-between py-2.5 border-b border-white/6 last:border-0"
                     >
                       <span className="text-slate-400 text-sm">{p.level}</span>
-                      <span className="font-display font-bold text-lg text-white">{p.price}</span>
+                      <span className="font-display font-bold text-lg text-white tabular-nums">{p.price}</span>
                     </div>
                   ))}
                 </div>

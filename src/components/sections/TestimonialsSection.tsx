@@ -48,7 +48,7 @@ function TestimonialCard({ t, delay }: { t: typeof testimonials[number]; delay: 
   return (
     <ScrollReveal delay={delay} className="h-full">
       <motion.div
-        className="glass-card rounded-2xl p-7 h-full flex flex-col gap-4"
+        className="glass-card rounded-2xl p-7 h-full flex flex-col gap-4 hover:border-white/15"
         whileHover={{ y: -2 }}
         transition={{ duration: 0.15, ease: "easeOut" }}
       >
@@ -84,8 +84,9 @@ function TestimonialCard({ t, delay }: { t: typeof testimonials[number]; delay: 
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="temoignages" className="relative py-24 overflow-hidden">
+      <div className="absolute inset-0" style={{ background: "#0D1B2E" }} />
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <SectionLabel label="Témoignages" />
           <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white">

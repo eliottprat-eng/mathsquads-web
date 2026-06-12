@@ -10,6 +10,7 @@ import SchoolLogosSection from "@/components/sections/SchoolLogosSection";
 import ForWhoSection from "@/components/sections/ForWhoSection";
 import PricingHomepageSection from "@/components/sections/PricingHomepageSection";
 import FAQSection from "@/components/sections/FAQSection";
+import ProductDemoSection from "@/components/sections/ProductDemoSection";
 import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
@@ -58,6 +59,9 @@ export default function HomePage() {
 
       {/* Hero */}
       <Hero />
+
+      {/* Moment produit — la séance */}
+      <ProductDemoSection />
 
       {/* 01 — Le constat */}
       <ConstatSection />
