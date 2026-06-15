@@ -1,0 +1,20 @@
+// Centralised site/brand constants used for SEO metadata and structured data.
+// Keep these in sync with the values displayed in the UI (Footer, Hero…).
+
+export const SITE_URL = "https://mathsquads.com";
+
+export const site = {
+  name: "MathSquads",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo-emlyon.svg`,
+  email: "lamathsquad@gmail.com",
+  phone: "+33664195752",
+  phoneDisplay: "06 64 19 57 52",
+  // Zones couvertes (présentiel + visio partout en France)
+  areaServed: ["Lyon", "Lille", "Paris", "France"],
+  priceFrom: 20,
+  currency: "EUR",
+} as const;
+
+export const absoluteUrl = (path = "/") =>
+  path.startsWith("http") ? path : `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;

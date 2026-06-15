@@ -102,7 +102,7 @@ export default function ProfCard({
                 {photo ? (
                   <Image
                     src={photo}
-                    alt={name}
+                    alt={`${name}, prof de maths MathSquads — ${school}`}
                     fill
                     className="object-cover object-top"
                     sizes="96px"

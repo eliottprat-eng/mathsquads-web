@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { homeFaqs } from "@/lib/faqs";
+import { faqSchema } from "@/lib/structured-data";
 import Hero from "@/components/hero/Hero";
 import WhySection from "@/components/sections/WhySection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
@@ -10,9 +14,26 @@ import ForWhoSection from "@/components/sections/ForWhoSection";
 import PricingHomepageSection from "@/components/sections/PricingHomepageSection";
 import FAQSection from "@/components/sections/FAQSection";
 
+export const metadata: Metadata = {
+  title: {
+    absolute: "MathSquads — Cours de maths à Lyon, Paris & en ligne",
+  },
+  description:
+    "Cours particuliers de maths dès 20€/h avec des profs des meilleures grandes écoles. Visio partout en France, présentiel à Lyon. Réservez votre 1ère heure offerte.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "MathSquads — Cours de maths à Lyon, Paris & en ligne",
+    description:
+      "Cours particuliers de maths dès 20€/h avec des profs des meilleures grandes écoles. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
+    url: "/",
+  },
+};
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={faqSchema(homeFaqs)} />
+
       {/* Hero */}
       <Hero />
 

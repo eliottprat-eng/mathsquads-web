@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
+
+export const metadata: Metadata = {
+  title: "Mentions légales",
+  description: "Mentions légales du site MathSquads.",
+  alternates: { canonical: "/mentions-legales" },
+  robots: { index: false, follow: true },
+};
 
 export default function MentionsLegalesPage() {
   return (
