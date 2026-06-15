@@ -1,7 +1,7 @@
 // Centralised site/brand constants used for SEO metadata and structured data.
 // Keep these in sync with the values displayed in the UI (Footer, Hero…).
 
-export const SITE_URL = "https://mathsquads.com";
+export const SITE_URL = "https://www.mathsquads.com";
 
 export const site = {
   name: "MathSquads",
