@@ -13,8 +13,8 @@ const navLinks = [
 const resourceLinks = [
   { href: "/tarifs#booking", label: "Réserver un cours" },
   { href: "/tarifs", label: "1ère heure gratuite" },
-  { href: "/tarifs", label: "Cours maths Lyon" },
-  { href: "/tarifs", label: "Cours maths visio" },
+  { href: "/cours-maths-en-ligne-lyon", label: "Cours de maths en ligne à Lyon" },
+  { href: "/cours-maths-en-ligne-lyon", label: "Cours de maths en visio" },
   { href: "/cpge-postbac", label: "Cours maths CPGE" },
   { href: "/college-lycee", label: "Cours maths Lycée" },
   { href: "/college-lycee", label: "Cours maths Collège" },

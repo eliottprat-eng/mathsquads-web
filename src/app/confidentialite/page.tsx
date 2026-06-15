@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
+
+export const metadata: Metadata = {
+  title: "Politique de confidentialité",
+  description: "Politique de confidentialité et gestion des données personnelles sur MathSquads.",
+  alternates: { canonical: "/confidentialite" },
+  robots: { index: false, follow: true },
+};
 
 export default function ConfidentialitePage() {
   return (

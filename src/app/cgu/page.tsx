@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import FloatingMathSymbols from "@/components/ui/FloatingMathSymbols";
+
+export const metadata: Metadata = {
+  title: "Conditions Générales d'Utilisation",
+  description: "Conditions Générales d'Utilisation du site MathSquads.",
+  alternates: { canonical: "/cgu" },
+  robots: { index: false, follow: true },
+};
 
 export default function CGUPage() {
   return (
