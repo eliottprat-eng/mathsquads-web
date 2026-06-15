@@ -9,6 +9,7 @@ export function organizationSchema() {
     "@type": "EducationalOrganization",
     "@id": ORG_ID,
     name: site.name,
+    alternateName: site.alternateNames,
     url: site.url,
     logo: site.logo,
     email: site.email,

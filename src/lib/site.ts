@@ -5,6 +5,18 @@ export const SITE_URL = "https://www.mathsquads.com";
 
 export const site = {
   name: "MathSquads",
+  // Orthographes alternatives courantes (fautes de frappe / variantes) signalées
+  // à Google via le champ alternateName du JSON-LD de l'organisation.
+  alternateNames: [
+    "MathSquad",
+    "Math Squads",
+    "Math Squad",
+    "Maths Squads",
+    "Maths Squad",
+    "Mathsquad",
+    "Mathsquads",
+    "Math Squad Lyon",
+  ],
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo-emlyon.svg`,
   email: "lamathsquad@gmail.com",
