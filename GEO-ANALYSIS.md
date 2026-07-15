@@ -55,4 +55,4 @@ Pas de Wikipedia, Reddit, YouTube détectable. Les mentions de marque corrèlent
 | 5 | Règles robots explicites pour GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot | Moyen | Oui |
 | 6 | Sourcer ou reformuler les stats de ConstatSection | Moyen | Oui |
 | 7 | llms.txt | Faible (défensif) | Oui |
-| 8 | Créer une présence Reddit (r/prepa, r/lyon), YouTube, page LinkedIn société | Fort | Non — action manuelle Marin/Eliott |
+| 8 | Créer une présence Reddit (r/prepa, r/lyon), YouTube, page LinkedIn société | Fort | Non — action manuelle Eliott/Marin |

@@ -153,7 +153,7 @@ export default function DevenirProfPage() {
                   <span className="font-semibold text-ink text-sm">Notre équipe actuelle</span>
                 </div>
                 <p className="text-xs text-ink/55">
-                  Marin Delzoppo et Eliott Prat, emlyon business school (Top 5 FR),
+                  Eliott Prat et Marin Delzoppo, emlyon business school (Top 5 FR),
                   475+ cours donnés, 5/5 de satisfaction.
                 </p>
               </div>

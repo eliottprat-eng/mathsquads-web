@@ -12,7 +12,7 @@ const sections = [
   {
     title: "1. Qui est responsable de vos données ?",
     body: [
-      `Le site ${site.url} est édité par MathSquads, représenté par ses cofondateurs Marin Delzoppo et Eliott Prat. Pour toute question relative à vos données personnelles : ${site.email} ou ${site.phoneDisplay}.`,
+      `Le site ${site.url} est édité par MathSquads, représenté par ses cofondateurs Eliott Prat et Marin Delzoppo. Pour toute question relative à vos données personnelles : ${site.email} ou ${site.phoneDisplay}.`,
     ],
   },
   {
