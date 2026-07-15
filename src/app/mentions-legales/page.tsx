@@ -12,8 +12,8 @@ const sections = [
   {
     title: "Éditeur du site",
     body: [
-      `Le site ${site.url} est édité par MathSquads, représenté par ses cofondateurs Marin Delzoppo et Eliott Prat.`,
-      `Directeurs de la publication : Marin Delzoppo et Eliott Prat. Contact : ${site.email} ou ${site.phoneDisplay}.`,
+      `Le site ${site.url} est édité par MathSquads, représenté par ses cofondateurs Eliott Prat et Marin Delzoppo.`,
+      `Directeurs de la publication : Eliott Prat et Marin Delzoppo. Contact : ${site.email} ou ${site.phoneDisplay}.`,
     ],
   },
   {

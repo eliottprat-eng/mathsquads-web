@@ -4,8 +4,8 @@ import { site, absoluteUrl } from "./site";
 const ORG_ID = `${site.url}/#organization`;
 
 const founders = [
-  { name: "Marin Delzoppo", id: `${site.url}/#marin-delzoppo` },
   { name: "Eliott Prat", id: `${site.url}/#eliott-prat` },
+  { name: "Marin Delzoppo", id: `${site.url}/#marin-delzoppo` },
 ];
 
 export function organizationSchema() {

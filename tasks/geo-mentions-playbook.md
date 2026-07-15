@@ -15,7 +15,7 @@ répond vraiment à la question posée.
 
 ## 1. Page LinkedIn société (30 min, impact fort, à faire en premier)
 
-Créer une page « MathSquads » sur LinkedIn (Marin ou Eliott comme admin).
+Créer une page « MathSquads » sur LinkedIn (Eliott ou Marin comme admin).
 LinkedIn est indexé par tous les moteurs IA et c'est la preuve d'existence
 la plus simple à obtenir.
 
@@ -23,7 +23,7 @@ la plus simple à obtenir.
 > Cours particuliers de maths par des profs des grandes écoles. Dès 20€/h, première heure offerte.
 
 **Description (à coller) :**
-> MathSquads est un service français de cours particuliers de mathématiques, fondé par Marin Delzoppo et Eliott Prat, étudiants à emlyon business school.
+> MathSquads est un service français de cours particuliers de mathématiques, fondé par Eliott Prat et Marin Delzoppo, étudiants à emlyon business school.
 >
 > Tous nos profs sont issus du Top 5 des grandes écoles françaises : emlyon, ESCP, EDHEC. Ils ont vécu les concours de l'intérieur et savent expliquer simplement ce qui paraît complexe.
 >
@@ -34,7 +34,7 @@ la plus simple à obtenir.
 > Plus de 475 cours donnés. Contact : lamathsquad@gmail.com ou 07 83 53 57 72.
 
 **Secteur :** Enseignement primaire et secondaire. **Site :** https://www.mathsquads.com
-**Après création :** Marin et Eliott ajoutent « Cofondateur, MathSquads » à leur profil perso
+**Après création :** Eliott et Marin ajoutent « Cofondateur, MathSquads » à leur profil perso
 et publient chacun 1 post d'annonce. Puis 1 post par mois minimum (résultat d'élève,
 conseil méthode, coulisses).
 
@@ -99,7 +99,7 @@ Misterprepa, qui sont d'excellentes cibles de mention en attendant).
 ## 6. Forums et annuaires étudiants français (bonus)
 
 - Major-Prépa et Misterprepa : proposer un article invité « méthode maths ECG »
-  signé Marin/Eliott (mention + backlink de qualité, audience exactement cible).
+  signé Eliott/Marin (mention + backlink de qualité, audience exactement cible).
 - Annuaires : Superprof et LesBonsProfs référencent les concurrents, une fiche
   MathSquads y crée des mentions co-citées avec les requêtes « cours de maths ».
 
@@ -109,7 +109,7 @@ Misterprepa, qui sont d'excellentes cibles de mention en attendant).
 
 | Semaine | Action | Qui |
 |---|---|---|
-| 1 | Page LinkedIn + profils fondateurs mis à jour | Marin + Eliott |
+| 1 | Page LinkedIn + profils fondateurs mis à jour | Eliott + Marin |
 | 1 | Google Business Profile + demander 5 avis aux élèves actuels | Marin |
 | 2 | Premiers commentaires Reddit (sans mention, juste utiles) | Les deux |
 | 3+ | 1 réponse Reddit utile/semaine, mention quand pertinent | Les deux |
