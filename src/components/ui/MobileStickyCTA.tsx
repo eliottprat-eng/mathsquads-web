@@ -33,7 +33,7 @@ export default function MobileStickyCTA() {
               <ArrowRight size={16} />
             </Link>
             <a
-              href="tel:0783535772"
+              href="tel:0664195752"
               aria-label="Appeler MathSquads"
               className="flex items-center justify-center w-12 h-12 rounded-xl border border-ink/15 text-ink flex-shrink-0"
             >

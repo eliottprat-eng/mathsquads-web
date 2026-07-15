@@ -130,6 +130,7 @@ export default function BookingForm() {
                   <AlertCircle size={17} className="text-coral flex-shrink-0 mt-0.5" />
                   <span>
                     L&apos;envoi a échoué. Réessaie, ou contacte-nous directement au{" "}
+                    <a href="tel:0664195752" className="font-semibold text-coral-dark">06 64 19 57 52</a> ou{" "}
                     <a href="tel:0783535772" className="font-semibold text-coral-dark">07 83 53 57 72</a> ou sur{" "}
                     <a href="mailto:lamathsquad@gmail.com" className="font-semibold text-coral-dark">lamathsquad@gmail.com</a>.
                   </span>
@@ -153,6 +154,7 @@ export default function BookingForm() {
 
               <p className="text-center text-xs text-ink/40 mt-4">
                 Gratuit · Sans engagement · Tu préfères parler à quelqu&apos;un ?{" "}
+                <a href="tel:0664195752" className="text-coral-dark font-medium">06 64 19 57 52</a> ou{" "}
                 <a href="tel:0783535772" className="text-coral-dark font-medium">07 83 53 57 72</a>
               </p>
               <p className="text-center text-xs text-ink/40 mt-2">
