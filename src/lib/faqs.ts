@@ -65,7 +65,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Comment réserver un cours ?",
-    a: "Utilise le formulaire sur la page Tarifs, ou contacte-nous directement par email (lamathsquad@gmail.com) ou téléphone (07 83 53 57 72). On te répond sous 24h.",
+    a: "Utilise le formulaire sur la page Tarifs, ou contacte-nous directement par email (lamathsquad@gmail.com) ou téléphone (06 64 19 57 52 ou 07 83 53 57 72). On te répond sous 24h.",
   },
   {
     q: "Les cours sont-ils remboursés si je ne suis pas satisfait ?",

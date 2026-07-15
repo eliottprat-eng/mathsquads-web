@@ -79,6 +79,10 @@ export default function CTASection() {
               </p>
               <p className="text-white/80 text-sm font-medium mt-3">
                 Vous préférez en parler de vive voix ?{" "}
+                <a href="tel:0664195752" className="text-white font-bold underline underline-offset-4 hover:text-white/90">
+                  06 64 19 57 52
+                </a>{" "}
+                ou{" "}
                 <a href="tel:0783535772" className="text-white font-bold underline underline-offset-4 hover:text-white/90">
                   07 83 53 57 72
                 </a>
