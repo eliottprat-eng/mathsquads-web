@@ -3,6 +3,7 @@ import JsonLd from "@/components/JsonLd";
 import { homeFaqs } from "@/lib/faqs";
 import { faqSchema } from "@/lib/structured-data";
 import Hero from "@/components/hero/Hero";
+import DefinitionSection from "@/components/sections/DefinitionSection";
 import WhySection from "@/components/sections/WhySection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import PresenceSection from "@/components/sections/PresenceSection";
@@ -13,6 +14,7 @@ import SchoolLogosSection from "@/components/sections/SchoolLogosSection";
 import ForWhoSection from "@/components/sections/ForWhoSection";
 import PricingHomepageSection from "@/components/sections/PricingHomepageSection";
 import FAQSection from "@/components/sections/FAQSection";
+import MobileStickyCTA from "@/components/ui/MobileStickyCTA";
 
 export const metadata: Metadata = {
   title: {
@@ -36,6 +38,9 @@ export default function HomePage() {
 
       {/* Hero */}
       <Hero />
+
+      {/* Bloc définition citable (GEO) */}
+      <DefinitionSection />
 
       {/* 01 — Le constat */}
       <ConstatSection />
@@ -66,6 +71,9 @@ export default function HomePage() {
 
       {/* 07 — Rejoins-nous */}
       <CTASection />
+
+      {/* CTA sticky mobile */}
+      <MobileStickyCTA />
     </>
   );
 }

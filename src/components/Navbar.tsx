@@ -45,17 +45,17 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? "glass-nav shadow-2xl" : "bg-transparent"
+          scrolled ? "bg-cream/90 backdrop-blur-md shadow-soft border-b border-ink/6" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-electric to-electric-dark flex items-center justify-center shadow-glow">
+              <div className="w-9 h-9 rounded-xl bg-coral flex items-center justify-center">
                 <span className="text-white font-display font-bold text-sm">M²</span>
               </div>
-              <span className="font-display font-bold text-xl text-white group-hover:text-gradient transition-all duration-300">
+              <span className="font-display font-bold text-xl text-ink">
                 MathSquads
               </span>
             </Link>
@@ -69,8 +69,8 @@ export default function Navbar() {
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         link.children.some((c) => c.href === pathname)
-                          ? "text-electric bg-electric/10"
-                          : "text-slate-300 hover:text-white hover:bg-white/5"
+                          ? "text-coral bg-coral/8"
+                          : "text-ink/70 hover:text-ink hover:bg-ink/5"
                       }`}
                     >
                       {link.label}
@@ -86,12 +86,7 @@ export default function Navbar() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -8 }}
                           transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                          className="absolute top-full left-0 mt-2 w-60 rounded-xl overflow-hidden shadow-premium"
-                          style={{
-                            background: "#0F172A",
-                            border: "1px solid rgba(91,130,246,0.3)",
-                            borderRadius: "8px",
-                          }}
+                          className="absolute top-full left-0 mt-2 w-60 rounded-xl overflow-hidden bg-white border border-ink/8 shadow-card"
                         >
                           {link.children.map((child) => {
                             const Icon = child.icon;
@@ -101,16 +96,16 @@ export default function Navbar() {
                                 href={child.href}
                                 className={`flex items-center gap-3 px-4 py-3 transition-colors duration-150 ${
                                   pathname === child.href
-                                    ? "text-electric bg-electric/10"
-                                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                                    ? "text-coral bg-coral/8"
+                                    : "text-ink/70 hover:text-ink hover:bg-ink/5"
                                 }`}
                               >
-                                <div className="w-7 h-7 rounded-lg bg-electric/10 flex items-center justify-center flex-shrink-0">
-                                  <Icon size={14} className="text-electric" />
+                                <div className="w-7 h-7 rounded-lg bg-coral/10 flex items-center justify-center flex-shrink-0">
+                                  <Icon size={14} className="text-coral" />
                                 </div>
                                 <div>
                                   <div className="text-sm font-semibold">{child.label}</div>
-                                  <div className="text-xs text-slate-500">{child.sub}</div>
+                                  <div className="text-xs text-ink/40">{child.sub}</div>
                                 </div>
                               </Link>
                             );
@@ -125,8 +120,8 @@ export default function Navbar() {
                     href={link.href!}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       pathname === link.href
-                        ? "text-electric bg-electric/10"
-                        : "text-slate-300 hover:text-white hover:bg-white/5"
+                        ? "text-coral bg-coral/8"
+                        : "text-ink/70 hover:text-ink hover:bg-ink/5"
                     }`}
                   >
                     {link.label}
@@ -137,10 +132,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="/tarifs"
-                className="btn-primary text-sm"
-              >
+              <Link href="/tarifs" className="btn-primary text-sm">
                 1ère heure gratuite
               </Link>
             </div>
@@ -148,7 +140,7 @@ export default function Navbar() {
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-colors"
+              className="lg:hidden p-2 rounded-lg text-ink/70 hover:text-ink hover:bg-ink/5 transition-colors"
               aria-label="Menu"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -168,7 +160,7 @@ export default function Navbar() {
             className="fixed inset-0 z-40 lg:hidden"
           >
             <div
-              className="absolute inset-0 bg-navy-900/90 backdrop-blur-xl"
+              className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
@@ -176,13 +168,13 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute right-0 top-0 bottom-0 w-80 glass-nav flex flex-col pt-20 px-6"
+              className="absolute right-0 top-0 bottom-0 w-80 bg-cream flex flex-col pt-20 px-6"
             >
               <nav className="flex flex-col gap-2">
                 {links.map((link) =>
                   link.children ? (
                     <div key={link.label}>
-                      <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                      <div className="px-4 py-2 text-xs font-medium text-ink/40">
                         {link.label}
                       </div>
                       {link.children.map((child) => (
@@ -191,8 +183,8 @@ export default function Navbar() {
                           href={child.href}
                           className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                             pathname === child.href
-                              ? "text-electric bg-electric/10"
-                              : "text-slate-300 hover:text-white hover:bg-white/5"
+                              ? "text-coral bg-coral/8"
+                              : "text-ink/70 hover:text-ink hover:bg-ink/5"
                           }`}
                         >
                           {child.label}
@@ -205,8 +197,8 @@ export default function Navbar() {
                       href={link.href!}
                       className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                         pathname === link.href
-                          ? "text-electric bg-electric/10"
-                          : "text-slate-300 hover:text-white hover:bg-white/5"
+                          ? "text-coral bg-coral/8"
+                          : "text-ink/70 hover:text-ink hover:bg-ink/5"
                       }`}
                     >
                       {link.label}
@@ -215,7 +207,7 @@ export default function Navbar() {
                 )}
               </nav>
               <div className="mt-6">
-                <Link href="/tarifs" className="btn-gold w-full justify-center text-center">
+                <Link href="/tarifs" className="btn-primary w-full text-center">
                   1ère heure gratuite
                 </Link>
               </div>

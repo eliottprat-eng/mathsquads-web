@@ -25,37 +25,34 @@ export default function BeforeAfterSection() {
   return (
     <section ref={ref} className="relative py-12 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl overflow-hidden shadow-premium">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-3xl overflow-hidden shadow-card">
           {/* AVANT */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="p-8 sm:p-10 flex flex-col gap-6"
-            style={{ background: "#1E293B" }}
+            className="p-8 sm:p-10 flex flex-col gap-6 bg-white"
           >
-            <div className="text-xs font-mono uppercase tracking-[0.2em] text-red-400">
+            <div className="text-xs font-semibold text-ink/40">
               Avant MathSquads
             </div>
             <ul className="flex flex-col gap-3">
               {beforeItems.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <X size={11} className="text-red-400" />
+                  <div className="w-5 h-5 rounded-full bg-coral/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <X size={11} className="text-coral-dark" />
                   </div>
-                  <span className="text-slate-400 text-sm leading-relaxed">{item}</span>
+                  <span className="text-ink/60 text-sm leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
-            <blockquote className="border-l-2 border-red-500/30 pl-4 mt-auto">
-              <div className="flex gap-1 mb-2">
-                <Quote size={14} className="text-red-400/40" />
-              </div>
-              <p className="text-slate-400 italic text-sm leading-relaxed">
+            <blockquote className="border-l-2 border-coral/25 pl-4 mt-auto">
+              <Quote size={14} className="text-ink/20 mb-2" />
+              <p className="text-ink/60 italic text-sm leading-relaxed">
                 Je passais d&apos;un prof à l&apos;autre, rien ne marchait. J&apos;étais découragé.
               </p>
-              <cite className="text-xs text-slate-600 mt-2 block not-italic">
-                — Thomas R., Terminale S
+              <cite className="text-xs text-ink/35 mt-2 block not-italic">
+                Thomas R., Terminale S
               </cite>
             </blockquote>
           </motion.div>
@@ -65,31 +62,28 @@ export default function BeforeAfterSection() {
             initial={{ opacity: 0, x: 60 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="p-8 sm:p-10 flex flex-col gap-6"
-            style={{ background: "#1E3A5F" }}
+            className="p-8 sm:p-10 flex flex-col gap-6 bg-ink text-white"
           >
-            <div className="text-xs font-mono uppercase tracking-[0.2em] text-green-400">
+            <div className="text-xs font-semibold text-sage-light">
               Après MathSquads
             </div>
             <ul className="flex flex-col gap-3">
               {afterItems.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check size={11} className="text-green-400" />
+                  <div className="w-5 h-5 rounded-full bg-sage/25 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check size={11} className="text-sage-light" />
                   </div>
-                  <span className="text-slate-200 text-sm leading-relaxed">{item}</span>
+                  <span className="text-white/80 text-sm leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
-            <blockquote className="border-l-2 border-green-500/30 pl-4 mt-auto">
-              <div className="flex gap-1 mb-2">
-                <Quote size={14} className="text-green-400/40" />
-              </div>
-              <p className="text-slate-200 italic text-sm leading-relaxed">
+            <blockquote className="border-l-2 border-sage/40 pl-4 mt-auto">
+              <Quote size={14} className="text-sage-light/50 mb-2" />
+              <p className="text-white/85 italic text-sm leading-relaxed">
                 En 3 séances avec Marin j&apos;avais tout compris. 17/20 au bac.
               </p>
-              <cite className="text-xs text-slate-400 mt-2 block not-italic">
-                — Emma L., Collégienne
+              <cite className="text-xs text-white/45 mt-2 block not-italic">
+                Emma L., Collégienne
               </cite>
             </blockquote>
           </motion.div>

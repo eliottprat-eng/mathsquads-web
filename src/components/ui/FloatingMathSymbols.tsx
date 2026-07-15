@@ -17,7 +17,7 @@ interface Props {
   opacity?: number;
 }
 
-export default function FloatingMathSymbols({ opacity = 0.07 }: Props) {
+export default function FloatingMathSymbols({ opacity = 0.05 }: Props) {
   return (
     <>
       {SYMBOLS.map((s, i) => (
@@ -28,7 +28,7 @@ export default function FloatingMathSymbols({ opacity = 0.07 }: Props) {
             top: s.top,
             left: s.left,
             fontSize: s.size,
-            color: "#3B82F6",
+            color: "#1B2A44",
             opacity,
           }}
           animate={{ y: s.y, x: s.x, rotate: s.rotate }}

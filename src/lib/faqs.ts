@@ -37,7 +37,7 @@ export const lyonFaqs: Faq[] = [
 export const homeFaqs: Faq[] = [
   {
     q: "Comment se déroule la 1ère heure gratuite ?",
-    a: "Tu nous contactes via le formulaire ou directement par téléphone. On te met en relation avec le prof le plus adapté à ton niveau et tes objectifs. La première séance est 100% offerte — si tu n'es pas satisfait, tu ne paies rien et tu n'as aucune obligation de continuer.",
+    a: "Tu nous contactes via le formulaire ou directement par téléphone. On te met en relation avec le prof le plus adapté à ton niveau et tes objectifs. La première séance est 100% offerte : si tu n'es pas satisfait, tu ne paies rien et tu n'as aucune obligation de continuer.",
   },
   {
     q: "Quelle est la différence avec Superprof ou Acadomia ?",
@@ -65,7 +65,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Comment réserver un cours ?",
-    a: "Utilise le formulaire sur la page Tarifs, ou contacte-nous directement par email (lamathsquad@gmail.com) ou téléphone (06 64 19 57 52). On te répond sous 24h.",
+    a: "Utilise le formulaire sur la page Tarifs, ou contacte-nous directement par email (lamathsquad@gmail.com) ou téléphone (07 83 53 57 72). On te répond sous 24h.",
   },
   {
     q: "Les cours sont-ils remboursés si je ne suis pas satisfait ?",

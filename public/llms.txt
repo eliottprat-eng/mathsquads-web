@@ -1,0 +1,31 @@
+# MathSquads
+
+> Cours particuliers de mathématiques assurés par des profs issus du Top 5 des
+> grandes écoles françaises (emlyon, ESCP, EDHEC). En visioconférence partout en
+> France, en présentiel à Lyon, Lille et Paris. Tarifs de 20€ à 35€ de l'heure
+> selon le niveau, première heure offerte, sans abonnement.
+
+## Pages principales
+
+- [Accueil](https://www.mathsquads.com/): présentation du service, méthode, témoignages, tarifs et FAQ
+- [Cours de maths en ligne à Lyon](https://www.mathsquads.com/cours-maths-en-ligne-lyon): guide complet des cours en visio et en présentiel à Lyon
+- [Collège & Lycée](https://www.mathsquads.com/college-lycee): programmes couverts de la 6ème à la Terminale, préparation Brevet et Bac
+- [CPGE & Post-Bac](https://www.mathsquads.com/cpge-postbac): préparation aux concours pour prépas MPSI, PCSI, ECG, Licence, BUT et BTS
+- [Nos profs](https://www.mathsquads.com/profs): profils des professeurs, écoles d'origine et villes d'intervention
+- [Tarifs](https://www.mathsquads.com/tarifs): grille tarifaire complète et formulaire de réservation
+
+## Faits clés
+
+- Fondé par Marin Delzoppo et Eliott Prat, étudiants à emlyon business school
+- Tous les profs sont issus des grandes écoles : emlyon, ESCP, EDHEC
+- Tarifs : dès 20€/h (collège et lycée en visio), jusqu'à 35€/h (post-bac présentiel Paris)
+- Première heure de cours offerte, satisfait ou remboursé, sans abonnement
+- Cours en visio avec tableau blanc interactif partagé, partout en France
+- Cours en présentiel à Lyon, Lille et Paris
+- Niveaux couverts : collège, lycée, CPGE (MPSI, PCSI, ECG...), Licence, BUT, BTS
+- Plus de 475 cours donnés
+
+## Contact
+
+- Email : lamathsquad@gmail.com
+- Téléphone : 07 83 53 57 72

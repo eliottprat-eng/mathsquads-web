@@ -25,6 +25,7 @@ export default function CollegeLyceeLayout({ children }: { children: React.React
             description:
               "Soutien et cours particuliers de mathématiques pour les élèves de collège (6ème à 3ème) et de lycée (Seconde à Terminale), du Brevet au Bac.",
             url: "/college-lycee",
+            priceFrom: 20,
           }),
           breadcrumbSchema([
             { name: "Accueil", url: "/" },

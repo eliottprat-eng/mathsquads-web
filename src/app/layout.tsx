@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL, site } from "@/lib/site";
-import { organizationSchema, websiteSchema } from "@/lib/structured-data";
+import { organizationSchema, websiteSchema, foundersSchema } from "@/lib/structured-data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,11 +13,12 @@ const inter = Inter({
   display: "swap",
 });
 
-const syne = Syne({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-fraunces",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "600", "700", "900"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -54,9 +55,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${syne.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="antialiased">
-        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <JsonLd data={[organizationSchema(), websiteSchema(), ...foundersSchema()]} />
         <Navbar />
         <main>{children}</main>
         <Footer />

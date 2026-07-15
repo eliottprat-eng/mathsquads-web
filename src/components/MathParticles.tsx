@@ -26,8 +26,8 @@ export default function MathParticles() {
             left: p.x,
             top: p.y,
             fontSize: p.size,
-            color: i % 3 === 0 ? "rgba(91, 141, 239, 0.25)" : i % 3 === 1 ? "rgba(255, 187, 10, 0.2)" : "rgba(255,255,255,0.1)",
-            fontFamily: "var(--font-syne)",
+            color: i % 3 === 0 ? "rgba(27, 42, 68, 0.1)" : i % 3 === 1 ? "rgba(225, 97, 62, 0.14)" : "rgba(27, 42, 68, 0.06)",
+            fontFamily: "var(--font-fraunces)",
             fontWeight: 700,
           }}
           animate={{

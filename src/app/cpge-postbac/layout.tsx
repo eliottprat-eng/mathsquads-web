@@ -25,6 +25,7 @@ export default function CpgePostbacLayout({ children }: { children: React.ReactN
             description:
               "Préparation et cours particuliers de mathématiques pour les classes préparatoires (MPSI, MP, PCSI, PSI, ECG…) et les études post-bac, orientés concours.",
             url: "/cpge-postbac",
+            priceFrom: 25,
           }),
           breadcrumbSchema([
             { name: "Accueil", url: "/" },

@@ -23,18 +23,16 @@ function FAQItem({
   return (
     <div
       className={`rounded-xl border transition-all duration-300 overflow-hidden ${
-        isOpen
-          ? "border-electric/40 bg-electric/5"
-          : "border-white/6 bg-white/2 hover:border-white/10"
+        isOpen ? "border-coral/30 bg-coral/5" : "border-ink/8 bg-white hover:border-ink/15"
       }`}
-      style={isOpen ? { borderLeft: "3px solid #5B8DEF" } : {}}
+      style={isOpen ? { borderLeft: "3px solid #E1613E" } : {}}
     >
       <button
         className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left cursor-pointer"
         onClick={() => onToggle(index)}
         aria-expanded={isOpen}
       >
-        <span className={`text-sm font-semibold leading-snug transition-colors ${isOpen ? "text-white" : "text-slate-300"}`}>
+        <span className={`text-sm font-semibold leading-snug transition-colors ${isOpen ? "text-ink" : "text-ink/70"}`}>
           {faq.q}
         </span>
         <motion.div
@@ -42,7 +40,7 @@ function FAQItem({
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className="flex-shrink-0"
         >
-          <Plus size={18} className={isOpen ? "text-electric" : "text-slate-500"} />
+          <Plus size={18} className={isOpen ? "text-coral" : "text-ink/35"} />
         </motion.div>
       </button>
 
@@ -56,7 +54,7 @@ function FAQItem({
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="px-5 pb-5">
-              <p className="text-slate-400 text-sm leading-relaxed">{faq.a}</p>
+              <p className="text-ink/60 text-sm leading-relaxed">{faq.a}</p>
             </div>
           </motion.div>
         )}
@@ -75,20 +73,11 @@ export default function FAQSection() {
 
   return (
     <section id="faq" className="relative py-24 overflow-hidden">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 60% 40%, rgba(91,141,239,0.05) 0%, transparent 50%)",
-        }}
-      />
-
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <SectionLabel number="06" label="FAQ" />
-          <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-white">
-            Questions{" "}
-            <span className="text-gradient">fréquentes</span>
+          <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink">
+            Questions <span className="italic text-coral">fréquentes</span>
           </h2>
         </ScrollReveal>
 

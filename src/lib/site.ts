@@ -8,8 +8,8 @@ export const site = {
   url: SITE_URL,
   logo: `${SITE_URL}/images/logo-emlyon.svg`,
   email: "lamathsquad@gmail.com",
-  phone: "+33664195752",
-  phoneDisplay: "06 64 19 57 52",
+  phone: "+33783535772",
+  phoneDisplay: "07 83 53 57 72",
   // Zones couvertes (présentiel + visio partout en France)
   areaServed: ["Lyon", "Lille", "Paris", "France"],
   priceFrom: 20,

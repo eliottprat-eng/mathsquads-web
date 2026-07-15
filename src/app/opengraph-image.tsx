@@ -17,9 +17,8 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background:
-            "radial-gradient(circle at 15% 60%, rgba(91,141,239,0.25) 0%, transparent 45%), radial-gradient(circle at 85% 25%, rgba(255,187,10,0.18) 0%, transparent 40%), #0F172A",
-          color: "white",
+          background: "#FBF7F0",
+          color: "#1B2A44",
           fontFamily: "sans-serif",
         }}
       >
@@ -29,22 +28,23 @@ export default function OpenGraphImage() {
               width: 72,
               height: 72,
               borderRadius: 20,
-              background: "linear-gradient(135deg, #5B8DEF, #3B72E0)",
+              background: "#E1613E",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontSize: 36,
               fontWeight: 800,
+              color: "white",
             }}
           >
             M²
           </div>
           <div style={{ fontSize: 40, fontWeight: 700 }}>MathSquads</div>
         </div>
-        <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1, maxWidth: 900 }}>
+        <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.1, maxWidth: 900 }}>
           Cours particuliers de maths dès 20€/h
         </div>
-        <div style={{ fontSize: 34, color: "#94A3B8", marginTop: 28 }}>
+        <div style={{ fontSize: 34, color: "#5A6B85", marginTop: 28 }}>
           Profs des grandes écoles · Lyon, Paris &amp; en ligne · 1ère heure offerte
         </div>
       </div>

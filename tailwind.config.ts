@@ -9,53 +9,47 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: "#101E36",
-          900: "#101E36",
-          800: "#1A2D4E",
-          700: "#243C66",
-          600: "#2E4B7E",
+        cream: {
+          DEFAULT: "#FBF7F0",
+          soft: "#F4EEE2",
         },
-        electric: {
-          DEFAULT: "#5B8DEF",
-          dark: "#3B72E0",
-          light: "#82AEFF",
-          50: "#EEF4FF",
+        ink: {
+          DEFAULT: "#1B2A44",
+          900: "#141F33",
+          800: "#1B2A44",
+          700: "#28395A",
+          600: "#3B4F78",
+        },
+        coral: {
+          DEFAULT: "#E1613E",
+          dark: "#C24A2A",
+          light: "#F2A484",
+          50: "#FDF0EB",
         },
         gold: {
-          DEFAULT: "#FFBB0A",
-          light: "#FFD147",
-          dark: "#E09F00",
+          DEFAULT: "#C99A3E",
+          light: "#E0BA6C",
+          dark: "#A97D28",
+        },
+        sage: {
+          DEFAULT: "#4F7A5E",
+          light: "#7BA187",
+          50: "#EDF3EE",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        display: ["var(--font-syne)", "sans-serif"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, #101E36 0%, #1A2D4E 50%, #101E36 100%)",
+        display: ["var(--font-fraunces)", "serif"],
       },
       boxShadow: {
-        glow: "0 0 40px rgba(91, 141, 239, 0.35)",
-        "glow-gold": "0 0 40px rgba(255, 187, 10, 0.35)",
-        premium: "0 25px 50px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.06)",
-        glass: "0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.08)",
+        soft: "0 2px 10px rgba(27, 42, 68, 0.06)",
+        card: "0 4px 20px rgba(27, 42, 68, 0.08)",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
           "33%": { transform: "translateY(-15px) rotate(3deg)" },
           "66%": { transform: "translateY(-8px) rotate(-2deg)" },
-        },
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
-        pulse_slow: {
-          "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "1" },
         },
       },
       animation: {
@@ -65,8 +59,6 @@ const config: Config = {
         "float-delay-3": "float 10s ease-in-out 3s infinite",
         "float-delay-4": "float 6s ease-in-out 4s infinite",
         "float-delay-5": "float 11s ease-in-out 1.5s infinite",
-        shimmer: "shimmer 3s linear infinite",
-        pulse_slow: "pulse_slow 3s ease-in-out infinite",
       },
     },
   },
