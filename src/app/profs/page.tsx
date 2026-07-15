@@ -27,7 +27,7 @@ const cities = [
         name: "Eliott Prat",
         school: "emlyon business school",
         role: "CEO & Fondateur",
-        coursesCount: 158,
+        coursesCount: 296,
         rating: 5,
         satisfaction: "96%",
         bio: "Avec moi, chaque concept est abordé avec précision, chaque raisonnement s'appuie sur des démonstrations solides. Mon objectif : t'armer pour exceller dans les concours les plus exigeants.",
