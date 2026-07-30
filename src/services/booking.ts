@@ -1,12 +1,20 @@
 // Envoi des demandes du site (réservation élève et candidature prof) vers la
-// boîte mail MathSquads. Le POST part sur notre propre route /api/contact, qui
-// relaie vers FormSubmit côté serveur et vérifie que l'envoi a réellement
-// abouti : FormSubmit répond HTTP 200 même en cas d'échec, donc un simple
-// res.ok côté navigateur laisserait passer des demandes perdues.
+// boîte mail MathSquads via FormSubmit (https://formsubmit.co), sans backend
+// ni clé API.
+//
+// Deux pièges vérifiés en conditions réelles, à ne pas réintroduire :
+//
+// 1. FormSubmit répond HTTP 200 même quand l'envoi échoue. Le seul signal
+//    fiable est le champ "success" du corps JSON. Tester uniquement res.ok
+//    affiche un faux « Demande envoyée ! » et perd la demande en silence.
+//
+// 2. L'appel doit partir du NAVIGATEUR du visiteur. Relayé par une route
+//    serveur, il part d'une IP Vercel que FormSubmit rejette en 403.
 
 export const CONTACT_EMAIL = "lamathsquad@gmail.com";
+export const CONTACT_PHONE_DISPLAY = "07 83 53 57 72";
 
-const CONTACT_ENDPOINT = "/api/contact";
+const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 const TIMEOUT_MS = 15_000;
 
 export interface BookingRequest {
@@ -31,16 +39,24 @@ async function sendContact(subject: string, fields: Record<string, string>): Pro
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
   try {
-    const res = await fetch(CONTACT_ENDPOINT, {
+    const res = await fetch(FORMSUBMIT_ENDPOINT, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       signal: controller.signal,
-      body: JSON.stringify({ subject, fields }),
+      body: JSON.stringify({
+        _subject: subject,
+        _template: "table",
+        _captcha: "false",
+        ...fields,
+      }),
     });
 
-    if (!res.ok) {
-      const data = (await res.json().catch(() => null)) as { error?: string } | null;
-      throw new Error(data?.error ?? `La demande n'a pas pu être envoyée (${res.status}).`);
+    const data = (await res.json().catch(() => null)) as
+      | { success?: string; message?: string }
+      | null;
+
+    if (!res.ok || String(data?.success) !== "true") {
+      throw new Error(data?.message ?? `FormSubmit a répondu ${res.status}.`);
     }
   } finally {
     clearTimeout(timeout);
