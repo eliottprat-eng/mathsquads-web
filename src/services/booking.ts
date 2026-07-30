@@ -12,7 +12,7 @@
 //    serveur, il part d'une IP Vercel que FormSubmit rejette en 403.
 
 export const CONTACT_EMAIL = "lamathsquad@gmail.com";
-export const CONTACT_PHONE_DISPLAY = "07 83 53 57 72";
+export const CONTACT_PHONE_DISPLAY = "06 64 19 57 52";
 
 const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 const TIMEOUT_MS = 15_000;

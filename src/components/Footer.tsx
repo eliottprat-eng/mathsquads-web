@@ -48,13 +48,13 @@ export default function Footer() {
                 lamathsquad@gmail.com
               </a>
               <a
-                href="tel:0783535772"
+                href="tel:+33664195752"
                 className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors"
               >
                 <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center flex-shrink-0">
                   <Phone size={14} className="text-coral" />
                 </div>
-                07 83 53 57 72
+                06 64 19 57 52
               </a>
               <div className="flex items-center gap-3 text-sm text-white/60">
                 <div className="w-8 h-8 rounded-lg bg-white/8 flex items-center justify-center flex-shrink-0">

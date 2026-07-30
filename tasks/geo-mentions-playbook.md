@@ -31,7 +31,7 @@ la plus simple à obtenir.
 >
 > Nos tarifs vont de 20€ à 35€ de l'heure selon le niveau, sans abonnement ni frais cachés. La première heure est offerte et chaque élève est satisfait ou remboursé.
 >
-> Plus de 475 cours donnés. Contact : lamathsquad@gmail.com ou 07 83 53 57 72.
+> Plus de 475 cours donnés. Contact : lamathsquad@gmail.com ou 06 64 19 57 52.
 
 **Secteur :** Enseignement primaire et secondaire. **Site :** https://www.mathsquads.com
 **Après création :** Eliott et Marin ajoutent « Cofondateur, MathSquads » à leur profil perso
