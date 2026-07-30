@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { Users, Clock, Euro, CheckCircle, Send, Trophy, Heart } from "lucide-react";
+import { Users, Clock, Euro, CheckCircle, Send, Trophy, Heart, AlertCircle } from "lucide-react";
+import { sendTeacherApplication, CONTACT_EMAIL } from "@/services/booking";
 
 const benefits = [
   {
@@ -51,6 +52,7 @@ export default function DevenirProfPage() {
   const [form, setForm] = useState({ prenom: "", nom: "", email: "", ecole: "", niveaux: "", motivation: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -59,9 +61,15 @@ export default function DevenirProfPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setLoading(false);
-    setSubmitted(true);
+    setError(false);
+    try {
+      await sendTeacherApplication(form);
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputCls =
@@ -232,6 +240,19 @@ export default function DevenirProfPage() {
                           className={`${inputCls} resize-none`}
                         />
                       </div>
+
+                      {error && (
+                        <div className="flex items-start gap-2.5 mb-4 p-3.5 rounded-xl bg-coral/10 border border-coral/25 text-xs text-ink/75">
+                          <AlertCircle size={15} className="text-coral flex-shrink-0 mt-0.5" />
+                          <span>
+                            L&apos;envoi a échoué. Réessaie, ou envoie ta candidature directement à{" "}
+                            <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-coral-dark">
+                              {CONTACT_EMAIL}
+                            </a>
+                            .
+                          </span>
+                        </div>
+                      )}
 
                       <motion.button
                         type="submit"
