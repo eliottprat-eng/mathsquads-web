@@ -2,6 +2,20 @@
 const nextConfig = {
   async redirects() {
     return [
+      // ── Canonicalisation de l'hôte ───────────────────────────────────────
+      // Toutes les URL canoniques du site pointent vers www.mathsquads.com.
+      // Sans cette règle, si le domaine nu répond aussi en 200, Google voit
+      // deux sites identiques et dilue l'indexation. Placée en premier pour
+      // que le domaine nu soit redirigé en un seul saut.
+      // Ne se déclenche que pour l'hôte exact "mathsquads.com" : l'hôte www
+      // ne correspond pas, donc pas de boucle de redirection.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "mathsquads.com" }],
+        destination: "https://www.mathsquads.com/:path*",
+        permanent: true,
+      },
+
       // ── Accueil ──────────────────────────────────────────────────────────
       { source: "/home",        destination: "/", permanent: true },
       { source: "/accueil",     destination: "/", permanent: true },
