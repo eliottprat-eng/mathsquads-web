@@ -3,7 +3,7 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Devenir prof de maths",
+  title: "Devenir prof de maths : rejoignez notre équipe",
   description:
     "Rejoignez MathSquads pour donner des cours particuliers de maths en visio ou à Lyon. Rémunération attractive, flexibilité totale. Envoyez votre candidature.",
   alternates: { canonical: "/devenir-prof" },
@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description:
       "Donnez des cours particuliers de maths en visio ou à Lyon. Rémunération attractive, flexibilité totale. Envoyez votre candidature.",
     url: "/devenir-prof",
+  },
+  twitter: {
+    title: "Devenir prof de maths chez MathSquads",
+    description:
+      "Donnez des cours particuliers de maths en visio ou à Lyon. Rémunération attractive, flexibilité totale. Envoyez votre candidature.",
   },
 };
 

@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
-  description: "Politique de confidentialité et gestion des données personnelles sur MathSquads.",
+  description:
+    "Politique de confidentialité de MathSquads : les données collectées via le formulaire de réservation, leur usage, leur durée de conservation et vos droits.",
   alternates: { canonical: "/confidentialite" },
   robots: { index: false, follow: true },
 };

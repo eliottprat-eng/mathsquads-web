@@ -12,7 +12,7 @@ const DATE_MODIFIED = "2026-07-13";
 const DATE_MODIFIED_DISPLAY = "13 juillet 2026";
 
 export const metadata: Metadata = {
-  title: "Cours de maths en ligne à Lyon dès 20€/h",
+  title: "Cours de maths en ligne à Lyon dès 20€/heure",
   description:
     "Cours de maths en ligne à Lyon : profs de grandes écoles, du collège à la prépa, en visio ou en présentiel. Dès 20€/h. Réservez votre 1ère heure offerte.",
   alternates: { canonical: PATH },
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
     description:
       "Profs de grandes écoles, du collège à la prépa, en visio ou en présentiel à Lyon. Dès 20€/h. Réservez votre 1ère heure offerte.",
     url: PATH,
+  },
+  twitter: {
+    title: "Cours de maths en ligne à Lyon dès 20€/h",
+    description:
+      "Profs de grandes écoles, du collège à la prépa, en visio ou en présentiel à Lyon. Dès 20€/h. Réservez votre 1ère heure offerte.",
   },
 };
 

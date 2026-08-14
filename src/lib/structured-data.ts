@@ -107,6 +107,59 @@ export function courseSchema(opts: {
   };
 }
 
+export type PricingGroup = {
+  /** Zone commerciale telle qu'affichée sur la page tarifs. */
+  area: string;
+  /** Zones géographiques couvertes par cette grille. */
+  areaServed: string[];
+  courseMode: "online" | "onsite";
+  tiers: { level: string; price: number }[];
+};
+
+// Grille tarifaire réelle en entités Offer, une par couple (zone × niveau).
+// Le prix est exprimé en UnitPriceSpecification horaire (unitCode HUR) : sans
+// ça, un « 20 » nu se lit comme le prix total de la prestation.
+export function pricingCatalogSchema(groups: PricingGroup[]) {
+  const offers = groups.flatMap((group) =>
+    group.tiers.map((tier) => ({
+      "@type": "Offer",
+      name: `Cours particuliers de maths ${tier.level} — ${group.area}`,
+      category:
+        group.courseMode === "online" ? "Cours en visioconférence" : "Cours en présentiel",
+      price: String(tier.price),
+      priceCurrency: site.currency,
+      availability: "https://schema.org/InStock",
+      areaServed: group.areaServed.map((name) => ({ "@type": "Place", name })),
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: String(tier.price),
+        priceCurrency: site.currency,
+        unitCode: "HUR",
+        unitText: "heure",
+      },
+      itemOffered: {
+        "@type": "Service",
+        name: `Cours particuliers de mathématiques — ${tier.level}`,
+        serviceType: "Cours particuliers de mathématiques",
+        provider: { "@id": ORG_ID },
+      },
+    })),
+  );
+
+  const prices = offers.map((offer) => Number(offer.price));
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": `${site.url}/tarifs#offers`,
+    name: "Tarifs des cours particuliers de maths MathSquads",
+    url: absoluteUrl("/tarifs"),
+    provider: { "@id": ORG_ID },
+    priceRange: `${Math.min(...prices)}€-${Math.max(...prices)}€ / heure`,
+    itemListElement: offers,
+  };
+}
+
 export function faqSchema(faqs: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

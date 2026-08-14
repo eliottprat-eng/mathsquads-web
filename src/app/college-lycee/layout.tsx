@@ -3,15 +3,20 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, courseSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Cours de maths collège et lycée",
+  title: "Cours particuliers de maths collège et lycée",
   description:
-    "Cours particuliers de maths au collège et au lycée, du Brevet au Bac. Profs de grandes écoles, en visio ou à Lyon. Réservez votre 1ère heure offerte.",
+    "Cours particuliers de maths au collège et au lycée, du Brevet au Bac. Profs issus des grandes écoles, en visio ou à Lyon. Réservez votre 1ère heure offerte.",
   alternates: { canonical: "/college-lycee" },
   openGraph: {
     title: "Cours de maths collège & lycée — du Brevet au Bac",
     description:
       "Cours particuliers de maths au collège et au lycée, du Brevet au Bac. Profs de grandes écoles, en visio ou à Lyon. 1ère heure offerte.",
     url: "/college-lycee",
+  },
+  twitter: {
+    title: "Cours de maths collège & lycée — du Brevet au Bac",
+    description:
+      "Cours particuliers de maths au collège et au lycée, du Brevet au Bac. Profs de grandes écoles, en visio ou à Lyon. 1ère heure offerte.",
   },
 };
 

@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
-  description: "Mentions légales du site MathSquads.",
+  description:
+    "Mentions légales de MathSquads : éditeur du site, directeurs de la publication, hébergeur, propriété intellectuelle et coordonnées de contact de la structure.",
   alternates: { canonical: "/mentions-legales" },
   robots: { index: false, follow: true },
 };
