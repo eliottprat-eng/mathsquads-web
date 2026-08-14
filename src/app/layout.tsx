@@ -30,7 +30,9 @@ export const metadata: Metadata = {
   description:
     "Cours particuliers de maths avec des profs issus du Top 5 des meilleures écoles de France. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
   applicationName: site.name,
-  alternates: { canonical: "/" },
+  // Pas de `alternates.canonical` ici : un canonical défini au layout racine est
+  // hérité par toute page qui n'en déclare pas, qui se déclarerait alors
+  // canonique vers "/". Chaque page porte le sien.
   openGraph: {
     type: "website",
     locale: "fr_FR",

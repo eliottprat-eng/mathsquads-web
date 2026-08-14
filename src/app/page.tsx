@@ -18,16 +18,21 @@ import MobileStickyCTA from "@/components/ui/MobileStickyCTA";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "MathSquads — Cours de maths à Lyon, Paris & en ligne",
+    absolute: "MathSquads — Cours particuliers de maths à Lyon et en ligne",
   },
   description:
-    "Cours particuliers de maths dès 20€/h avec des profs des meilleures grandes écoles. Visio partout en France, présentiel à Lyon. Réservez votre 1ère heure offerte.",
+    "Cours particuliers de maths dès 20€/h avec des profs des meilleures grandes écoles. Visio partout en France, présentiel à Lyon et Paris. 1ère heure offerte.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "MathSquads — Cours de maths à Lyon, Paris & en ligne",
+    title: "MathSquads — Cours particuliers de maths à Lyon et en ligne",
     description:
       "Cours particuliers de maths dès 20€/h avec des profs des meilleures grandes écoles. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
     url: "/",
+  },
+  twitter: {
+    title: "MathSquads — Cours particuliers de maths à Lyon et en ligne",
+    description:
+      "Cours particuliers de maths dès 20€/h avec des profs des meilleures grandes écoles. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
   },
 };
 

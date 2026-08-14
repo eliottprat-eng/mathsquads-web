@@ -3,7 +3,7 @@ import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, courseSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Cours de maths prépa CPGE & post-bac",
+  title: "Cours particuliers de maths CPGE et post-bac",
   description:
     "Cours particuliers de maths en prépa CPGE et post-bac (MPSI, PCSI, ECG…). Profs passés par les concours, en visio ou à Lyon. Réservez votre 1ère heure offerte.",
   alternates: { canonical: "/cpge-postbac" },
@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     description:
       "Cours particuliers de maths en prépa CPGE et post-bac. Profs passés par les concours, en visio ou à Lyon. 1ère heure offerte.",
     url: "/cpge-postbac",
+  },
+  twitter: {
+    title: "Cours de maths prépa CPGE & post-bac",
+    description:
+      "Cours particuliers de maths en prépa CPGE et post-bac. Profs passés par les concours, en visio ou à Lyon. 1ère heure offerte.",
   },
 };
 

@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Conditions Générales d'Utilisation",
-  description: "Conditions Générales d'Utilisation du site MathSquads.",
+  description:
+    "Conditions Générales d'Utilisation de MathSquads : réservation des cours particuliers de maths, déroulement des séances, tarifs, annulation et responsabilités.",
   alternates: { canonical: "/cgu" },
   robots: { index: false, follow: true },
 };
