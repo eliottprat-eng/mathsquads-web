@@ -19,7 +19,7 @@ export function SectionLabel({
 
   return (
     <p className="section-tag mb-4 gap-2.5">
-      <span className="text-coral/50 font-semibold">{number}</span>
+      <span className="text-coral-deep font-semibold">{number}</span>
       <span className="w-1 h-1 rounded-full bg-coral/30" />
       {label}
     </p>

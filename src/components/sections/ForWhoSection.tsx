@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { BookOpen, Target, Trophy, ArrowRight } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { readableAccent } from "@/lib/palette";
 
 const profiles = [
   {
@@ -64,16 +65,16 @@ export default function ForWhoSection() {
                 </div>
 
                 <div className="relative flex-1">
-                  <div className="text-xs text-ink/40 mb-1">{profile.levels}</div>
+                  <div className="text-xs text-ink/70 mb-1">{profile.levels}</div>
                   <h3 className="font-display font-semibold text-xl text-ink mb-2">{profile.title}</h3>
-                  <p className="text-ink/60 text-sm leading-relaxed mb-3">{profile.subtitle}</p>
-                  <p className="text-xs font-semibold" style={{ color: profile.color }}>{profile.details}</p>
+                  <p className="text-ink/70 text-sm leading-relaxed mb-3">{profile.subtitle}</p>
+                  <p className="text-xs font-semibold" style={{ color: readableAccent(profile.color) }}>{profile.details}</p>
                 </div>
 
                 <Link
                   href={profile.href}
                   className="relative inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-200 group-hover:gap-3"
-                  style={{ color: profile.color }}
+                  style={{ color: readableAccent(profile.color) }}
                 >
                   En savoir plus
                   <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />

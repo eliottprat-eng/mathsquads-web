@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { readableAccent } from "@/lib/palette";
 import { MapPin, Globe, Wifi } from "lucide-react";
 
 const items = [
@@ -48,7 +49,7 @@ export default function PresenceSection() {
             <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink leading-tight mb-6">
               Lyon, Lille, Paris et <span className="italic text-coral">partout en France</span>
             </h2>
-            <p className="text-ink/60 text-lg mb-8 leading-relaxed">
+            <p className="text-ink/70 text-lg mb-8 leading-relaxed">
               Cours en présentiel dans 3 grandes villes, ou en visio depuis n&apos;importe où en France.
               MathSquads s&apos;adapte à ton emploi du temps et ton lieu de vie.
             </p>
@@ -69,7 +70,7 @@ export default function PresenceSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-ink text-sm mb-0.5">{item.title}</div>
-                    <div className="text-ink/60 text-sm">{item.desc}</div>
+                    <div className="text-ink/70 text-sm">{item.desc}</div>
                   </div>
                 </motion.div>
               ))}
@@ -109,7 +110,7 @@ export default function PresenceSection() {
                         <div className="w-4 h-4 rounded-full" style={{ background: city.color }} />
                         <div
                           className="absolute -top-7 left-5 text-xs font-semibold whitespace-nowrap"
-                          style={{ color: city.color }}
+                          style={{ color: readableAccent(city.color) }}
                         >
                           {city.name}
                         </div>

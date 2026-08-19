@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Star, BookOpen, GraduationCap, Quote, MapPin } from "lucide-react";
 import Image from "next/image";
+import { readableAccent } from "@/lib/palette";
 
 interface ProfCardProps {
   name: string;
@@ -33,6 +34,9 @@ export default function ProfCard({
   delay = 0,
   city,
 }: ProfCardProps) {
+  // Couleur d'origine pour les aplats et les icônes, variante lisible pour le texte.
+  const textColor = readableAccent(color);
+
   return (
     <motion.div
       className="relative card overflow-hidden cursor-default"
@@ -72,12 +76,12 @@ export default function ProfCard({
             <div>
               <h3 className="font-display font-semibold text-xl text-ink">{name}</h3>
               <div className="flex items-center gap-1.5 mt-1">
-                <GraduationCap size={13} className="text-ink/40" />
-                <span className="text-sm text-ink/50">{school}</span>
+                <GraduationCap size={13} className="text-ink/70" />
+                <span className="text-sm text-ink/70">{school}</span>
               </div>
               <div
                 className="mt-1.5 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold"
-                style={{ background: `${color}14`, color }}
+                style={{ background: `${color}14`, color: textColor }}
               >
                 {role}
               </div>
@@ -86,7 +90,7 @@ export default function ProfCard({
 
           {/* City badge */}
           <div className="flex flex-col items-end gap-1.5">
-            <div className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-ink/5 text-xs text-ink/50">
+            <div className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-ink/5 text-xs text-ink/70">
               <MapPin size={11} />
               {city}
             </div>
@@ -103,14 +107,14 @@ export default function ProfCard({
             <BookOpen size={14} style={{ color }} />
             <div>
               <div className="font-bold text-ink text-sm">{coursesCount}</div>
-              <div className="text-xs text-ink/40">cours donnés</div>
+              <div className="text-xs text-ink/70">cours donnés</div>
             </div>
           </div>
           <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
             <Star size={14} className="text-gold" />
             <div>
               <div className="font-bold text-ink text-sm">{satisfaction}</div>
-              <div className="text-xs text-ink/40">satisfaction</div>
+              <div className="text-xs text-ink/70">satisfaction</div>
             </div>
           </div>
         </div>
@@ -118,7 +122,7 @@ export default function ProfCard({
         {/* Bio */}
         <div className="relative">
           <Quote size={16} className="text-ink/20 mb-2" />
-          <p className="text-sm text-ink/65 leading-relaxed italic">{bio}</p>
+          <p className="text-sm text-ink/70 leading-relaxed italic">{bio}</p>
         </div>
       </div>
     </motion.div>

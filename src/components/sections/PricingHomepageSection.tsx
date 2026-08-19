@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, Wifi, ArrowRight, Gift, Star } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { readableAccent } from "@/lib/palette";
 
 const pricingCards = [
   {
@@ -57,7 +58,7 @@ export default function PricingHomepageSection() {
           <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink">
             Des tarifs <span className="italic text-coral">clairs et accessibles</span>
           </h2>
-          <p className="mt-4 text-ink/60 text-lg">
+          <p className="mt-4 text-ink/70 text-lg">
             Sans frais cachés. Sans engagement. La première heure est offerte.
           </p>
         </ScrollReveal>
@@ -79,13 +80,13 @@ export default function PricingHomepageSection() {
                     style={{
                       background: `${card.color}14`,
                       border: `1px solid ${card.color}28`,
-                      color: card.color,
+                      color: readableAccent(card.color),
                     }}
                   >
                     <card.badgeIcon size={11} />
                     {card.badge}
                   </div>
-                  <div className="flex items-center gap-1.5 text-xs text-ink/40">
+                  <div className="flex items-center gap-1.5 text-xs text-ink/70">
                     {card.featured ? (
                       <Wifi size={12} className="text-coral" />
                     ) : (
@@ -103,7 +104,7 @@ export default function PricingHomepageSection() {
                       key={j}
                       className="flex items-center justify-between py-2.5 border-b border-ink/8 last:border-0"
                     >
-                      <span className="text-ink/60 text-sm">{p.level}</span>
+                      <span className="text-ink/70 text-sm">{p.level}</span>
                       <span className="font-display font-semibold text-lg text-ink">{p.price}</span>
                     </div>
                   ))}

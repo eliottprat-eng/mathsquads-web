@@ -25,7 +25,7 @@ export default function TarifsPage() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Promo banner */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full mb-6 text-sm font-semibold text-white bg-gold">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full mb-6 text-sm font-semibold text-ink bg-gold">
               <Gift size={16} />
               Promo : la 1ère heure de cours est gratuite pour tous les premiers arrivants
             </div>
@@ -35,7 +35,7 @@ export default function TarifsPage() {
               <br />
               et accessibles
             </h1>
-            <p className="text-xl text-ink/60 max-w-xl mx-auto">
+            <p className="text-xl text-ink/70 max-w-xl mx-auto">
               Pas de frais cachés, pas d&apos;abonnement. Tu paies à l&apos;heure, tu annules quand tu veux.
             </p>
           </motion.div>
@@ -117,7 +117,7 @@ export default function TarifsPage() {
               </div>
               <div>
                 <div className="font-semibold text-ink text-sm mb-1">Pourquoi les tarifs visio sont plus bas ?</div>
-                <p className="text-xs text-ink/55 leading-relaxed">
+                <p className="text-xs text-ink/70 leading-relaxed">
                   En visio, on économise les frais de déplacement et on peut optimiser les créneaux : on te répercute ces économies directement. La qualité du cours reste identique, avec supports partagés, tableau blanc interactif et enregistrement possible.
                 </p>
               </div>
@@ -134,7 +134,7 @@ export default function TarifsPage() {
             <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink">
               Réserve ton cours
             </h2>
-            <p className="text-ink/60 mt-3">
+            <p className="text-ink/70 mt-3">
               1ère heure gratuite : on revient vers toi sous 24h
             </p>
           </ScrollReveal>

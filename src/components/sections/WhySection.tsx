@@ -58,6 +58,7 @@ function ReasonCard({ reason, index }: { reason: (typeof reasons)[number]; index
       </div>
 
       <div
+        aria-hidden="true"
         className="absolute top-6 right-6 font-display font-bold text-6xl leading-none select-none pointer-events-none text-ink/[0.04]"
       >
         0{index + 1}
@@ -66,7 +67,7 @@ function ReasonCard({ reason, index }: { reason: (typeof reasons)[number]; index
       <h3 className="font-display font-semibold text-xl text-ink mb-3 relative z-10">
         {reason.title}
       </h3>
-      <p className="text-base text-ink/60 leading-relaxed relative z-10">
+      <p className="text-base text-ink/70 leading-relaxed relative z-10">
         {reason.description}
       </p>
     </motion.div>
@@ -85,7 +86,7 @@ export default function WhySection() {
             <br />
             <span className="italic text-coral">Une vraie transformation.</span>
           </h2>
-          <p className="mt-5 text-ink/60 text-xl max-w-xl mx-auto">
+          <p className="mt-5 text-ink/70 text-xl max-w-xl mx-auto">
             5 piliers qui font la différence entre un cours ordinaire et une progression durable.
           </p>
         </ScrollReveal>

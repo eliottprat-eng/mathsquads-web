@@ -106,25 +106,25 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-white/10 gap-4">
-          <p className="text-xs text-white/40">
+          <p className="text-xs text-white/70">
             © 2026 MathSquads. Tous droits réservés.
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center">
-            <Link href="/mentions-legales" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            <Link href="/mentions-legales" className="text-xs text-white/70 hover:text-white/70 transition-colors">
               Mentions légales
             </Link>
             <span className="text-white/20 text-xs">·</span>
-            <Link href="/cgu" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            <Link href="/cgu" className="text-xs text-white/70 hover:text-white/70 transition-colors">
               CGU
             </Link>
             <span className="text-white/20 text-xs">·</span>
-            <Link href="/confidentialite" className="text-xs text-white/40 hover:text-white/70 transition-colors">
+            <Link href="/confidentialite" className="text-xs text-white/70 hover:text-white/70 transition-colors">
               Politique de confidentialité
             </Link>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-sage-light" />
-            <span className="text-xs text-white/40">Disponible pour de nouveaux élèves</span>
+            <span className="text-xs text-white/70">Disponible pour de nouveaux élèves</span>
           </div>
         </div>
       </div>
