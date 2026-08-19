@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-inter: "Inter", sans-serif;
-  --font-fraunces: "Fraunces", serif;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -22,11 +17,20 @@ html {
 body {
   background: #FBF7F0;
   color: #1B2A44;
-  font-family: var(--font-inter);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Poppins est large par defaut : un tracking negatif resserre les gros titres. */
+h1, h2 {
+  letter-spacing: -0.02em;
 }
 
 p, li, blockquote {
