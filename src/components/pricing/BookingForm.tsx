@@ -40,8 +40,8 @@ export default function BookingForm() {
   };
 
   const inputCls =
-    "w-full bg-ink/[0.03] border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder-ink/35 focus:outline-none focus:border-coral/50 focus:bg-white transition-all duration-200 text-sm";
-  const labelCls = "block text-xs font-medium text-ink/55 mb-1.5";
+    "w-full bg-ink/[0.03] border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder-ink/55 focus:outline-none focus:border-coral/50 focus:bg-white transition-all duration-200 text-sm";
+  const labelCls = "block text-xs font-medium text-ink/70 mb-1.5";
 
   return (
     <div className="relative card overflow-hidden">
@@ -67,7 +67,7 @@ export default function BookingForm() {
               <h3 className="font-display font-semibold text-2xl text-ink mb-3">
                 Demande envoyée !
               </h3>
-              <p className="text-ink/55 max-w-sm mx-auto">
+              <p className="text-ink/70 max-w-sm mx-auto">
                 On te rappelle sous 24h pour organiser ton premier cours gratuit
                 avec le prof le plus adapté à ton niveau.
               </p>
@@ -77,7 +77,7 @@ export default function BookingForm() {
               <h3 className="font-display font-semibold text-2xl text-ink mb-2">
                 Réserver ma 1ère heure gratuite
               </h3>
-              <p className="text-ink/55 text-sm mb-8">
+              <p className="text-ink/70 text-sm mb-8">
                 30 secondes à remplir. On te rappelle sous 24h, sans engagement.
               </p>
 
@@ -118,7 +118,7 @@ export default function BookingForm() {
 
               <div className="mb-6">
                 <label htmlFor="objectifs" className={labelCls}>
-                  Objectifs <span className="text-ink/35">(facultatif)</span>
+                  Objectifs <span className="text-ink/70">(facultatif)</span>
                 </label>
                 <textarea id="objectifs" name="objectifs" value={form.objectifs} onChange={handleChange}
                   placeholder="Ex : revoir les dérivées avant le bac, préparer les concours..."
@@ -151,14 +151,14 @@ export default function BookingForm() {
                 )}
               </motion.button>
 
-              <p className="text-center text-xs text-ink/40 mt-4">
+              <p className="text-center text-xs text-ink/70 mt-4">
                 Gratuit · Sans engagement · Tu préfères parler à quelqu&apos;un ?{" "}
                 <a href="tel:0783535772" className="text-coral-dark font-medium">07 83 53 57 72</a>
               </p>
-              <p className="text-center text-xs text-ink/40 mt-2">
+              <p className="text-center text-xs text-ink/70 mt-2">
                 En envoyant ce formulaire, tu acceptes nos{" "}
-                <a href="/cgu" className="underline underline-offset-2 hover:text-ink/60">CGU</a> et notre{" "}
-                <a href="/confidentialite" className="underline underline-offset-2 hover:text-ink/60">politique de confidentialité</a>.
+                <a href="/cgu" className="underline underline-offset-2 hover:text-ink/70">CGU</a> et notre{" "}
+                <a href="/confidentialite" className="underline underline-offset-2 hover:text-ink/70">politique de confidentialité</a>.
               </p>
             </motion.form>
           )}

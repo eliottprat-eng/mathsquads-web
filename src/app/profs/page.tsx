@@ -2,172 +2,12 @@
 
 import { motion } from "framer-motion";
 import ProfCard from "@/components/profs/ProfCard";
+import { cities } from "@/lib/profs";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CTASection from "@/components/sections/CTASection";
 import { GraduationCap, MapPin, Star, Users } from "lucide-react";
-
-const cities = [
-  {
-    label: "Lyon",
-    profs: [
-      {
-        name: "Eliott Prat",
-        school: "emlyon business school",
-        role: "CEO & Fondateur",
-        coursesCount: 296,
-        rating: 5,
-        satisfaction: "96%",
-        bio: "Avec moi, chaque concept est abordé avec précision, chaque raisonnement s'appuie sur des démonstrations solides. Mon objectif : t'armer pour exceller dans les concours les plus exigeants.",
-        avatar: "EP",
-        photo: "https://static.wixstatic.com/media/5bdef8_a2a97cdd2fb64b35b3e2ab028f520e5f~mv2.jpg",
-        color: "#1B2A44",
-        city: "Lyon",
-      },
-      {
-        name: "Marin Delzoppo",
-        school: "emlyon business school",
-        role: "CEO & Fondateur",
-        coursesCount: 317,
-        rating: 5,
-        satisfaction: "97%",
-        bio: "J'adore expliquer simplement des choses compliquées. Mon truc, c'est de te faire comprendre vite, progresser vraiment et pourquoi pas commencer à aimer les maths.",
-        avatar: "MD",
-        photo: "https://static.wixstatic.com/media/dbf384_0c3e74a1dd3d4849bdb2a510026b6f01~mv2.jpg",
-        color: "#E1613E",
-        city: "Lyon",
-      },
-      {
-        name: "Elisa Sergers",
-        school: "emlyon business school",
-        role: "Prof lyonnaise",
-        coursesCount: 43,
-        rating: 5,
-        satisfaction: "94%",
-        bio: "Passionnée par les mathématiques, je mets toute mon énergie à rendre chaque concept accessible. Mon approche combine rigueur et bienveillance pour t'aider à progresser avec confiance.",
-        avatar: "ES",
-        photo: "/profs/elisa.jpg",
-        color: "#4F7A5E",
-        city: "Lyon",
-      },
-      {
-        name: "Paul Prieur",
-        school: "emlyon business school",
-        role: "Prof lyonnais",
-        coursesCount: 52,
-        rating: 5,
-        satisfaction: "95%",
-        bio: "Je pars du principe qu'un blocage en maths vient presque toujours d'une notion mal posée au départ. On reprend les bases ensemble, sans jugement, jusqu'à ce que la logique devienne évidente.",
-        avatar: "PP",
-        photo: "/profs/paul.jpg",
-        color: "#C99A3E",
-        city: "Lyon",
-      },
-      {
-        name: "Nolann Lagoutte",
-        school: "emlyon business school",
-        role: "Prof lyonnais",
-        coursesCount: 47,
-        rating: 5,
-        satisfaction: "96%",
-        bio: "Je crois beaucoup aux automatismes : quelques exercices bien choisis, refaits jusqu'à devenir des réflexes. C'est ce qui fait la différence le jour du contrôle, quand le stress s'en mêle.",
-        avatar: "NL",
-        photo: "/profs/nolann.jpg",
-        color: "#1B2A44",
-        city: "Lyon",
-      },
-      {
-        name: "Adrien Praino",
-        school: "emlyon business school",
-        role: "Prof lyonnais",
-        coursesCount: 58,
-        rating: 5,
-        satisfaction: "97%",
-        bio: "Je commence toujours par te faire expliquer ce que tu as compris : c'est là qu'on repère le vrai blocage. On reconstruit ensuite étape par étape, jusqu'à ce que tu refasses l'exercice seul.",
-        avatar: "AP",
-        photo: "/profs/adrien.jpg",
-        color: "#E1613E",
-        city: "Lyon",
-      },
-      {
-        name: "Adam Atoui",
-        school: "emlyon business school",
-        role: "Prof lyonnais",
-        coursesCount: 41,
-        rating: 5,
-        satisfaction: "94%",
-        bio: "Les maths, c'est d'abord une histoire de méthode, pas de talent. Je te montre comment attaquer un énoncé et quoi chercher en premier : tu réalises vite que la plupart des exercices se ressemblent.",
-        avatar: "AA",
-        photo: "/profs/adam.jpg",
-        color: "#4F7A5E",
-        city: "Lyon",
-      },
-    ],
-  },
-  {
-    label: "Lille",
-    profs: [
-      {
-        name: "Oscar Loisel",
-        school: "EDHEC business school",
-        role: "Prof lillois",
-        coursesCount: 38,
-        rating: 5,
-        satisfaction: "95%",
-        bio: "Je rends les maths dynamiques : tu progresses vite tout en gardant la motivation. Chaque cours est pensé pour que tu sortes avec plus de confiance.",
-        avatar: "OL",
-        photo: "/profs/oscar.jpg",
-        color: "#C99A3E",
-        city: "Lille",
-      },
-      {
-        name: "Raphaël Bismuth",
-        school: "EDHEC business school",
-        role: "Prof lillois",
-        coursesCount: 61,
-        rating: 5,
-        satisfaction: "98%",
-        bio: "J'ai accompagné de nombreux lycéens et élèves de prépa avec succès. J'adapte ma pédagogie à chacun pour transformer les points faibles en atouts.",
-        avatar: "RB",
-        photo: "/profs/raphael.jpg",
-        color: "#E1613E",
-        city: "Lille",
-      },
-    ],
-  },
-  {
-    label: "Paris",
-    profs: [
-      {
-        name: "Achille Glorieux",
-        school: "ESCP business school",
-        role: "Prof parisien",
-        coursesCount: 29,
-        rating: 5,
-        satisfaction: "93%",
-        bio: "Étudiant à l'ESCP, je me propose de t'aider à progresser en maths. Mon objectif : rendre les mathématiques accessibles et te donner les clés pour réussir.",
-        avatar: "AG",
-        photo: "/profs/achille.jpg",
-        color: "#1B2A44",
-        city: "Paris",
-      },
-      {
-        name: "Héloïse Bourgoin",
-        school: "ESCP business school",
-        role: "Prof parisienne",
-        coursesCount: 34,
-        rating: 5,
-        satisfaction: "96%",
-        bio: "Je mets ma rigueur et mon sens de la pédagogie au service de mes élèves. Mon objectif est de leur donner les clés pour comprendre en profondeur et réussir avec assurance.",
-        avatar: "HB",
-        photo: "/profs/heloise.jpg",
-        color: "#4F7A5E",
-        city: "Paris",
-      },
-    ],
-  },
-];
-
-const totalProfs = cities.reduce((n, c) => n + c.profs.length, 0);
+import { stats } from "@/lib/stats";
+import { readableAccent } from "@/lib/palette";
 
 const processSteps = [
   {
@@ -205,7 +45,7 @@ export default function ProfsPage() {
             <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
               Des profs issus des <span className="italic text-coral">meilleures Grandes Écoles</span> de France
             </h1>
-            <p className="text-xl text-ink/60 max-w-2xl mx-auto">
+            <p className="text-xl text-ink/70 max-w-2xl mx-auto">
               Chaque prof MathSquads est sélectionné pour son excellence académique et sa passion pour la transmission.
             </p>
           </motion.div>
@@ -218,7 +58,7 @@ export default function ProfsPage() {
             className="flex flex-wrap justify-center gap-6 mt-10"
           >
             {[
-              { icon: Users, label: `${totalProfs} profs`, sub: "Sélectionnés un par un" },
+              { icon: Users, label: `${stats.profsCount} profs`, sub: "Sélectionnés un par un" },
               { icon: GraduationCap, label: "Top 5", sub: "Grandes écoles de France" },
               { icon: MapPin, label: "3 villes", sub: "Lyon · Lille · Paris" },
               { icon: Star, label: "5/5", sub: "Note moyenne" },
@@ -230,7 +70,7 @@ export default function ProfsPage() {
                 <item.icon size={16} className="text-coral" />
                 <div className="text-left">
                   <div className="text-ink font-bold text-sm">{item.label}</div>
-                  <div className="text-ink/45 text-xs">{item.sub}</div>
+                  <div className="text-ink/70 text-xs">{item.sub}</div>
                 </div>
               </div>
             ))}
@@ -277,7 +117,7 @@ export default function ProfsPage() {
             <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink mb-4">
               Comment ça marche ?
             </h2>
-            <p className="text-ink/60">De ta demande au premier cours en 24h</p>
+            <p className="text-ink/70">De ta demande au premier cours en 24h</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -289,13 +129,13 @@ export default function ProfsPage() {
                     style={{
                       background: `${s.color}14`,
                       border: `1px solid ${s.color}25`,
-                      color: s.color,
+                      color: readableAccent(s.color),
                     }}
                   >
                     {s.step}
                   </div>
                   <h3 className="font-display font-semibold text-lg text-ink mb-2">{s.title}</h3>
-                  <p className="text-sm text-ink/55 leading-relaxed">{s.desc}</p>
+                  <p className="text-sm text-ink/70 leading-relaxed">{s.desc}</p>
                 </div>
               </ScrollReveal>
             ))}

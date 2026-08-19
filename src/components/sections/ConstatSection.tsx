@@ -73,7 +73,7 @@ export default function ConstatSection() {
 
                 <p className="text-white/70 text-sm leading-relaxed flex-1">{stat.label}</p>
 
-                <p className="text-xs text-white/35">{stat.source}</p>
+                <p className="text-xs text-white/70">{stat.source}</p>
               </div>
             </ScrollReveal>
           ))}

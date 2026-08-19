@@ -4,55 +4,19 @@ import { motion } from "framer-motion";
 import { Star, Quote, Trophy, GraduationCap, TrendingUp, ShieldCheck } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { testimonials, type Testimonial, type ResultIcon } from "@/lib/testimonials";
+import { readableAccent } from "@/lib/palette";
 
-const testimonials = [
-  {
-    name: "Emma L.",
-    grade: "Collégienne, 3ème",
-    result: "20/20 au Brevet",
-    resultIcon: Trophy,
-    avatar: "E",
-    color: "#1B2A44",
-    stars: 5,
-    quote:
-      "Une méthode claire, des supports complets, et un prof toujours à l'écoute. Je ne comprenais rien aux équations avant, maintenant j'adore résoudre des problèmes. J'ai eu 20/20 au Brevet et je n'aurais jamais cru ça possible il y a 6 mois.",
-  },
-  {
-    name: "Yanis M.",
-    grade: "Prépa HEC → Admis ESCP",
-    result: "Admis à l'ESCP",
-    resultIcon: GraduationCap,
-    avatar: "Y",
-    color: "#C99A3E",
-    stars: 5,
-    quote:
-      "Grâce à MathSquads j'ai pu combler mes lacunes en maths avant les écrits. Mon prof comprenait exactement où je bloquais et repartait toujours de la base sans me faire sentir nul. Résultat : admis à l'ESCP.",
-  },
-  {
-    name: "Lucas D.",
-    grade: "Terminale Spécialité Maths",
-    result: "De 8 à 16 en maths",
-    resultIcon: TrendingUp,
-    avatar: "L",
-    color: "#4F7A5E",
-    stars: 5,
-    quote:
-      "En septembre j'avais 8 de moyenne. En mars j'étais à 16. Marin a tout simplement changé ma façon de voir les maths : au lieu de réciter des formules, je comprends maintenant pourquoi elles marchent.",
-  },
-  {
-    name: "Sophie L.",
-    grade: "Mère d'élève, Lycée (Lyon)",
-    result: "Confiance retrouvée",
-    resultIcon: ShieldCheck,
-    avatar: "S",
-    color: "#E1613E",
-    stars: 5,
-    quote:
-      "Ma fille détestait les maths. Après 4 séances avec MathSquads, elle nous demande d'elle-même à faire ses exercices. La qualité des profs est vraiment différente, on sent qu'ils adorent enseigner.",
-  },
-];
+const resultIcons: Record<ResultIcon, typeof Trophy> = {
+  trophy: Trophy,
+  graduation: GraduationCap,
+  trending: TrendingUp,
+  shield: ShieldCheck,
+};
 
-function TestimonialCard({ t, delay }: { t: typeof testimonials[number]; delay: number }) {
+function TestimonialCard({ t, delay }: { t: Testimonial; delay: number }) {
+  const ResultIcon = resultIcons[t.resultIcon];
+  const textColor = readableAccent(t.color);
   return (
     <ScrollReveal delay={delay}>
       <motion.div
@@ -75,10 +39,10 @@ function TestimonialCard({ t, delay }: { t: typeof testimonials[number]; delay: 
             style={{
               background: `${t.color}14`,
               border: `1px solid ${t.color}25`,
-              color: t.color,
+              color: textColor,
             }}
           >
-            <t.resultIcon size={12} />
+            <ResultIcon size={12} />
             {t.result}
           </div>
         </div>
@@ -98,7 +62,7 @@ function TestimonialCard({ t, delay }: { t: typeof testimonials[number]; delay: 
           </div>
           <div>
             <div className="font-display font-semibold text-ink text-sm">{t.name}</div>
-            <div className="text-xs text-ink/45">{t.grade}</div>
+            <div className="text-xs text-ink/70">{t.grade}</div>
           </div>
         </div>
       </motion.div>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowRight, Star, MapPin, Wifi } from "lucide-react";
 import MathParticles from "@/components/MathParticles";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import { stats } from "@/lib/stats";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 22 },
@@ -17,10 +18,10 @@ type StatItem =
   | { kind: "counter"; target: number; suffix: string; label: string; duration: number }
   | { kind: "text"; value: string; label: string };
 
-const stats: StatItem[] = [
-  { kind: "counter", target: 475, suffix: "+", label: "cours donnés",  duration: 1.5 },
+const heroStats: StatItem[] = [
+  { kind: "counter", target: stats.coursDonnes, suffix: "+", label: "cours donnés", duration: 1.5 },
   { kind: "counter", target: 100, suffix: "%", label: "satisfaits",    duration: 1.2 },
-  { kind: "counter", target: 20,  suffix: "€", label: "dès / heure",   duration: 1.0 },
+  { kind: "counter", target: stats.prixDepart, suffix: "€", label: "dès / heure",  duration: 1.0 },
   { kind: "text",    value: "Top 5",            label: "écoles FR" },
 ];
 
@@ -50,10 +51,10 @@ export default function Hero() {
               Les maths <span className="italic text-coral">accessibles</span> à tous.
             </motion.h1>
 
-            <motion.p {...fadeUp(0.3)} className="text-lg text-ink/60 leading-relaxed mb-8">
+            <motion.p {...fadeUp(0.3)} className="text-lg text-ink/70 leading-relaxed mb-8">
               Des profs issus d&apos;emlyon et des meilleures grandes écoles de France,
               pour progresser vraiment, dès{" "}
-              <span className="text-ink font-semibold">20€/h</span>.
+              <span className="text-ink font-semibold">{stats.prixDepart}€/h</span>.
             </motion.p>
 
             <motion.div {...fadeUp(0.4)} className="flex flex-col sm:flex-row justify-center gap-3 mb-10">
@@ -71,7 +72,7 @@ export default function Hero() {
               {...fadeUp(0.5)}
               className="grid grid-cols-4 gap-3 pb-8 mb-8 border-b border-ink/10 w-full"
             >
-              {stats.map((s, i) => (
+              {heroStats.map((s, i) => (
                 <div key={i} className="text-center">
                   <div className="font-display font-bold text-xl text-ink">
                     {s.kind === "counter" ? (
@@ -85,7 +86,7 @@ export default function Hero() {
                       s.value
                     )}
                   </div>
-                  <div className="text-xs text-ink/45 mt-0.5 leading-tight">{s.label}</div>
+                  <div className="text-xs text-ink/70 mt-0.5 leading-tight">{s.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -98,9 +99,9 @@ export default function Hero() {
                   ))}
                 </div>
                 <span className="text-sm text-ink/70 font-medium">5/5</span>
-                <span className="text-sm text-ink/45">· 100% d&apos;élèves satisfaits</span>
+                <span className="text-sm text-ink/70">· 100% d&apos;élèves satisfaits</span>
               </div>
-              <div className="flex items-center justify-center gap-4 text-sm text-ink/45">
+              <div className="flex items-center justify-center gap-4 text-sm text-ink/70">
                 <span className="flex items-center gap-1.5">
                   <MapPin size={13} className="text-coral" />
                   Lyon · Lille · Paris

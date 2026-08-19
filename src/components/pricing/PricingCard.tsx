@@ -45,7 +45,7 @@ export default function PricingCard({
       <div className="absolute top-0 left-0 right-0 h-1" style={{ background: color }} />
 
       {highlight && (
-        <div className="absolute top-4 right-4 flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold text-white bg-coral">
+        <div className="absolute top-4 right-4 flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold text-white bg-coral-dark">
           <Star size={11} className="fill-white" />
           Populaire
         </div>
@@ -62,7 +62,7 @@ export default function PricingCard({
           </div>
           <h3 className="font-display font-semibold text-2xl text-ink">{title}</h3>
         </div>
-        <p className="text-base text-ink/55 mb-8">{description}</p>
+        <p className="text-base text-ink/70 mb-8">{description}</p>
 
         {/* Tiers */}
         <div className="flex flex-col gap-4 mb-8">
@@ -81,7 +81,7 @@ export default function PricingCard({
                 <div>
                   <div className="font-semibold text-ink text-sm">{tier.level}</div>
                   {tier.details && (
-                    <div className="text-xs text-ink/40 mt-0.5">{tier.details}</div>
+                    <div className="text-xs text-ink/70 mt-0.5">{tier.details}</div>
                   )}
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function PricingCard({
                 <span className="font-display font-bold text-2xl" style={{ color }}>
                   {tier.price}€
                 </span>
-                <span className="text-xs text-ink/40">/h</span>
+                <span className="text-xs text-ink/70">/h</span>
               </div>
             </div>
           ))}

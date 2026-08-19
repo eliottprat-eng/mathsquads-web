@@ -69,7 +69,7 @@ export default function Navbar() {
                       onClick={() => setDropdownOpen(!dropdownOpen)}
                       className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                         link.children.some((c) => c.href === pathname)
-                          ? "text-coral bg-coral/8"
+                          ? "text-coral-deep bg-coral/8"
                           : "text-ink/70 hover:text-ink hover:bg-ink/5"
                       }`}
                     >
@@ -96,7 +96,7 @@ export default function Navbar() {
                                 href={child.href}
                                 className={`flex items-center gap-3 px-4 py-3 transition-colors duration-150 ${
                                   pathname === child.href
-                                    ? "text-coral bg-coral/8"
+                                    ? "text-coral-deep bg-coral/8"
                                     : "text-ink/70 hover:text-ink hover:bg-ink/5"
                                 }`}
                               >
@@ -105,7 +105,7 @@ export default function Navbar() {
                                 </div>
                                 <div>
                                   <div className="text-sm font-semibold">{child.label}</div>
-                                  <div className="text-xs text-ink/40">{child.sub}</div>
+                                  <div className="text-xs text-ink/70">{child.sub}</div>
                                 </div>
                               </Link>
                             );
@@ -120,7 +120,7 @@ export default function Navbar() {
                     href={link.href!}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       pathname === link.href
-                        ? "text-coral bg-coral/8"
+                        ? "text-coral-deep bg-coral/8"
                         : "text-ink/70 hover:text-ink hover:bg-ink/5"
                     }`}
                   >
@@ -174,7 +174,7 @@ export default function Navbar() {
                 {links.map((link) =>
                   link.children ? (
                     <div key={link.label}>
-                      <div className="px-4 py-2 text-xs font-medium text-ink/40">
+                      <div className="px-4 py-2 text-xs font-medium text-ink/70">
                         {link.label}
                       </div>
                       {link.children.map((child) => (
@@ -183,7 +183,7 @@ export default function Navbar() {
                           href={child.href}
                           className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                             pathname === child.href
-                              ? "text-coral bg-coral/8"
+                              ? "text-coral-deep bg-coral/8"
                               : "text-ink/70 hover:text-ink hover:bg-ink/5"
                           }`}
                         >
@@ -197,7 +197,7 @@ export default function Navbar() {
                       href={link.href!}
                       className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                         pathname === link.href
-                          ? "text-coral bg-coral/8"
+                          ? "text-coral-deep bg-coral/8"
                           : "text-ink/70 hover:text-ink hover:bg-ink/5"
                       }`}
                     >

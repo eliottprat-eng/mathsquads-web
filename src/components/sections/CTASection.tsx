@@ -4,15 +4,20 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { ArrowRight, Users } from "lucide-react";
+import { stats } from "@/lib/stats";
 
-const socialProofItems = ["475+ élèves", "100% satisfaits", "Profs issus du Top 5"];
+const socialProofItems = [
+  `${stats.coursDonnesTexte}+ cours donnés`,
+  "100% satisfaits",
+  `${stats.profsCount} profs des grandes écoles`,
+];
 
 export default function CTASection() {
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="relative rounded-3xl overflow-hidden bg-coral">
+          <div className="relative rounded-3xl overflow-hidden bg-coral-dark">
             {/* Floating symbols */}
             {["∑", "π", "√", "∫"].map((s, i) => (
               <motion.div
@@ -33,17 +38,17 @@ export default function CTASection() {
             <div className="relative z-10 text-center py-16 px-8">
               {/* Social proof band */}
               <motion.div
-                className="inline-flex flex-wrap items-center justify-center gap-3 mb-8 px-5 py-2.5 rounded-full bg-white/15 border border-white/20"
+                className="inline-flex flex-wrap items-center justify-center gap-3 mb-8 px-5 py-2.5 rounded-full bg-ink/20 border border-white/25"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <Users size={14} className="text-white/70" />
+                <Users size={14} className="text-white" />
                 {socialProofItems.map((item, i) => (
                   <span key={i} className="flex items-center gap-3 text-white text-xs font-semibold">
                     {item}
                     {i < socialProofItems.length - 1 && (
-                      <span className="text-white/40">·</span>
+                      <span className="text-white/60">·</span>
                     )}
                   </span>
                 ))}
@@ -54,7 +59,7 @@ export default function CTASection() {
                 <br />
                 <span className="text-white/85">La 1ère heure est gratuite.</span>
               </h2>
-              <p className="text-white/80 text-lg mb-10 max-w-lg mx-auto">
+              <p className="text-white text-lg mb-10 max-w-lg mx-auto">
                 Zéro risque. Si ton premier cours ne te satisfait pas à 100%, on te rembourse sans poser de questions.
               </p>
 
@@ -68,18 +73,18 @@ export default function CTASection() {
                 </Link>
                 <Link
                   href="/profs"
-                  className="flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white border border-white/30 hover:bg-white/10 transition-all duration-300"
+                  className="flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white border border-white/50 hover:bg-white/15 transition-all duration-300"
                 >
                   Découvrir nos profs
                 </Link>
               </div>
 
-              <p className="text-white/60 text-xs font-medium">
+              <p className="text-white text-xs font-medium">
                 Gratuit · Sans engagement · Réponse sous 24h
               </p>
-              <p className="text-white/80 text-sm font-medium mt-3">
+              <p className="text-white text-sm font-medium mt-3">
                 Vous préférez en parler de vive voix ?{" "}
-                <a href="tel:0783535772" className="text-white font-bold underline underline-offset-4 hover:text-white/90">
+                <a href="tel:0783535772" className="text-white font-bold underline underline-offset-4 hover:text-white/85">
                   07 83 53 57 72
                 </a>
               </p>

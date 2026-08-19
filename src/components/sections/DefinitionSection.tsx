@@ -1,3 +1,5 @@
+import { stats } from "@/lib/stats";
+
 // Server component : bloc de réponse autonome placé dans le premier tiers de la
 // page, formulé pour être extractible tel quel par les moteurs de recherche IA.
 export default function DefinitionSection() {
@@ -18,8 +20,8 @@ export default function DefinitionSection() {
           Les tarifs vont de 20€ à 35€ de l&apos;heure selon le niveau (collège, lycée,
           CPGE et post-bac) et le format, sans abonnement ni frais cachés. La première
           heure est offerte et chaque élève bénéficie d&apos;un suivi entre les séances,
-          avec la garantie satisfait ou remboursé. Plus de 475 cours ont été donnés
-          depuis le lancement.
+          avec la garantie satisfait ou remboursé. Plus de {stats.coursDonnesTexte} cours ont été
+          donnés depuis le lancement.
         </p>
       </div>
     </section>

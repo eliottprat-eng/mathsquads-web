@@ -60,7 +60,7 @@ export default function ConfidentialitePage() {
           <h1 className="font-display font-semibold text-4xl sm:text-5xl text-ink mb-4">
             Politique de confidentialité
           </h1>
-          <p className="text-ink/55 text-lg">
+          <p className="text-ink/70 text-lg">
             Dernière mise à jour : <time dateTime="2026-07-14">14 juillet 2026</time>
           </p>
         </div>

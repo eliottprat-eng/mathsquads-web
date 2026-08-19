@@ -23,6 +23,9 @@ const config: Config = {
         coral: {
           DEFAULT: "#E1613E",
           dark: "#C24A2A",
+          // Réservé au petit texte : #C24A2A ne passe AA que sur blanc pur,
+          // #A63D21 tient aussi sur les pastilles teintées et le fond beige.
+          deep: "#A63D21",
           light: "#F2A484",
           50: "#FDF0EB",
         },

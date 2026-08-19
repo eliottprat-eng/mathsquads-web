@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { readableAccent } from "@/lib/palette";
 import CTASection from "@/components/sections/CTASection";
 import { BookOpen, Target, TrendingUp, CheckCircle, ArrowRight, Trophy } from "lucide-react";
 
@@ -94,7 +95,7 @@ export default function CollegeLyceePage() {
                 <br />
                 <span className="italic text-coral">on t&apos;accompagne.</span>
               </h1>
-              <p className="text-xl text-ink/60 max-w-xl mb-10">
+              <p className="text-xl text-ink/70 max-w-xl mb-10">
                 Des cours particuliers adaptés à chaque niveau, avec une méthode éprouvée et des profs qui s&apos;investissent vraiment.
               </p>
               <Link href="/tarifs#booking" className="btn-primary text-base group">
@@ -138,11 +139,11 @@ export default function CollegeLyceePage() {
                   <div className="flex items-start justify-between mb-6">
                     <div>
                       <h2 className="font-display font-semibold text-3xl text-ink">{level.name}</h2>
-                      <div className="text-sm text-ink/50 mt-1">{level.grades}</div>
+                      <div className="text-sm text-ink/70 mt-1">{level.grades}</div>
                     </div>
                     <div
                       className="px-3 py-1.5 rounded-xl text-sm font-bold"
-                      style={{ background: `${level.color}14`, color: level.color, border: `1px solid ${level.color}25` }}
+                      style={{ background: `${level.color}14`, color: readableAccent(level.color), border: `1px solid ${level.color}25` }}
                     >
                       {level.price}
                     </div>
@@ -178,7 +179,7 @@ export default function CollegeLyceePage() {
             <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink mb-4">
               Notre méthode pour le scolaire
             </h2>
-            <p className="text-ink/60">Testée et approuvée par des dizaines d&apos;élèves</p>
+            <p className="text-ink/70">Testée et approuvée par des dizaines d&apos;élèves</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -192,7 +193,7 @@ export default function CollegeLyceePage() {
                     <item.icon size={20} style={{ color: item.color }} />
                   </div>
                   <h3 className="font-display font-semibold text-lg text-ink mb-2">{item.title}</h3>
-                  <p className="text-sm text-ink/55 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-ink/70 leading-relaxed">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -209,14 +210,14 @@ export default function CollegeLyceePage() {
                 <div className="card p-6">
                   <div
                     className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold mb-4"
-                    style={{ background: `${t.color}14`, color: t.color, border: `1px solid ${t.color}25` }}
+                    style={{ background: `${t.color}14`, color: readableAccent(t.color), border: `1px solid ${t.color}25` }}
                   >
                     <Trophy size={12} />
                     {t.result}
                   </div>
                   <p className="text-sm text-ink/70 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div className="font-semibold text-ink text-sm">{t.name}</div>
-                  <div className="text-xs text-ink/40">{t.level}</div>
+                  <div className="text-xs text-ink/70">{t.level}</div>
                 </div>
               </ScrollReveal>
             ))}

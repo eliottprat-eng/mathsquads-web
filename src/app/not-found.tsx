@@ -35,7 +35,7 @@ export default function NotFound() {
           <h1 className="font-display font-semibold text-3xl text-ink">
             Cette page n&apos;existe pas.
           </h1>
-          <p className="text-ink/55 text-lg">
+          <p className="text-ink/70 text-lg">
             Tu cherches peut-être l&apos;une de ces pages ?
           </p>
         </motion.div>

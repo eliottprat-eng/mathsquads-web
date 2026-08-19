@@ -26,7 +26,7 @@ export default function SchoolLogosSection() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <SectionLabel number="03" label="Nos profs" />
-          <p className="text-ink/40 text-sm font-medium">
+          <p className="text-ink/70 text-sm font-medium">
             Nos profs sont issus des meilleures grandes écoles
           </p>
         </motion.div>

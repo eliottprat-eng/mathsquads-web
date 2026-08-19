@@ -34,12 +34,12 @@ export default function AnimatedCounter({
         ease: [0.22, 1, 0.36, 1],
         onUpdate(v) {
           if (spanRef.current) {
-            spanRef.current.textContent = `${prefix}${Math.round(v)}${suffix}`;
+            spanRef.current.textContent = `${prefix}${Math.round(v).toLocaleString("fr-FR")}${suffix}`;
           }
         },
         onComplete() {
           if (spanRef.current) {
-            spanRef.current.textContent = `${prefix}${target}${suffix}`;
+            spanRef.current.textContent = `${prefix}${target.toLocaleString("fr-FR")}${suffix}`;
           }
         },
       });
@@ -75,7 +75,7 @@ export default function AnimatedCounter({
   // Initial render shows the real target value — never shows "0"
   return (
     <span ref={spanRef} className={className}>
-      {prefix}{target}{suffix}
+      {prefix}{target.toLocaleString("fr-FR")}{suffix}
     </span>
   );
 }

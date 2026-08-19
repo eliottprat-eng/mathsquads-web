@@ -40,7 +40,7 @@ function FAQItem({
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className="flex-shrink-0"
         >
-          <Plus size={18} className={isOpen ? "text-coral" : "text-ink/35"} />
+          <Plus size={18} className={isOpen ? "text-coral" : "text-ink/70"} />
         </motion.div>
       </button>
 
@@ -54,7 +54,7 @@ function FAQItem({
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="px-5 pb-5">
-              <p className="text-ink/60 text-sm leading-relaxed">{faq.a}</p>
+              <p className="text-ink/70 text-sm leading-relaxed">{faq.a}</p>
             </div>
           </motion.div>
         )}

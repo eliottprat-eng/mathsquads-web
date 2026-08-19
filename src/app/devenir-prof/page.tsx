@@ -73,7 +73,7 @@ export default function DevenirProfPage() {
   };
 
   const inputCls =
-    "w-full bg-ink/[0.03] border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder-ink/35 focus:outline-none focus:border-coral/50 focus:bg-white transition-all duration-200 text-sm";
+    "w-full bg-ink/[0.03] border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder-ink/55 focus:outline-none focus:border-coral/50 focus:bg-white transition-all duration-200 text-sm";
 
   return (
     <>
@@ -91,7 +91,7 @@ export default function DevenirProfPage() {
               <br />
               <span className="italic text-coral">MathSquads</span>
             </h1>
-            <p className="text-xl text-ink/60 max-w-2xl mx-auto">
+            <p className="text-xl text-ink/70 max-w-2xl mx-auto">
               Tu es issu d&apos;une grande école ? Tu veux transmettre ta passion des maths tout en gagnant bien ta vie ?
               Rejoins notre équipe de profs d&apos;excellence.
             </p>
@@ -123,7 +123,7 @@ export default function DevenirProfPage() {
                     <b.icon size={20} style={{ color: b.color }} />
                   </div>
                   <h3 className="font-display font-semibold text-base text-ink mb-2">{b.title}</h3>
-                  <p className="text-sm text-ink/55 leading-relaxed">{b.desc}</p>
+                  <p className="text-sm text-ink/70 leading-relaxed">{b.desc}</p>
                 </motion.div>
               </ScrollReveal>
             ))}
@@ -140,7 +140,7 @@ export default function DevenirProfPage() {
               <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink leading-tight mb-6">
                 On recrute les <span className="italic text-coral">meilleurs</span>
               </h2>
-              <p className="text-ink/60 mb-8 leading-relaxed">
+              <p className="text-ink/70 mb-8 leading-relaxed">
                 Chez MathSquads, la qualité passe avant tout. On ne recrute pas massivement :
                 on sélectionne les profs qui partagent notre vision, l&apos;excellence académique au service d&apos;une vraie pédagogie.
               </p>
@@ -160,7 +160,7 @@ export default function DevenirProfPage() {
                   <Trophy size={18} className="text-gold" />
                   <span className="font-semibold text-ink text-sm">Notre équipe actuelle</span>
                 </div>
-                <p className="text-xs text-ink/55">
+                <p className="text-xs text-ink/70">
                   Eliott Prat et Marin Delzoppo, emlyon business school (Top 5 FR),
                   475+ cours donnés, 5/5 de satisfaction.
                 </p>
@@ -191,7 +191,7 @@ export default function DevenirProfPage() {
                       <h3 className="font-display font-semibold text-xl text-ink mb-2">
                         Candidature reçue !
                       </h3>
-                      <p className="text-ink/55 text-sm">
+                      <p className="text-ink/70 text-sm">
                         On étudie ta candidature et on revient vers toi sous 48h.
                       </p>
                     </motion.div>
@@ -200,36 +200,36 @@ export default function DevenirProfPage() {
                       <h3 className="font-display font-semibold text-xl text-ink mb-2">
                         Candidater
                       </h3>
-                      <p className="text-ink/55 text-xs mb-6">On étudie chaque candidature avec attention.</p>
+                      <p className="text-ink/70 text-xs mb-6">On étudie chaque candidature avec attention.</p>
 
                       <div className="grid grid-cols-2 gap-3 mb-3">
                         <div>
-                          <label className="block text-xs text-ink/55 mb-1.5">Prénom</label>
+                          <label className="block text-xs text-ink/70 mb-1.5">Prénom</label>
                           <input type="text" name="prenom" value={form.prenom} onChange={handleChange} required placeholder="Thomas" className={inputCls} />
                         </div>
                         <div>
-                          <label className="block text-xs text-ink/55 mb-1.5">Nom</label>
+                          <label className="block text-xs text-ink/70 mb-1.5">Nom</label>
                           <input type="text" name="nom" value={form.nom} onChange={handleChange} required placeholder="Dupont" className={inputCls} />
                         </div>
                       </div>
 
                       <div className="mb-3">
-                        <label className="block text-xs text-ink/55 mb-1.5">Email</label>
+                        <label className="block text-xs text-ink/70 mb-1.5">Email</label>
                         <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="thomas@exemple.fr" className={inputCls} />
                       </div>
 
                       <div className="mb-3">
-                        <label className="block text-xs text-ink/55 mb-1.5">École / Parcours</label>
+                        <label className="block text-xs text-ink/70 mb-1.5">École / Parcours</label>
                         <input type="text" name="ecole" value={form.ecole} onChange={handleChange} required placeholder="emlyon, HEC, ENS..." className={inputCls} />
                       </div>
 
                       <div className="mb-3">
-                        <label className="block text-xs text-ink/55 mb-1.5">Niveaux que tu peux enseigner</label>
+                        <label className="block text-xs text-ink/70 mb-1.5">Niveaux que tu peux enseigner</label>
                         <input type="text" name="niveaux" value={form.niveaux} onChange={handleChange} required placeholder="Lycée, CPGE, Licence..." className={inputCls} />
                       </div>
 
                       <div className="mb-6">
-                        <label className="block text-xs text-ink/55 mb-1.5">Motivation</label>
+                        <label className="block text-xs text-ink/70 mb-1.5">Motivation</label>
                         <textarea
                           name="motivation"
                           value={form.motivation}
@@ -295,10 +295,10 @@ export default function DevenirProfPage() {
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="card p-5 text-center">
                   <div className="w-9 h-9 rounded-xl bg-coral/10 flex items-center justify-center mx-auto mb-3">
-                    <span className="text-xs font-bold text-coral">{s.step}</span>
+                    <span className="text-xs font-bold text-coral-deep">{s.step}</span>
                   </div>
                   <h3 className="font-display font-semibold text-sm text-ink mb-1">{s.title}</h3>
-                  <p className="text-xs text-ink/55">{s.desc}</p>
+                  <p className="text-xs text-ink/70">{s.desc}</p>
                 </div>
               </ScrollReveal>
             ))}

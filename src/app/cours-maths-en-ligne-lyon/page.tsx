@@ -62,11 +62,11 @@ export default function CoursMathsLyonPage() {
           <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
             Cours de maths <span className="italic text-coral">en ligne à Lyon</span>
           </h1>
-          <p className="text-xl text-ink/60 max-w-2xl mx-auto mb-4">
+          <p className="text-xl text-ink/70 max-w-2xl mx-auto mb-4">
             Progressez en maths avec des profs issus des meilleures grandes écoles, en visio
             depuis chez vous à Lyon ou en présentiel. Du collège à la prépa, dès 20€/h.
           </p>
-          <p className="text-sm text-ink/40 mb-10">
+          <p className="text-sm text-ink/70 mb-10">
             Mis à jour le <time dateTime={DATE_MODIFIED}>{DATE_MODIFIED_DISPLAY}</time>
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
@@ -141,11 +141,11 @@ export default function CoursMathsLyonPage() {
             <p className="mt-4">
               Selon le profil de l&apos;élève, nous orientons vers l&apos;accompagnement le plus
               adapté : découvrez le détail de notre offre{" "}
-              <Link href="/college-lycee" className="text-coral hover:underline">
+              <Link href="/college-lycee" className="text-coral-deep hover:underline">
                 cours de maths collège et lycée
               </Link>{" "}
               ou notre programme{" "}
-              <Link href="/cpge-postbac" className="text-coral hover:underline">
+              <Link href="/cpge-postbac" className="text-coral-deep hover:underline">
                 cours de maths prépa CPGE et post-bac
               </Link>
               .
@@ -165,7 +165,7 @@ export default function CoursMathsLyonPage() {
             </p>
             <p>
               Faites connaissance avec l&apos;équipe sur la page{" "}
-              <Link href="/profs" className="text-coral hover:underline">
+              <Link href="/profs" className="text-coral-deep hover:underline">
                 nos profs de maths
               </Link>{" "}
               : chaque profil précise son école, son expérience et sa spécialité.
@@ -214,7 +214,7 @@ export default function CoursMathsLyonPage() {
               vous restez libre d&apos;annuler quand vous le souhaitez. Et pour commencer sans
               risque, la <strong className="text-ink">première heure est offerte</strong>.
               Consultez le détail sur la page{" "}
-              <Link href="/tarifs" className="text-coral hover:underline">
+              <Link href="/tarifs" className="text-coral-deep hover:underline">
                 tarifs des cours particuliers de maths
               </Link>{" "}
               et réservez votre première séance gratuite en quelques clics.
@@ -238,7 +238,7 @@ export default function CoursMathsLyonPage() {
                 <summary className="cursor-pointer list-none text-sm font-semibold text-ink/80 group-open:text-ink">
                   {faq.q}
                 </summary>
-                <p className="mt-3 text-sm text-ink/60 leading-relaxed">{faq.a}</p>
+                <p className="mt-3 text-sm text-ink/70 leading-relaxed">{faq.a}</p>
               </details>
             ))}
           </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import { readableAccent } from "@/lib/palette";
 import CTASection from "@/components/sections/CTASection";
 import { GraduationCap, Zap, CheckCircle, ArrowRight, Trophy } from "lucide-react";
 
@@ -68,7 +69,7 @@ export default function CPGEPostBacPage() {
               <br />
               <span className="italic text-coral">concours d&apos;excellence.</span>
             </h1>
-            <p className="text-xl text-ink/60 max-w-2xl mx-auto mb-10">
+            <p className="text-xl text-ink/70 max-w-2xl mx-auto mb-10">
               Des profs eux-mêmes passés par les classes prépas et les grandes écoles, qui connaissent l&apos;exigence des concours de l&apos;intérieur.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -109,12 +110,12 @@ export default function CPGEPostBacPage() {
                     <GraduationCap size={20} style={{ color: prog.color }} />
                   </div>
                   <h3 className="font-display font-semibold text-xl text-ink mb-1">{prog.name}</h3>
-                  <div className="text-xs text-ink/40 mb-5">{prog.sub}</div>
+                  <div className="text-xs text-ink/70 mb-5">{prog.sub}</div>
                   <div className="flex flex-col gap-2.5">
                     {prog.topics.map((topic, j) => (
                       <div key={j} className="flex items-start gap-2">
                         <CheckCircle size={13} style={{ color: prog.color }} className="mt-0.5 flex-shrink-0" />
-                        <span className="text-xs text-ink/65">{topic}</span>
+                        <span className="text-xs text-ink/70">{topic}</span>
                       </div>
                     ))}
                   </div>
@@ -134,7 +135,7 @@ export default function CPGEPostBacPage() {
               <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink leading-tight mb-6">
                 Des profs qui ont vécu <span className="italic text-coral">la prépa de l&apos;intérieur</span>
               </h2>
-              <p className="text-ink/60 mb-6 leading-relaxed">
+              <p className="text-ink/70 mb-6 leading-relaxed">
                 Nos fondateurs sont issus d&apos;emlyon, Top 5 des grandes écoles françaises. Ils ont traversé les mêmes khôlles,
                 les mêmes concours, les mêmes nuits à réviser. Ils savent ce qui fonctionne vraiment.
               </p>
@@ -161,7 +162,7 @@ export default function CPGEPostBacPage() {
                 <div className="text-center mb-8">
                   <Trophy size={40} className="text-gold mx-auto mb-3" />
                   <h3 className="font-display font-semibold text-2xl text-ink">Résultats concours</h3>
-                  <p className="text-ink/55 text-sm mt-2">Nos élèves CPGE</p>
+                  <p className="text-ink/70 text-sm mt-2">Nos élèves CPGE</p>
                 </div>
                 <div className="flex flex-col gap-4">
                   {results.map((r, i) => (
@@ -172,7 +173,7 @@ export default function CPGEPostBacPage() {
                       <span className="text-sm text-ink/70">{r.name}</span>
                       <span
                         className="text-xs font-bold px-2.5 py-1 rounded-full"
-                        style={{ background: `${r.color}14`, color: r.color }}
+                        style={{ background: `${r.color}14`, color: readableAccent(r.color) }}
                       >
                         {r.result}
                       </span>
@@ -196,7 +197,7 @@ export default function CPGEPostBacPage() {
                 </div>
                 <div>
                   <div className="font-bold text-ink text-sm">Post-bac à Lyon</div>
-                  <div className="text-ink/50 text-xs">Prépa, Licence, BTS</div>
+                  <div className="text-ink/70 text-xs">Prépa, Licence, BTS</div>
                 </div>
               </div>
               <div className="font-display font-bold text-3xl text-coral">30€/h</div>
