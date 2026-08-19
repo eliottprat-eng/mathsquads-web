@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,16 +9,16 @@ import { organizationSchema, websiteSchema, foundersSchema } from "@/lib/structu
 
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  variable: "--font-sans",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
   display: "swap",
-  weight: ["500", "600", "700", "900"],
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -57,7 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
       <body className="antialiased">
         <JsonLd data={[organizationSchema(), websiteSchema(), ...foundersSchema()]} />
         <Navbar />
