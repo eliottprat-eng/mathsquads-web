@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ProfCard from "@/components/profs/ProfCard";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CTASection from "@/components/sections/CTASection";
-import { GraduationCap, MapPin, Star } from "lucide-react";
+import { GraduationCap, MapPin, Star, Users } from "lucide-react";
 
 const cities = [
   {
@@ -167,6 +167,8 @@ const cities = [
   },
 ];
 
+const totalProfs = cities.reduce((n, c) => n + c.profs.length, 0);
+
 const processSteps = [
   {
     step: "01",
@@ -201,7 +203,7 @@ export default function ProfsPage() {
           >
             <div className="section-tag mb-6">Notre équipe</div>
             <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
-              Des profs issus du <span className="italic text-coral">Top 5 des meilleures écoles</span> de France
+              Des profs issus des <span className="italic text-coral">meilleures Grandes Écoles</span> de France
             </h1>
             <p className="text-xl text-ink/60 max-w-2xl mx-auto">
               Chaque prof MathSquads est sélectionné pour son excellence académique et sa passion pour la transmission.
@@ -216,6 +218,7 @@ export default function ProfsPage() {
             className="flex flex-wrap justify-center gap-6 mt-10"
           >
             {[
+              { icon: Users, label: `${totalProfs} profs`, sub: "Sélectionnés un par un" },
               { icon: GraduationCap, label: "Top 5", sub: "Grandes écoles de France" },
               { icon: MapPin, label: "3 villes", sub: "Lyon · Lille · Paris" },
               { icon: Star, label: "5/5", sub: "Note moyenne" },
