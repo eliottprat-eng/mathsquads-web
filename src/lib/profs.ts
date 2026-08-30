@@ -125,7 +125,7 @@ export const cities: City[] = [
         satisfaction: "95%",
         bio: "Beaucoup d'élèves trouvent le bon résultat mais perdent des points en route, faute de rédaction claire. Je t'apprends à poser ton raisonnement proprement : le correcteur suit, et la note suit avec.",
         avatar: "AT",
-        photo: "/profs/andy.png",
+        photo: "/profs/andy.jpg",
         color: "#C99A3E",
         city: "Lyon",
       },
