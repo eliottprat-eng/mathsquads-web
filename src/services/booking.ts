@@ -22,6 +22,8 @@ export interface BookingRequest {
   telephone: string;
   email: string;
   niveau: string;
+  ville: string;
+  format: string;
   objectifs: string;
 }
 
@@ -64,13 +66,18 @@ async function sendContact(subject: string, fields: Record<string, string>): Pro
 }
 
 export function sendBookingRequest(data: BookingRequest): Promise<void> {
-  return sendContact(`Nouvelle demande de cours : ${data.prenom} (${data.niveau})`, {
-    Prénom: data.prenom,
-    Téléphone: data.telephone,
-    Email: data.email,
-    Niveau: data.niveau,
-    Objectifs: data.objectifs || "Non précisé",
-  });
+  return sendContact(
+    `Nouvelle demande de cours : ${data.prenom} (${data.niveau}, ${data.ville}, ${data.format})`,
+    {
+      Prénom: data.prenom,
+      Téléphone: data.telephone,
+      Email: data.email,
+      Niveau: data.niveau,
+      Ville: data.ville,
+      Format: data.format,
+      Objectifs: data.objectifs || "Non précisé",
+    }
+  );
 }
 
 export function sendTeacherApplication(data: TeacherApplication): Promise<void> {

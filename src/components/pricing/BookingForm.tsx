@@ -2,18 +2,21 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Send, CheckCircle, User, Mail, Phone, GraduationCap, AlertCircle } from "lucide-react";
-import { sendBookingRequest, type BookingRequest } from "@/services/booking";
+import { Send, CheckCircle, User, Mail, Phone, GraduationCap, MapPin, Video, AlertCircle } from "lucide-react";
+import { sendBookingRequest, CONTACT_EMAIL, type BookingRequest } from "@/services/booking";
 
 const initialData: BookingRequest = {
   prenom: "",
   telephone: "",
   email: "",
   niveau: "",
+  ville: "",
+  format: "",
   objectifs: "",
 };
 
 const niveaux = ["Collège", "Lycée", "Prépa (CPGE)", "Post-bac", "Autre"];
+const formats = ["Visio (partout en France)", "Présentiel", "Peu importe"];
 
 export default function BookingForm() {
   const [form, setForm] = useState<BookingRequest>(initialData);
@@ -42,6 +45,14 @@ export default function BookingForm() {
   const inputCls =
     "w-full bg-ink/[0.03] border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder-ink/55 focus:outline-none focus:border-coral/50 focus:bg-white transition-all duration-200 text-sm";
   const labelCls = "block text-xs font-medium text-ink/70 mb-1.5";
+
+  // Filet de sécurité : si FormSubmit tombe, l'élève envoie sa demande
+  // déjà rédigée depuis sa propre messagerie. Aucun lead perdu.
+  const mailtoFallback = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    `Demande de cours : ${form.prenom}`
+  )}&body=${encodeURIComponent(
+    `Prénom : ${form.prenom}\nTéléphone : ${form.telephone}\nEmail : ${form.email}\nNiveau : ${form.niveau}\nVille : ${form.ville}\nFormat : ${form.format}\nObjectifs : ${form.objectifs || "Non précisé"}`
+  )}`;
 
   return (
     <div className="relative card overflow-hidden">
@@ -114,6 +125,24 @@ export default function BookingForm() {
                     ))}
                   </select>
                 </div>
+                <div>
+                  <label htmlFor="ville" className={labelCls}>
+                    <span className="flex items-center gap-1.5"><MapPin size={12} />Ville de l&apos;élève</span>
+                  </label>
+                  <input id="ville" type="text" name="ville" value={form.ville} onChange={handleChange}
+                    placeholder="Lyon, Paris, Lille..." required className={inputCls} />
+                </div>
+                <div>
+                  <label htmlFor="format" className={labelCls}>
+                    <span className="flex items-center gap-1.5"><Video size={12} />Format du cours</span>
+                  </label>
+                  <select id="format" name="format" value={form.format} onChange={handleChange} required className={inputCls}>
+                    <option value="">Visio ou présentiel ?</option>
+                    {formats.map((f) => (
+                      <option key={f} value={f}>{f}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               <div className="mb-6">
@@ -129,9 +158,12 @@ export default function BookingForm() {
                 <div className="flex items-start gap-2.5 mb-6 p-4 rounded-xl bg-coral/10 border border-coral/25 text-sm text-ink/75">
                   <AlertCircle size={17} className="text-coral flex-shrink-0 mt-0.5" />
                   <span>
-                    L&apos;envoi a échoué. Réessaie, ou contacte-nous directement au{" "}
-                    <a href="tel:0783535772" className="font-semibold text-coral-dark">07 83 53 57 72</a> ou sur{" "}
-                    <a href="mailto:lamathsquad@gmail.com" className="font-semibold text-coral-dark">lamathsquad@gmail.com</a>.
+                    L&apos;envoi a échoué. Réessaie, ou{" "}
+                    <a href={mailtoFallback} className="font-semibold text-coral-dark underline underline-offset-2">
+                      envoie-nous ta demande par mail
+                    </a>{" "}
+                    (elle est déjà pré-remplie), ou appelle le{" "}
+                    <a href="tel:0783535772" className="font-semibold text-coral-dark">07 83 53 57 72</a>.
                   </span>
                 </div>
               )}

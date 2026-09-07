@@ -48,3 +48,51 @@ Déjà en place (bon niveau) : sitemap.ts, robots.ts, JSON-LD (Organization/Webs
 Course/Breadcrumb), metadata + canonical par page, OG/Twitter cards.
 Ajustements prévus : régénérer opengraph-image.tsx avec la nouvelle palette (cohérence
 visuelle réseaux sociaux), vérifier que les alt d'images survivent à la refonte.
+
+---
+
+## Objectif : Exécution playbook GEO — mentions de marque (solo, 06/08)
+
+Base : `tasks/geo-mentions-playbook.md` (déjà écrit le 30/07, pas encore exécuté —
+vérifié le 06/08 : pas de page LinkedIn société trouvée, pas de GBP, pas de YouTube).
+Delta par rapport au playbook d'origine : Eliott non impliqué pour l'instant (Marin
+gère seul), et objectif double — GEO (citations IA long terme) **+** leads directs
+(threads à intention d'achat immédiate), pas juste GEO.
+
+Contrainte outillage : reddit.com est bloqué par la politique de mon navigateur —
+je ne peux pas chercher les threads live ni poster à ta place. Cette partie reste
+manuelle ; je fournis les requêtes de recherche et les brouillons prêts à adapter.
+
+- [ ] 1. Google Business Profile "MathSquads"
+      Critères : (1) fiche créée, catégorie "Service de soutien scolaire", zone Lyon
+      métropole, (2) lien mathsquads.com + tél renseignés, (3) 3 avis élèves obtenus
+      dans la semaine.
+      Pourquoi en premier : 20 min, impact direct sur "cours de maths Lyon" en
+      recherche locale ET en Google AI Overviews — le plus fort ratio effort/résultat.
+- [ ] 1-vérif. Rechercher "MathSquads" sur Google Maps → fiche visible + capture d'écran
+- [ ] 2. Page LinkedIn société MathSquads
+      Critères : (1) page créée avec tagline + description du playbook (section 1),
+      (2) Marin ajoute "Cofondateur, MathSquads" à son profil, (3) 1 post d'annonce publié.
+      Note : le post fondateur croisé (Eliott + Marin) attend qu'il soit dispo — ne pas
+      bloquer la page pour ça, la créer maintenant.
+- [ ] 2-vérif. URL de la page LinkedIn accessible publiquement + capture d'écran
+- [ ] 3. Reddit — cadence GEO (mentions différées, autorité)
+      Critères : (1) 3 réponses utiles postées sur r/prepas/r/etudiants/r/Lyon sans
+      mention MathSquads sur 2 semaines, (2) ton no mode entier de leçon de "je suis
+      concerné" respecté, (3) ratio 9 utile / 1 mention tenu.
+      Recherches à lancer manuellement chaque semaine (reddit.com bloqué côté outil) :
+      "prépa ECG méthode maths", "terminale spé maths méthode", "rattraper retard maths".
+- [ ] 3-vérif. Capture des réponses postées (ou lien) + relecture ton/ratio par Marin
+- [ ] 4. Reddit — cadence leads directs (intention d'achat immédiate)
+      Critères : (1) recherche hebdo sur les 3 requêtes ci-dessous, (2) réponse avec
+      mention transparente ("je suis concerné") postée sous 24-48h sur les threads
+      pertinents trouvés, (3) lien de suivi (1ère heure gratuite) uniquement si demandé
+      explicitement dans le fil, jamais en push.
+      Requêtes de recherche Reddit à lancer par Marin : "recommandation prof de maths"
+      Lyon/Paris, "cours particuliers avis" Lyon/Paris, "soutien scolaire terminale
+      conseil". Brouillon de réponse : reprendre le template section 3 du playbook
+      ("Sur cours particuliers Lyon, vous recommandez quoi ?").
+- [ ] 4-vérif. Tableau simple (date, sub, lien thread, mention ou pas, résultat) tenu
+      à jour par Marin — même sommaire, sert de preuve et évite le spam répété au même sub
+- [ ] FINAL. Check d'intégration : GBP + LinkedIn + 1er cycle Reddit (GEO et lead)
+      vécus une fois de bout en bout, calendrier hebdo tenable posé pour la suite.
