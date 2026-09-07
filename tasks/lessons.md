@@ -23,3 +23,5 @@
 [2026-09-07] | Resend refuse d'écrire à une autre adresse que celle du compte tant qu'aucun domaine n'est vérifié (`You can only send testing emails to your own email address`) | Avec l'expéditeur de test `onboarding@resend.dev`, seul le mail du compte Resend est joignable. Pour livrer sur une autre boîte : vérifier le domaine sur resend.com/domains (DNS), puis passer `RESEND_FROM` sur une adresse de ce domaine.
 
 [2026-09-07] | Clé API collée en clair dans la conversation | Une clé passée en chat est compromise : la révoquer et en régénérer une après usage. Ne jamais l'écrire dans un fichier versionné — vérifier `git check-ignore .env.local` AVANT d'écrire, et relire `git diff --cached` avant de commiter.
+
+[2026-09-08] | Resend choisi puis abandonné : il exige un MX sur `send.<domaine>`, or le DNS de mathsquads.com est chez Wix qui ne gère les MX que sur le domaine racine | Vérifier les contraintes DNS du domaine (`dig NS`) AVANT de proposer un fournisseur d'emails. Alternatives sans MX si besoin un jour : Brevo, Postmark, SendGrid (TXT/CNAME seulement). Sinon migrer le DNS vers Cloudflare ou Vercel.
