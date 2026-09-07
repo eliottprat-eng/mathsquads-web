@@ -1,19 +1,24 @@
-// Envoi des demandes du site (réservation élève et candidature prof) vers la
-// boîte mail MathSquads via FormSubmit (https://formsubmit.co), sans backend
-// ni clé API.
+// Envoi des demandes du site (réservation élève et candidature prof).
 //
-// Deux pièges vérifiés en conditions réelles, à ne pas réintroduire :
+// Deux chemins, dans cet ordre :
+//   1. Resend via notre route /api/contact — service transactionnel, clé API
+//      côté serveur, envoi depuis notre domaine. C'est le chemin normal.
+//   2. FormSubmit directement depuis le navigateur — filet, utilisé seulement
+//      si la route échoue (clé Resend absente, quota, panne).
 //
-// 1. FormSubmit répond HTTP 200 même quand l'envoi échoue. Le seul signal
-//    fiable est le champ "success" du corps JSON. Tester uniquement res.ok
-//    affiche un faux « Demande envoyée ! » et perd la demande en silence.
+// Pièges vérifiés en conditions réelles, à ne pas réintroduire :
 //
-// 2. L'appel doit partir du NAVIGATEUR du visiteur. Relayé par une route
-//    serveur, il part d'une IP Vercel que FormSubmit rejette en 403.
+// - FormSubmit répond HTTP 200 même quand l'envoi échoue. Le seul signal
+//   fiable est le champ "success" du corps JSON. Tester uniquement res.ok
+//   affiche un faux « Demande envoyée ! » et perd la demande en silence.
+//
+// - L'appel FormSubmit doit partir du NAVIGATEUR du visiteur : relayé par une
+//   route serveur, il part d'une IP Vercel que FormSubmit rejette en 403.
+//   Resend, lui, exige l'inverse (clé API, donc côté serveur uniquement).
 
 export const CONTACT_EMAIL = "lamathsquad@gmail.com";
-export const CONTACT_PHONE_DISPLAY = "07 83 53 57 72";
 
+const RESEND_ROUTE = "/api/contact";
 const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 const TIMEOUT_MS = 15_000;
 
@@ -36,15 +41,40 @@ export interface TeacherApplication {
   motivation: string;
 }
 
-async function sendContact(subject: string, fields: Record<string, string>): Promise<void> {
+function withTimeout<T>(run: (signal: AbortSignal) => Promise<T>): Promise<T> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  return run(controller.signal).finally(() => clearTimeout(timeout));
+}
 
-  try {
+async function sendViaResend(
+  subject: string,
+  fields: Record<string, string>,
+  replyTo: string
+): Promise<void> {
+  await withTimeout(async (signal) => {
+    const res = await fetch(RESEND_ROUTE, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      signal,
+      body: JSON.stringify({ subject, fields, replyTo }),
+    });
+    if (!res.ok) {
+      const data = (await res.json().catch(() => null)) as { error?: string } | null;
+      throw new Error(data?.error ?? `Route contact : ${res.status}`);
+    }
+  });
+}
+
+async function sendViaFormSubmit(
+  subject: string,
+  fields: Record<string, string>
+): Promise<void> {
+  await withTimeout(async (signal) => {
     const res = await fetch(FORMSUBMIT_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      signal: controller.signal,
+      signal,
       body: JSON.stringify({
         _subject: subject,
         _template: "table",
@@ -52,16 +82,25 @@ async function sendContact(subject: string, fields: Record<string, string>): Pro
         ...fields,
       }),
     });
-
     const data = (await res.json().catch(() => null)) as
       | { success?: string; message?: string }
       | null;
-
     if (!res.ok || String(data?.success) !== "true") {
       throw new Error(data?.message ?? `FormSubmit a répondu ${res.status}.`);
     }
-  } finally {
-    clearTimeout(timeout);
+  });
+}
+
+async function sendContact(
+  subject: string,
+  fields: Record<string, string>,
+  replyTo: string
+): Promise<void> {
+  try {
+    await sendViaResend(subject, fields, replyTo);
+  } catch {
+    // Resend indisponible : on ne perd pas la demande, on repasse par FormSubmit.
+    await sendViaFormSubmit(subject, fields);
   }
 }
 
@@ -76,17 +115,22 @@ export function sendBookingRequest(data: BookingRequest): Promise<void> {
       Ville: data.ville,
       Format: data.format,
       Objectifs: data.objectifs || "Non précisé",
-    }
+    },
+    data.email
   );
 }
 
 export function sendTeacherApplication(data: TeacherApplication): Promise<void> {
-  return sendContact(`Candidature prof : ${data.prenom} ${data.nom} (${data.ecole})`, {
-    Prénom: data.prenom,
-    Nom: data.nom,
-    Email: data.email,
-    École: data.ecole,
-    "Niveaux enseignés": data.niveaux,
-    Motivation: data.motivation || "Non précisé",
-  });
+  return sendContact(
+    `Candidature prof : ${data.prenom} ${data.nom} (${data.ecole})`,
+    {
+      Prénom: data.prenom,
+      Nom: data.nom,
+      Email: data.email,
+      École: data.ecole,
+      "Niveaux enseignés": data.niveaux,
+      Motivation: data.motivation || "Non précisé",
+    },
+    data.email
+  );
 }
