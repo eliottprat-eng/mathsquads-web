@@ -15,3 +15,7 @@
 [2026-07-30] | Un `route.ts` exportant une constante partagée (`CONTACT_EMAIL`) a cassé le build avec une erreur de typage obscure sur `OmitWithTag` | Dans un `route.ts`, n'exporter que les handlers HTTP. Les constantes partagées vont dans `/lib` ou `/services`.
 
 [2026-07-30] | Des commits d'Eliott poussés entre deux sessions ont réintroduit un numéro déjà retiré, et un `git push` a été rejeté | Toujours `git fetch` + rebase avant de pousser sur ce repo, et lire ce que ses commits ont changé : un « reste » apparent peut être un ajout délibéré de sa part, à signaler plutôt qu'à écraser en silence.
+
+[2026-09-07] | Tests de formulaire faussés deux fois par l'outil : (a) mocker `window.fetch` depuis la console d'automatisation crée une `Response` cross-realm que le `await res.json()` de la page ne résout jamais (bouton bloqué en chargement, ni succès ni erreur) ; (b) un onglet en arrière-plan (`document.visibilityState === "hidden"`) throttle timers et requêtes, donc l'`AbortController` ne se déclenche pas | Pour prouver qu'un formulaire envoie vraiment : intercepter le fetch UNIQUEMENT pour lire le payload, puis valider le dernier maillon en rejouant ce payload exact vers l'API depuis node. Ne pas conclure « le site est cassé » depuis un onglet masqué.
+
+[2026-09-07] | FormSubmit refuse les soumissions dont l'origine est `localhost` : en dev le formulaire affiche toujours l'état d'erreur | Normal, pas un bug. Tester le vrai envoi depuis la prod ou en rejouant le payload avec l'en-tête `Referer: https://www.mathsquads.com/`.
