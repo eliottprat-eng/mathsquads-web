@@ -96,3 +96,29 @@ manuelle ; je fournis les requêtes de recherche et les brouillons prêts à ada
       à jour par Marin — même sommaire, sert de preuve et évite le spam répété au même sub
 - [ ] FINAL. Check d'intégration : GBP + LinkedIn + 1er cycle Reddit (GEO et lead)
       vécus une fois de bout en bout, calendrier hebdo tenable posé pour la suite.
+
+---
+
+# Pages villes Paris + Lille (SEO local, issu de Search Console du 2026-10-02)
+
+Constat GSC : 36 clics / 457 impressions sur 3 mois, "prix/tarif cours de maths" à la
+position 75-80 (requête nationale), aucune page pour Paris et Lille alors que les profs et
+les prix existent. Livraison directe sur main (choix Marin). Prix = grille actuelle, rien d'inventé.
+
+## 1. Données + composant
+Critères : (1) `src/lib/city-pages.ts` porte contenu, FAQ et prix de chaque ville, (2) un seul
+composant `CityPage` rend les deux pages, (3) profs affichés = ceux de `profs.ts`, (4) aucun tiret long ni emoji.
+- [x] 1. Créer lib/city-pages.ts + components/city/CityPage.tsx
+- [x] 1-vérif. Typecheck + lint passent
+
+## 2. Routes + maillage
+Critères : (1) /cours-maths-paris et /cours-maths-lille avec metadata + JSON-LD (Course, WebPage, FAQ, Breadcrumb),
+(2) ajoutées au sitemap, (3) liens depuis Footer, /tarifs et la page Lyon.
+- [x] 2. Pages, sitemap, liens internes
+- [x] 2-vérif. `npm run build` sans erreur, les 2 routes présentes, HTML contient title/h1/JSON-LD
+
+## 3. Rendu
+- [x] 3-vérif. Captures 375px + desktop, console vide, liens OK, prix identiques à /tarifs
+
+- [ ] FINAL. Push main (fetch + rebase), URL live en 200, demander l'indexation dans Search Console
+- [ ] REQS. Relire la demande d'origine : pages villes + niveau + page tarifs claire. Signaler ce qui n'est pas couvert

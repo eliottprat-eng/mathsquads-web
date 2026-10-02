@@ -12,6 +12,8 @@ const routes: {
 }[] = [
   { path: "/", lastModified: "2026-08-14", changeFrequency: "weekly", priority: 1 },
   { path: "/cours-maths-en-ligne-lyon", lastModified: "2026-08-14", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/cours-maths-paris", lastModified: "2026-10-02", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/cours-maths-lille", lastModified: "2026-10-02", changeFrequency: "monthly", priority: 0.8 },
   { path: "/college-lycee", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
   { path: "/cpge-postbac", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.8 },
   { path: "/profs", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.7 },

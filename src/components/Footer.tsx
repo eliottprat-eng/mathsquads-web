@@ -14,6 +14,8 @@ const resourceLinks = [
   { href: "/tarifs#booking", label: "Réserver un cours" },
   { href: "/tarifs", label: "1ère heure gratuite" },
   { href: "/cours-maths-en-ligne-lyon", label: "Cours de maths en ligne à Lyon" },
+  { href: "/cours-maths-paris", label: "Cours de maths à Paris" },
+  { href: "/cours-maths-lille", label: "Cours de maths à Lille" },
   { href: "/cours-maths-en-ligne-lyon", label: "Cours de maths en visio" },
   { href: "/cpge-postbac", label: "Cours maths CPGE" },
   { href: "/college-lycee", label: "Cours maths Lycée" },

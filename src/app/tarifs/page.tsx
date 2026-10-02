@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import PricingCard from "@/components/pricing/PricingCard";
 import BookingForm from "@/components/pricing/BookingForm";
@@ -123,6 +124,22 @@ export default function TarifsPage() {
               </div>
             </div>
           </ScrollReveal>
+
+          <p className="mt-6 text-sm text-ink/70 text-center">
+            Le détail par ville :{" "}
+            <Link href="/cours-maths-paris" className="text-coral-deep hover:underline">
+              cours de maths à Paris
+            </Link>
+            ,{" "}
+            <Link href="/cours-maths-lille" className="text-coral-deep hover:underline">
+              cours de maths à Lille
+            </Link>{" "}
+            et{" "}
+            <Link href="/cours-maths-en-ligne-lyon" className="text-coral-deep hover:underline">
+              cours de maths à Lyon
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
