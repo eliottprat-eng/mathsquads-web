@@ -49,7 +49,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Les cours sont-ils disponibles partout en France ?",
-    a: "Oui ! En visio (tableau blanc interactif partagé), les cours sont disponibles partout en France. Les cours en présentiel sont disponibles à Lyon.",
+    a: "Oui ! En visio (tableau blanc interactif partagé), les cours sont disponibles partout en France. Les cours en présentiel sont disponibles à Lyon, Lille et Paris.",
   },
   {
     q: "Comment se passe le suivi entre les séances ?",

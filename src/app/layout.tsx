@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | MathSquads",
   },
   description:
-    "Cours particuliers de maths avec des profs issus du Top 5 des meilleures écoles de France. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
+    "Cours particuliers de maths avec des profs issus du Top 5 des meilleures écoles de France. Visio partout en France, présentiel à Lyon, Lille et Paris. 1ère heure offerte.",
   applicationName: site.name,
   // Pas de `alternates.canonical` ici : un canonical défini au layout racine est
   // hérité par toute page qui n'en déclare pas, qui se déclarerait alors
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "MathSquads — Cours particuliers de maths dès 20€/h",
     description:
-      "Des profs issus des meilleures grandes écoles de France. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
+      "Des profs issus des meilleures grandes écoles de France. Visio partout en France, présentiel à Lyon, Lille et Paris. 1ère heure offerte.",
   },
   twitter: {
     card: "summary_large_image",
     title: "MathSquads — Cours particuliers de maths dès 20€/h",
     description:
-      "Des profs issus des meilleures grandes écoles de France. Visio partout en France, présentiel à Lyon. 1ère heure offerte.",
+      "Des profs issus des meilleures grandes écoles de France. Visio partout en France, présentiel à Lyon, Lille et Paris. 1ère heure offerte.",
   },
   robots: { index: true, follow: true },
 };
