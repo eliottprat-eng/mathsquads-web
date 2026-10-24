@@ -15,6 +15,8 @@
 //    mathsquads.com est chez Wix, qui ne gère les MX que sur le domaine
 //    racine. Y revenir supposerait de migrer le DNS (Cloudflare/Vercel).
 
+import { site } from "@/lib/site";
+
 export const CONTACT_EMAIL = "lamathsquad@gmail.com";
 
 const FORMSUBMIT_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
@@ -42,7 +44,8 @@ export interface TeacherApplication {
 async function sendContact(
   subject: string,
   fields: Record<string, string>,
-  replyTo: string
+  replyTo: string,
+  autoResponse?: string
 ): Promise<void> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
@@ -58,6 +61,10 @@ async function sendContact(
         _captcha: "false",
         // Répondre au mail reçu répond directement à l'élève.
         _replyto: replyTo,
+        // Accusé de réception envoyé au visiteur par FormSubmit. Il ne part que
+        // si le formulaire contient un champ nommé exactement « email », en
+        // minuscules : d'où la clé `email` dans sendBookingRequest.
+        ...(autoResponse ? { _autoresponse: autoResponse } : {}),
         ...fields,
       }),
     });
@@ -74,19 +81,37 @@ async function sendContact(
   }
 }
 
+// Texte brut : FormSubmit n'interprète pas le HTML dans une réponse automatique.
+// Court, et une seule demande à la fin pour que l'élève réponde avec ses dispos.
+function bookingAutoResponse(prenom: string): string {
+  return [
+    `Bonjour ${prenom},`,
+    "",
+    "Merci d'avoir choisi MathSquads. Ta demande est bien arrivée, et ta première heure de cours est offerte, sans engagement.",
+    "",
+    "Pour la programmer, réponds simplement à ce message en nous disant quand tu es disponible (jours et créneaux qui t'arrangent). On te confirme sous 24 h l'horaire et le prof le plus adapté à ton niveau.",
+    "",
+    `Tu préfères qu'on en parle de vive voix ? Appelle-nous au ${site.phoneDisplay}.`,
+    "",
+    "À très vite,",
+    "L'équipe MathSquads",
+  ].join("\n");
+}
+
 export function sendBookingRequest(data: BookingRequest): Promise<void> {
   return sendContact(
     `Nouvelle demande de cours : ${data.prenom} (${data.niveau}, ${data.ville}, ${data.format})`,
     {
       Prénom: data.prenom,
       Téléphone: data.telephone,
-      Email: data.email,
+      email: data.email,
       Niveau: data.niveau,
       Ville: data.ville,
       Format: data.format,
       Objectifs: data.objectifs || "Non précisé",
     },
-    data.email
+    data.email,
+    bookingAutoResponse(data.prenom)
   );
 }
 
