@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -63,6 +64,13 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        {/* Chatbot Causerie (bulle flottante). Apparence et connaissances se règlent sur dashboard.causeriebot.com, pas ici. */}
+        <Script
+          src="https://dashboard.causeriebot.com/widget.js"
+          data-id="594eba6d-0032-4369-928b-c69216cf405f"
+          data-url="https://dashboard.causeriebot.com"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
