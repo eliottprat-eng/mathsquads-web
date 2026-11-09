@@ -14,7 +14,7 @@ const sections = [
     title: "Éditeur du site",
     body: [
       `Le site ${site.url} est édité par Eliott Prat, entrepreneur individuel (EI), régime micro-entrepreneur, exerçant sous la marque MathSquads.`,
-      "SIRET : 105 953 715 00015. Immatriculation : Registre national des entreprises (RNE). Siège : Rue du Chirat, 42410 Chavanay, France. TVA non applicable, article 293 B du CGI.",
+      "SIRET : 105 953 715 00015. Immatriculation : Registre national des entreprises (RNE). Siège : 42410 Chavanay, France. TVA non applicable, article 293 B du CGI.",
       `Directeur de la publication : Eliott Prat. Contact : ${site.email} ou +33 6 64 19 57 52.`,
     ],
   },
