@@ -13,8 +13,9 @@ const sections = [
   {
     title: "Éditeur du site",
     body: [
-      `Le site ${site.url} est édité par MathSquads, représenté par ses cofondateurs Eliott Prat et Marin Delzoppo.`,
-      `Directeurs de la publication : Eliott Prat et Marin Delzoppo. Contact : ${site.email} ou ${site.phoneDisplay}.`,
+      `Le site ${site.url} est édité par Eliott Prat, entrepreneur individuel (EI), régime micro-entrepreneur, exerçant sous la marque MathSquads.`,
+      "SIRET : 105 953 715 00015. Immatriculation : Registre national des entreprises (RNE). Siège : Rue du Chirat, 42410 Chavanay, France. TVA non applicable, article 293 B du CGI.",
+      `Directeur de la publication : Eliott Prat. Contact : ${site.email} ou ${site.phoneDisplay}.`,
     ],
   },
   {
@@ -46,7 +47,7 @@ export default function MentionsLegalesPage() {
             Mentions légales
           </h1>
           <p className="text-ink/70 text-lg">
-            Dernière mise à jour : <time dateTime="2026-07-14">14 juillet 2026</time>
+            Dernière mise à jour : <time dateTime="2026-11-09">9 novembre 2026</time>
           </p>
         </div>
       </section>
