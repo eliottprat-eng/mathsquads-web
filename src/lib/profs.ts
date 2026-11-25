@@ -2,13 +2,36 @@
 // en dérive les compteurs du site (nombre de profs, cours donnés). Ajouter un prof
 // ici met à jour les deux sans risque de divergence.
 
+export interface SchoolLogo {
+  src: string;
+  alt: string;
+}
+
+// Logos affichés en bas de chaque fiche prof. Clé = valeur de `logos` dans la fiche.
+export const schoolLogos = {
+  emlyon: { src: "/images/logo-emlyon.svg", alt: "emlyon business school" },
+  mines: { src: "/images/logo-mines-saint-etienne.svg", alt: "École des Mines de Saint-Étienne" },
+  escp: { src: "/images/logo-escp.png", alt: "ESCP Business School" },
+  edhec: { src: "/images/logo-edhec-crop.png", alt: "EDHEC Business School" },
+} satisfies Record<string, SchoolLogo>;
+
+export type SchoolKey = keyof typeof schoolLogos;
+
 export interface Prof {
   name: string;
   school: string;
+  /** Écoles dont le logo s'affiche sur la fiche. */
+  logos: SchoolKey[];
   role: string;
+  /** 0 pour un prof qui démarre : la fiche affiche alors `highlights` à la place des stats. */
   coursesCount: number;
-  rating: number;
-  satisfaction: string;
+  /** Absents tant que le prof n'a pas encore d'avis : rien n'est inventé. */
+  rating?: number;
+  satisfaction?: string;
+  /** Deux points forts affichés à la place des stats pour un nouveau prof. */
+  highlights?: { value: string; label: string }[];
+  /** Petit badge en plus du rôle (ex. « Ingénieur »). */
+  badge?: string;
   bio: string;
   avatar: string;
   photo: string;
@@ -28,6 +51,7 @@ export const cities: City[] = [
       {
         name: "Eliott Prat",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "CEO & Fondateur",
         coursesCount: 296,
         rating: 5,
@@ -41,6 +65,7 @@ export const cities: City[] = [
       {
         name: "Marin Delzoppo",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "CEO & Fondateur",
         coursesCount: 317,
         rating: 5,
@@ -54,6 +79,7 @@ export const cities: City[] = [
       {
         name: "Elisa Sergers",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "Prof lyonnaise",
         coursesCount: 43,
         rating: 5,
@@ -67,6 +93,7 @@ export const cities: City[] = [
       {
         name: "Paul Prieur",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "Prof lyonnais",
         coursesCount: 52,
         rating: 5,
@@ -80,6 +107,7 @@ export const cities: City[] = [
       {
         name: "Nolann Lagoutte",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "Prof lyonnais",
         coursesCount: 47,
         rating: 5,
@@ -93,6 +121,7 @@ export const cities: City[] = [
       {
         name: "Adrien Praino",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "Prof lyonnais",
         coursesCount: 58,
         rating: 5,
@@ -106,6 +135,7 @@ export const cities: City[] = [
       {
         name: "Adam Atoui",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "Prof lyonnais",
         coursesCount: 41,
         rating: 5,
@@ -119,6 +149,7 @@ export const cities: City[] = [
       {
         name: "Andy Ta",
         school: "emlyon business school",
+        logos: ["emlyon"],
         role: "Prof lyonnais",
         coursesCount: 45,
         rating: 5,
@@ -137,6 +168,7 @@ export const cities: City[] = [
       {
         name: "Oscar Loisel",
         school: "EDHEC business school",
+        logos: ["edhec"],
         role: "Prof lillois",
         coursesCount: 38,
         rating: 5,
@@ -150,6 +182,7 @@ export const cities: City[] = [
       {
         name: "Raphaël Bismuth",
         school: "EDHEC business school",
+        logos: ["edhec"],
         role: "Prof lillois",
         coursesCount: 61,
         rating: 5,
@@ -168,6 +201,7 @@ export const cities: City[] = [
       {
         name: "Achille Glorieux",
         school: "ESCP business school",
+        logos: ["escp"],
         role: "Prof parisien",
         coursesCount: 29,
         rating: 5,
@@ -181,6 +215,7 @@ export const cities: City[] = [
       {
         name: "Héloïse Bourgoin",
         school: "ESCP business school",
+        logos: ["escp"],
         role: "Prof parisienne",
         coursesCount: 34,
         rating: 5,
@@ -189,6 +224,23 @@ export const cities: City[] = [
         avatar: "HB",
         photo: "/profs/heloise.jpg",
         color: "#4F7A5E",
+        city: "Paris",
+      },
+      {
+        name: "Raphaël Soeung",
+        school: "Mines Saint-Étienne × emlyon",
+        logos: ["mines", "emlyon"],
+        role: "Prof parisien",
+        badge: "Ingénieur",
+        coursesCount: 0,
+        highlights: [
+          { value: "Ingénieur-Manager", label: "double diplôme" },
+          { value: "FR · EN · 中文", label: "trilingue" },
+        ],
+        bio: "Formé aux Mines de Saint-Étienne et à emlyon (double diplôme ingénieur-manager), je fais des maths tous les jours en data science et en finance de marché. Je te montre à quoi servent vraiment les notions du programme, et comment les maîtriser avec méthode, de l'analyse aux probabilités.",
+        avatar: "RS",
+        photo: "/profs/raphael-soeung.jpg",
+        color: "#C99A3E",
         city: "Paris",
       },
     ],

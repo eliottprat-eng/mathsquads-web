@@ -43,10 +43,10 @@ export default function ProfsPage() {
           >
             <div className="section-tag mb-6">Notre équipe</div>
             <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
-              Des profs issus des <span className="italic text-coral">meilleures Grandes Écoles</span> de France
+              Des profs issus des <span className="italic text-coral">Grandes Écoles</span> d&apos;ingénieurs et de commerce
             </h1>
             <p className="text-xl text-ink/70 max-w-2xl mx-auto">
-              Chaque prof MathSquads est sélectionné pour son excellence académique et sa passion pour la transmission.
+              Écoles de commerce ou d&apos;ingénieurs : chaque prof MathSquads est sélectionné pour son excellence académique et sa passion pour la transmission.
             </p>
           </motion.div>
 
@@ -59,7 +59,7 @@ export default function ProfsPage() {
           >
             {[
               { icon: Users, label: `${stats.profsCount} profs`, sub: "Sélectionnés un par un" },
-              { icon: GraduationCap, label: "Top 5", sub: "Grandes écoles de France" },
+              { icon: GraduationCap, label: "Ingé & Commerce", sub: "Grandes écoles de France" },
               { icon: MapPin, label: "3 villes", sub: "Lyon · Lille · Paris" },
               { icon: Star, label: "5/5", sub: "Note moyenne" },
             ].map((item, i) => (

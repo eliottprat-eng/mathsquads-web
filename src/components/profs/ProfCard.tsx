@@ -1,17 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, BookOpen, GraduationCap, Quote, MapPin } from "lucide-react";
+import { Star, BookOpen, GraduationCap, Quote, MapPin, Languages } from "lucide-react";
 import Image from "next/image";
 import { readableAccent } from "@/lib/palette";
+import { schoolLogos, type SchoolKey } from "@/lib/profs";
 
 interface ProfCardProps {
   name: string;
   school: string;
+  logos?: SchoolKey[];
   role: string;
   coursesCount: number;
-  rating: number;
-  satisfaction: string;
+  rating?: number;
+  satisfaction?: string;
+  highlights?: { value: string; label: string }[];
+  badge?: string;
   bio: string;
   avatar: string;
   photo?: string;
@@ -23,10 +27,13 @@ interface ProfCardProps {
 export default function ProfCard({
   name,
   school,
+  logos = [],
   role,
   coursesCount,
   rating,
   satisfaction,
+  highlights,
+  badge,
   bio,
   avatar,
   photo,
@@ -79,11 +86,18 @@ export default function ProfCard({
                 <GraduationCap size={13} className="text-ink/70" />
                 <span className="text-sm text-ink/70">{school}</span>
               </div>
-              <div
-                className="mt-1.5 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold"
-                style={{ background: `${color}14`, color: textColor }}
-              >
-                {role}
+              <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
+                <div
+                  className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold"
+                  style={{ background: `${color}14`, color: textColor }}
+                >
+                  {role}
+                </div>
+                {badge && (
+                  <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-ink text-cream">
+                    {badge}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -94,29 +108,51 @@ export default function ProfCard({
               <MapPin size={11} />
               {city}
             </div>
-            <div className="flex items-center gap-1">
-              <Star size={12} className="text-gold fill-gold" />
-              <span className="text-sm font-bold text-ink/70">{rating}.0</span>
-            </div>
+            {rating !== undefined ? (
+              <div className="flex items-center gap-1">
+                <Star size={12} className="text-gold fill-gold" />
+                <span className="text-sm font-bold text-ink/70">{rating}.0</span>
+              </div>
+            ) : (
+              <div className="text-xs font-semibold text-coral-dark">Nouveau</div>
+            )}
           </div>
         </div>
 
-        {/* Stats row */}
+        {/* Stats row : vrais compteurs, ou points forts pour un prof qui démarre */}
         <div className="grid grid-cols-2 gap-3 mb-5">
-          <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
-            <BookOpen size={14} style={{ color }} />
-            <div>
-              <div className="font-bold text-ink text-sm">{coursesCount}</div>
-              <div className="text-xs text-ink/70">cours donnés</div>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
-            <Star size={14} className="text-gold" />
-            <div>
-              <div className="font-bold text-ink text-sm">{satisfaction}</div>
-              <div className="text-xs text-ink/70">satisfaction</div>
-            </div>
-          </div>
+          {highlights && coursesCount === 0 ? (
+            highlights.slice(0, 2).map((h, i) => (
+              <div key={i} className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
+                {i === 0 ? (
+                  <GraduationCap size={14} style={{ color }} className="flex-shrink-0" />
+                ) : (
+                  <Languages size={14} className="text-gold flex-shrink-0" />
+                )}
+                <div>
+                  <div className="font-bold text-ink text-sm">{h.value}</div>
+                  <div className="text-xs text-ink/70">{h.label}</div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <>
+              <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
+                <BookOpen size={14} style={{ color }} />
+                <div>
+                  <div className="font-bold text-ink text-sm">{coursesCount}</div>
+                  <div className="text-xs text-ink/70">cours donnés</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
+                <Star size={14} className="text-gold" />
+                <div>
+                  <div className="font-bold text-ink text-sm">{satisfaction}</div>
+                  <div className="text-xs text-ink/70">satisfaction</div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Bio */}
@@ -124,6 +160,25 @@ export default function ProfCard({
           <Quote size={16} className="text-ink/20 mb-2" />
           <p className="text-sm text-ink/70 leading-relaxed italic">{bio}</p>
         </div>
+
+        {/* Logos des écoles */}
+        {logos.length > 0 && (
+          <div className="mt-5 pt-4 border-t border-ink/10 flex items-center gap-5">
+            {logos.map((key) => {
+              const logo = schoolLogos[key];
+              return (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={key}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="h-10 w-auto max-w-[150px] object-contain"
+                  loading="lazy"
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </motion.div>
   );

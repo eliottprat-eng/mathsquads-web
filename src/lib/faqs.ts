@@ -41,7 +41,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: "Quelle est la différence avec Superprof ou Acadomia ?",
-    a: "Nos profs sont exclusivement issus du Top 5 des grandes écoles françaises (emlyon, ESCP, EDHEC...). Ce ne sont pas des étudiants lambda mais des profils d'exception, capables d'expliquer les maths de façon simple et efficace. Et nos tarifs commencent à 20€/h, bien en dessous du marché premium.",
+    a: "Nos profs sont exclusivement issus des grandes écoles d'ingénieurs et de commerce françaises (Mines Saint-Étienne, emlyon, ESCP, EDHEC...). Ce ne sont pas des étudiants lambda mais des profils d'exception, capables d'expliquer les maths de façon simple et efficace. Et nos tarifs commencent à 20€/h, bien en dessous du marché premium.",
   },
   {
     q: "Puis-je changer de prof si le courant ne passe pas ?",

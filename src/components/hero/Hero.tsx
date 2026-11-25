@@ -22,7 +22,7 @@ const heroStats: StatItem[] = [
   { kind: "counter", target: stats.coursDonnes, suffix: "+", label: "cours donnés", duration: 1.5 },
   { kind: "counter", target: 100, suffix: "%", label: "satisfaits",    duration: 1.2 },
   { kind: "counter", target: stats.prixDepart, suffix: "€", label: "dès / heure",  duration: 1.0 },
-  { kind: "text",    value: "Top 5",            label: "écoles FR" },
+  { kind: "text",    value: "Ingé",             label: "& commerce" },
 ];
 
 export default function Hero() {
@@ -52,7 +52,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p {...fadeUp(0.3)} className="text-lg text-ink/70 leading-relaxed mb-8">
-              Des profs issus d&apos;emlyon et des meilleures grandes écoles de France,
+              Des profs issus des grandes écoles d&apos;ingénieurs et de commerce,
               pour progresser vraiment, dès{" "}
               <span className="text-ink font-semibold">{stats.prixDepart}€/h</span>.
             </motion.p>

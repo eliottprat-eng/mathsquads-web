@@ -1,7 +1,8 @@
 # MathSquads
 
-> Cours particuliers de mathématiques assurés par des profs issus du Top 5 des
-> grandes écoles françaises (emlyon, ESCP, EDHEC). En visioconférence partout en
+> Cours particuliers de mathématiques assurés par des profs issus des grandes
+> écoles d'ingénieurs et de commerce françaises (Mines Saint-Étienne, emlyon,
+> ESCP, EDHEC). En visioconférence partout en
 > France, en présentiel à Lyon, Lille et Paris. Tarifs de 20€ à 35€ de l'heure
 > selon le niveau, première heure offerte, sans abonnement.
 

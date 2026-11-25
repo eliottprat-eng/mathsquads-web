@@ -5,18 +5,18 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Nos profs de maths issus des grandes écoles",
   description:
-    "Rencontrez nos profs de maths issus du Top 5 des grandes écoles de France (emlyon, ESCP, EDHEC…). Cours en visio ou à Lyon. Réservez votre 1ère heure offerte.",
+    "Rencontrez nos profs de maths issus des grandes écoles d'ingénieurs et de commerce (Mines Saint-Étienne, emlyon, ESCP, EDHEC…). Cours en visio ou à Lyon. Réservez votre 1ère heure offerte.",
   alternates: { canonical: "/profs" },
   openGraph: {
     title: "Nos profs de maths issus des grandes écoles",
     description:
-      "Nos profs de maths sont issus du Top 5 des grandes écoles de France. Cours en visio ou à Lyon. 1ère heure offerte.",
+      "Nos profs de maths sont issus des grandes écoles d'ingénieurs et de commerce. Cours en visio ou à Lyon. 1ère heure offerte.",
     url: "/profs",
   },
   twitter: {
     title: "Nos profs de maths issus des grandes écoles",
     description:
-      "Nos profs de maths sont issus du Top 5 des grandes écoles de France. Cours en visio ou à Lyon. 1ère heure offerte.",
+      "Nos profs de maths sont issus des grandes écoles d'ingénieurs et de commerce. Cours en visio ou à Lyon. 1ère heure offerte.",
   },
 };
 

@@ -158,9 +158,9 @@ export default function CoursMathsLyonPage() {
             </h2>
             <p className="mb-4">
               La qualité d&apos;un cours de maths tient avant tout à la qualité du prof. Nos
-              enseignants sont issus du Top 5 des grandes écoles françaises, emlyon business
-              school, dont le campus historique se trouve à Lyon, mais aussi ESCP, EDHEC, HEC ou
-              l&apos;ESSEC. Tous ont eux-mêmes affronté l&apos;exigence des concours et savent
+              enseignants sont issus des grandes écoles d&apos;ingénieurs et de commerce françaises :
+              emlyon business school, dont le campus historique se trouve à Lyon, l&apos;École des
+              Mines de Saint-Étienne, mais aussi ESCP ou EDHEC. Tous ont eux-mêmes affronté l&apos;exigence des concours et savent
               transmettre une méthode claire, structurée et rassurante.
             </p>
             <p>

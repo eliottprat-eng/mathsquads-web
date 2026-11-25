@@ -14,7 +14,7 @@ const beforeItems = [
 ];
 
 const afterItems = [
-  "Des profs issus du Top 5 des grandes écoles françaises (emlyon)",
+  "Des profs issus des grandes écoles d'ingénieurs et de commerce (Mines, emlyon…)",
   `Dès ${stats.prixDepart}€/h, 1ère heure 100% gratuite, zéro risque`,
   "Suivi personnalisé, bilan régulier, objectifs clairs",
   "Résultats concrets : notes en hausse, confiance retrouvée",

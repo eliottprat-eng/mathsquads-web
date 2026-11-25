@@ -136,7 +136,7 @@ export default function CPGEPostBacPage() {
                 Des profs qui ont vécu <span className="italic text-coral">la prépa de l&apos;intérieur</span>
               </h2>
               <p className="text-ink/70 mb-6 leading-relaxed">
-                Nos fondateurs sont issus d&apos;emlyon, Top 5 des grandes écoles françaises. Ils ont traversé les mêmes khôlles,
+                Nos profs sont issus des grandes écoles d&apos;ingénieurs et de commerce, comme les Mines de Saint-Étienne et emlyon. Ils ont traversé les mêmes khôlles,
                 les mêmes concours, les mêmes nuits à réviser. Ils savent ce qui fonctionne vraiment.
               </p>
               <div className="flex flex-col gap-3">

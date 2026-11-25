@@ -12,8 +12,8 @@ export default function DefinitionSection() {
         <p className="text-ink/70 leading-relaxed mb-4">
           MathSquads est un service français de cours particuliers de mathématiques,
           fondé par Eliott Prat et Marin Delzoppo, étudiants à emlyon business school.
-          Les cours sont assurés exclusivement par des profs issus du Top 5 des grandes
-          écoles françaises (emlyon, ESCP, EDHEC), en visioconférence partout en France
+          Les cours sont assurés exclusivement par des profs issus des grandes écoles
+          d&apos;ingénieurs et de commerce françaises (Mines Saint-Étienne, emlyon, ESCP, EDHEC), en visioconférence partout en France
           ou en présentiel à Lyon, Lille et Paris.
         </p>
         <p className="text-ink/70 leading-relaxed">

@@ -6,6 +6,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const schools = [
   { src: "/images/logo-emlyon.svg",  alt: "emlyon business school",   width: 260 },
+  { src: "/images/logo-mines-saint-etienne.svg", alt: "École des Mines de Saint-Étienne", width: 90 },
   { src: "/images/logo-escp.png",    alt: "ESCP Business School",      width: 230 },
   { src: "/images/logo-edhec.avif",  alt: "EDHEC Business School",     width: 240 },
   { src: "/images/logo-hec.png",     alt: "HEC Paris",                 width: 190 },
@@ -27,7 +28,7 @@ export default function SchoolLogosSection() {
         >
           <SectionLabel number="03" label="Nos profs" />
           <p className="text-ink/70 text-sm font-medium">
-            Nos profs sont issus des meilleures grandes écoles
+            Nos profs sont issus des grandes écoles d&apos;ingénieurs et de commerce
           </p>
         </motion.div>
 
