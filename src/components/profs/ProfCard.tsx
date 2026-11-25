@@ -87,7 +87,10 @@ export default function ProfCard({
                   alt={`${name}, prof de maths MathSquads, ${school}`}
                   fill
                   className="object-cover object-top"
-                  sizes="96px"
+                  // La vignette fait ~103px (w-24 avec html à 107 %). On demande plus large
+                  // pour rester net sur écrans Retina, et une qualité plus haute que 75.
+                  sizes="160px"
+                  quality={90}
                 />
               ) : (
                 <div
