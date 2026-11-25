@@ -10,7 +10,7 @@ import { organizationSchema, websiteSchema, foundersSchema } from "@/lib/structu
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans",
   display: "swap",
 });

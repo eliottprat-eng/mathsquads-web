@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Colonne 2 — Navigation */}
           <div>
-            <h3 className="font-display font-semibold text-white mb-4 text-sm">
+            <h3 className="font-display font-bold text-white mb-4 text-sm">
               Navigation
             </h3>
             <ul className="flex flex-col gap-2">
@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Colonne 3 — Ressources */}
           <div>
-            <h3 className="font-display font-semibold text-white mb-4 text-sm">
+            <h3 className="font-display font-bold text-white mb-4 text-sm">
               Ressources
             </h3>
             <ul className="flex flex-col gap-2">

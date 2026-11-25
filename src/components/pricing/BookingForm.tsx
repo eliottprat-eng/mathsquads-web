@@ -75,7 +75,7 @@ export default function BookingForm() {
               >
                 <CheckCircle size={36} className="text-sage" />
               </motion.div>
-              <h3 className="font-display font-semibold text-2xl text-ink mb-3">
+              <h3 className="font-display font-bold text-2xl text-ink mb-3">
                 Demande envoyée !
               </h3>
               <p className="text-ink/70 max-w-sm mx-auto">
@@ -85,7 +85,7 @@ export default function BookingForm() {
             </motion.div>
           ) : (
             <motion.form key="form" onSubmit={handleSubmit} initial={{ opacity: 1 }} exit={{ opacity: 0 }}>
-              <h3 className="font-display font-semibold text-2xl text-ink mb-2">
+              <h3 className="font-display font-bold text-2xl text-ink mb-2">
                 Réserver ma 1ère heure gratuite
               </h3>
               <p className="text-ink/70 text-sm mb-8">

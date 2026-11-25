@@ -42,8 +42,8 @@ export default function ProfsPage() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="section-tag mb-6">Notre équipe</div>
-            <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
-              Des profs issus des <span className="italic text-coral">Grandes Écoles</span> d&apos;ingénieurs et de commerce
+            <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+              Des profs issus des <span className="text-coral">Grandes Écoles</span> d&apos;ingénieurs et de commerce
             </h1>
             <p className="text-xl text-ink/70 max-w-2xl mx-auto">
               Écoles de commerce ou d&apos;ingénieurs : chaque prof MathSquads est sélectionné pour son excellence académique et sa passion pour la transmission.
@@ -87,7 +87,7 @@ export default function ProfsPage() {
                 <div className="w-9 h-9 rounded-xl bg-coral/10 flex items-center justify-center">
                   <MapPin size={16} className="text-coral" />
                 </div>
-                <h2 className="font-display font-semibold text-2xl text-ink">{label}</h2>
+                <h2 className="font-display font-bold text-2xl text-ink">{label}</h2>
               </ScrollReveal>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {profs.map((prof, i) => (
@@ -114,7 +114,7 @@ export default function ProfsPage() {
       <section className="py-20 bg-cream-soft">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-14">
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink mb-4">
               Comment ça marche ?
             </h2>
             <p className="text-ink/70">De ta demande au premier cours en 24h</p>
@@ -134,7 +134,7 @@ export default function ProfsPage() {
                   >
                     {s.step}
                   </div>
-                  <h3 className="font-display font-semibold text-lg text-ink mb-2">{s.title}</h3>
+                  <h3 className="font-display font-bold text-lg text-ink mb-2">{s.title}</h3>
                   <p className="text-sm text-ink/70 leading-relaxed">{s.desc}</p>
                 </div>
               </ScrollReveal>

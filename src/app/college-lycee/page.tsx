@@ -90,10 +90,10 @@ export default function CollegeLyceePage() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="section-tag mb-6">Collège & Lycée</div>
-              <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+              <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
                 Du Brevet au Bac,
                 <br />
-                <span className="italic text-coral">on t&apos;accompagne.</span>
+                <span className="text-coral">on t&apos;accompagne.</span>
               </h1>
               <p className="text-xl text-ink/70 max-w-xl mb-10">
                 Des cours particuliers adaptés à chaque niveau, avec une méthode éprouvée et des profs qui s&apos;investissent vraiment.
@@ -138,7 +138,7 @@ export default function CollegeLyceePage() {
 
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <h2 className="font-display font-semibold text-3xl text-ink">{level.name}</h2>
+                      <h2 className="font-display font-bold text-3xl text-ink">{level.name}</h2>
                       <div className="text-sm text-ink/70 mt-1">{level.grades}</div>
                     </div>
                     <div
@@ -176,7 +176,7 @@ export default function CollegeLyceePage() {
       <section className="py-20 bg-cream-soft">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-14">
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink mb-4">
               Notre méthode pour le scolaire
             </h2>
             <p className="text-ink/70">Testée et approuvée par des dizaines d&apos;élèves</p>
@@ -192,7 +192,7 @@ export default function CollegeLyceePage() {
                   >
                     <item.icon size={20} style={{ color: item.color }} />
                   </div>
-                  <h3 className="font-display font-semibold text-lg text-ink mb-2">{item.title}</h3>
+                  <h3 className="font-display font-bold text-lg text-ink mb-2">{item.title}</h3>
                   <p className="text-sm text-ink/70 leading-relaxed">{item.desc}</p>
                 </div>
               </ScrollReveal>
@@ -215,7 +215,7 @@ export default function CollegeLyceePage() {
                     <Trophy size={12} />
                     {t.result}
                   </div>
-                  <p className="text-sm text-ink/70 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+                  <p className="text-sm text-ink/70 mb-4">&ldquo;{t.quote}&rdquo;</p>
                   <div className="font-semibold text-ink text-sm">{t.name}</div>
                   <div className="text-xs text-ink/70">{t.level}</div>
                 </div>

@@ -42,8 +42,8 @@ export default function ForWhoSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <div className="section-tag mb-4">Pour qui ?</div>
-          <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink">
-            Un accompagnement <span className="italic text-coral">adapté à chaque niveau</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ink">
+            Un accompagnement <span className="text-coral">adapté à chaque niveau</span>
           </h2>
         </ScrollReveal>
 
@@ -66,7 +66,7 @@ export default function ForWhoSection() {
 
                 <div className="relative flex-1">
                   <div className="text-xs text-ink/70 mb-1">{profile.levels}</div>
-                  <h3 className="font-display font-semibold text-xl text-ink mb-2">{profile.title}</h3>
+                  <h3 className="font-display font-bold text-xl text-ink mb-2">{profile.title}</h3>
                   <p className="text-ink/70 text-sm leading-relaxed mb-3">{profile.subtitle}</p>
                   <p className="text-xs font-semibold" style={{ color: readableAccent(profile.color) }}>{profile.details}</p>
                 </div>

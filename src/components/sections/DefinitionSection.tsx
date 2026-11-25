@@ -6,7 +6,7 @@ export default function DefinitionSection() {
   return (
     <section aria-label="Qu'est-ce que MathSquads" className="relative py-14 bg-cream">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-display font-semibold text-2xl sm:text-3xl text-ink mb-5">
+        <h2 className="font-display font-bold text-2xl sm:text-3xl text-ink mb-5">
           Qu&apos;est-ce que MathSquads ?
         </h2>
         <p className="text-ink/70 leading-relaxed mb-4">

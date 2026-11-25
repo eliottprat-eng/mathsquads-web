@@ -10,7 +10,7 @@ import { breadcrumbSchema, courseSchema, faqSchema, webPageSchema } from "@/lib/
 function PriceTable({ title, tiers }: { title: string; tiers: PriceTier[] }) {
   return (
     <div className="rounded-2xl border border-ink/10 bg-white p-6 shadow-sm">
-      <h3 className="font-display font-semibold text-xl text-ink mb-4">{title}</h3>
+      <h3 className="font-display font-bold text-xl text-ink mb-4">{title}</h3>
       <ul className="flex flex-col gap-3">
         {tiers.map((tier) => (
           <li key={tier.level} className="flex items-baseline justify-between gap-4">
@@ -55,8 +55,8 @@ export default function CityPage({ data }: { data: CityPageData }) {
       <section className="relative min-h-[50vh] flex items-center pt-32 pb-16 overflow-hidden bg-cream">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="section-tag mb-6">Cours de maths à {data.city}</div>
-          <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
-            {data.heroTitle} <span className="italic text-coral">{data.heroHighlight}</span>
+          <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+            {data.heroTitle} <span className="text-coral">{data.heroHighlight}</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-2xl mx-auto mb-4">{data.heroText}</p>
           <p className="text-sm text-ink/70 mb-10">
@@ -82,7 +82,7 @@ export default function CityPage({ data }: { data: CityPageData }) {
           ))}
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Du collège à la prépa : tous les niveaux
             </h2>
             <p className="mb-4">{data.levelsIntro}</p>
@@ -114,7 +114,7 @@ export default function CityPage({ data }: { data: CityPageData }) {
           ))}
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               {data.sections[data.sections.length - 1].title}
             </h2>
             {data.sections[data.sections.length - 1].paragraphs.map((p) => (
@@ -141,7 +141,7 @@ export default function CityPage({ data }: { data: CityPageData }) {
       {profs.length > 0 && (
         <section className="relative py-16 bg-cream-soft">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink text-center mb-10">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink text-center mb-10">
               Vos profs de maths à {data.city}
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
@@ -156,7 +156,7 @@ export default function CityPage({ data }: { data: CityPageData }) {
       {/* ── FAQ locale ── */}
       <section className="relative py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink text-center mb-10">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink text-center mb-10">
             {data.faqHeading}
           </h2>
           <div className="flex flex-col gap-3">
@@ -183,7 +183,7 @@ export default function CityPage({ data }: { data: CityPageData }) {
 function Section({ title, paragraphs }: { title: string; paragraphs: string[] }) {
   return (
     <section>
-      <h2 className="font-display font-semibold text-3xl text-ink mb-4">{title}</h2>
+      <h2 className="font-display font-bold text-3xl text-ink mb-4">{title}</h2>
       {paragraphs.map((p) => (
         <p key={p} className="mb-4 last:mb-0">
           {p}

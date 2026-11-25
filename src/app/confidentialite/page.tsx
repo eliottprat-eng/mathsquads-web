@@ -57,7 +57,7 @@ export default function ConfidentialitePage() {
     <>
       <section className="relative pt-32 pb-12 overflow-hidden bg-cream">
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display font-semibold text-4xl sm:text-5xl text-ink mb-4">
+          <h1 className="font-display font-bold text-4xl sm:text-5xl text-ink mb-4">
             Politique de confidentialité
           </h1>
           <p className="text-ink/70 text-lg">
@@ -68,7 +68,7 @@ export default function ConfidentialitePage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         {sections.map((s) => (
           <section key={s.title} className="mb-10">
-            <h2 className="font-display font-semibold text-2xl text-ink mb-4">{s.title}</h2>
+            <h2 className="font-display font-bold text-2xl text-ink mb-4">{s.title}</h2>
             {s.body.map((p, i) => (
               <p key={i} className="text-ink/70 leading-relaxed mb-3">{p}</p>
             ))}

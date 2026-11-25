@@ -50,10 +50,10 @@ export default function BeforeAfterSection() {
             </ul>
             <blockquote className="border-l-2 border-coral/25 pl-4 mt-auto">
               <Quote size={14} className="text-ink/20 mb-2" />
-              <p className="text-ink/70 italic text-sm leading-relaxed">
+              <p className="text-ink/70 text-sm leading-relaxed">
                 {beforeAfter.before}
               </p>
-              <cite className="text-xs text-ink/70 mt-2 block not-italic">
+              <cite className="text-xs text-ink/70 mt-2 block">
                 {beforeAfter.author}
               </cite>
             </blockquote>
@@ -81,10 +81,10 @@ export default function BeforeAfterSection() {
             </ul>
             <blockquote className="border-l-2 border-sage/40 pl-4 mt-auto">
               <Quote size={14} className="text-sage-light/50 mb-2" />
-              <p className="text-white/85 italic text-sm leading-relaxed">
+              <p className="text-white/85 text-sm leading-relaxed">
                 {beforeAfter.after}
               </p>
-              <cite className="text-xs text-white/60 mt-2 block not-italic">
+              <cite className="text-xs text-white/60 mt-2 block">
                 {beforeAfter.author}
               </cite>
             </blockquote>

@@ -54,7 +54,7 @@ export default function CTASection() {
                 ))}
               </motion.div>
 
-              <h2 className="font-display font-semibold text-4xl sm:text-5xl text-white leading-tight mb-4">
+              <h2 className="font-display font-bold text-4xl sm:text-5xl text-white leading-tight mb-4">
                 Commence maintenant.
                 <br />
                 <span className="text-white/85">La 1ère heure est gratuite.</span>

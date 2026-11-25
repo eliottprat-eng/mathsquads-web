@@ -55,8 +55,8 @@ export default function PricingHomepageSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <SectionLabel number="05" label="Nos tarifs" />
-          <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink">
-            Des tarifs <span className="italic text-coral">clairs et accessibles</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ink">
+            Des tarifs <span className="text-coral">clairs et accessibles</span>
           </h2>
           <p className="mt-4 text-ink/70 text-lg">
             Sans frais cachés. Sans engagement. La première heure est offerte.
@@ -96,7 +96,7 @@ export default function PricingHomepageSection() {
                   </div>
                 </div>
 
-                <h3 className="font-display font-semibold text-xl text-ink">{card.title}</h3>
+                <h3 className="font-display font-bold text-xl text-ink">{card.title}</h3>
 
                 <div className="flex flex-col gap-2 flex-1">
                   {card.prices.map((p, j) => (
@@ -105,7 +105,7 @@ export default function PricingHomepageSection() {
                       className="flex items-center justify-between py-2.5 border-b border-ink/8 last:border-0"
                     >
                       <span className="text-ink/70 text-sm">{p.level}</span>
-                      <span className="font-display font-semibold text-lg text-ink">{p.price}</span>
+                      <span className="font-display font-bold text-lg text-ink">{p.price}</span>
                     </div>
                   ))}
                 </div>

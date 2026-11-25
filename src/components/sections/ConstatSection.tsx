@@ -38,7 +38,7 @@ export default function ConstatSection() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-16">
           <SectionLabel number="01" label="Le constat" dark />
-          <h2 className="font-display font-semibold text-4xl sm:text-5xl leading-tight">
+          <h2 className="font-display font-bold text-4xl sm:text-5xl leading-tight">
             Les maths en France : un vrai problème.
           </h2>
           <p className="mt-5 text-white/60 text-xl max-w-2xl mx-auto">

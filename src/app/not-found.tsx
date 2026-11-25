@@ -32,7 +32,7 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex flex-col gap-2"
         >
-          <h1 className="font-display font-semibold text-3xl text-ink">
+          <h1 className="font-display font-bold text-3xl text-ink">
             Cette page n&apos;existe pas.
           </h1>
           <p className="text-ink/70 text-lg">

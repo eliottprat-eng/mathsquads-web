@@ -46,8 +46,8 @@ export default function PresenceSection() {
           {/* Text side */}
           <ScrollReveal direction="left">
             <div className="section-tag mb-6">Notre présence</div>
-            <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink leading-tight mb-6">
-              Lyon, Lille, Paris et <span className="italic text-coral">partout en France</span>
+            <h2 className="font-display font-bold text-4xl sm:text-5xl text-ink leading-tight mb-6">
+              Lyon, Lille, Paris et <span className="text-coral">partout en France</span>
             </h2>
             <p className="text-ink/70 text-lg mb-8 leading-relaxed">
               Cours en présentiel dans 3 grandes villes, ou en visio depuis n&apos;importe où en France.

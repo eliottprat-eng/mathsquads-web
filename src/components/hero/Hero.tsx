@@ -45,10 +45,10 @@ export default function Hero() {
 
             <motion.h1
               {...fadeUp(0.2)}
-              className="font-display font-semibold text-ink leading-[1.05] mb-6"
+              className="font-display font-bold text-ink leading-[1.05] mb-6"
               style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)" }}
             >
-              Les maths <span className="italic text-coral">accessibles</span> à tous.
+              Les maths <span className="text-coral">accessibles</span> à tous.
             </motion.h1>
 
             <motion.p {...fadeUp(0.3)} className="text-lg text-ink/70 leading-relaxed mb-8">

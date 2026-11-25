@@ -100,7 +100,7 @@ export default function ProfCard({
             </div>
 
             <div>
-              <h3 className="font-display font-semibold text-xl text-ink">{name}</h3>
+              <h3 className="font-display font-bold text-xl text-ink">{name}</h3>
               <div className="flex items-center gap-1.5 mt-1">
                 <GraduationCap size={13} className="text-ink/70" />
                 <span className="text-sm text-ink/70">{school}</span>
@@ -154,7 +154,7 @@ export default function ProfCard({
         {/* Bio */}
         <div className="relative">
           <Quote size={16} className="text-ink/20 mb-2" />
-          <p className="text-sm text-ink/70 leading-relaxed italic">{bio}</p>
+          <p className="text-sm text-ink/70 leading-relaxed">{bio}</p>
         </div>
 
         {/* Logos des écoles */}

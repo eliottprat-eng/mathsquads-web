@@ -64,10 +64,10 @@ export default function CPGEPostBacPage() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="section-tag mb-6">CPGE & Post-Bac</div>
-            <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+            <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
               Viser les
               <br />
-              <span className="italic text-coral">concours d&apos;excellence.</span>
+              <span className="text-coral">concours d&apos;excellence.</span>
             </h1>
             <p className="text-xl text-ink/70 max-w-2xl mx-auto mb-10">
               Des profs eux-mêmes passés par les classes prépas et les grandes écoles, qui connaissent l&apos;exigence des concours de l&apos;intérieur.
@@ -89,7 +89,7 @@ export default function CPGEPostBacPage() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-14">
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink">
               Programmes couverts
             </h2>
           </ScrollReveal>
@@ -109,7 +109,7 @@ export default function CPGEPostBacPage() {
                   >
                     <GraduationCap size={20} style={{ color: prog.color }} />
                   </div>
-                  <h3 className="font-display font-semibold text-xl text-ink mb-1">{prog.name}</h3>
+                  <h3 className="font-display font-bold text-xl text-ink mb-1">{prog.name}</h3>
                   <div className="text-xs text-ink/70 mb-5">{prog.sub}</div>
                   <div className="flex flex-col gap-2.5">
                     {prog.topics.map((topic, j) => (
@@ -132,8 +132,8 @@ export default function CPGEPostBacPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal direction="left">
               <div className="section-tag mb-6">Notre avantage</div>
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink leading-tight mb-6">
-                Des profs qui ont vécu <span className="italic text-coral">la prépa de l&apos;intérieur</span>
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink leading-tight mb-6">
+                Des profs qui ont vécu <span className="text-coral">la prépa de l&apos;intérieur</span>
               </h2>
               <p className="text-ink/70 mb-6 leading-relaxed">
                 Nos profs sont issus des grandes écoles d&apos;ingénieurs et de commerce, comme les Mines de Saint-Étienne et emlyon. Ils ont traversé les mêmes khôlles,
@@ -161,7 +161,7 @@ export default function CPGEPostBacPage() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-coral" />
                 <div className="text-center mb-8">
                   <Trophy size={40} className="text-gold mx-auto mb-3" />
-                  <h3 className="font-display font-semibold text-2xl text-ink">Résultats concours</h3>
+                  <h3 className="font-display font-bold text-2xl text-ink">Résultats concours</h3>
                   <p className="text-ink/70 text-sm mt-2">Nos élèves CPGE</p>
                 </div>
                 <div className="flex flex-col gap-4">

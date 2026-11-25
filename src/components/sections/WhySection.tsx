@@ -64,7 +64,7 @@ function ReasonCard({ reason, index }: { reason: (typeof reasons)[number]; index
         0{index + 1}
       </div>
 
-      <h3 className="font-display font-semibold text-xl text-ink mb-3 relative z-10">
+      <h3 className="font-display font-bold text-xl text-ink mb-3 relative z-10">
         {reason.title}
       </h3>
       <p className="text-base text-ink/70 leading-relaxed relative z-10">
@@ -81,10 +81,10 @@ export default function WhySection() {
         {/* Header */}
         <ScrollReveal className="text-center mb-16">
           <SectionLabel number="02" label="Notre méthode" />
-          <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink leading-tight">
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ink leading-tight">
             Pas juste des cours.
             <br />
-            <span className="italic text-coral">Une vraie transformation.</span>
+            <span className="text-coral">Une vraie transformation.</span>
           </h2>
           <p className="mt-5 text-ink/70 text-xl max-w-xl mx-auto">
             5 piliers qui font la différence entre un cours ordinaire et une progression durable.

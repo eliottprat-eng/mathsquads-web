@@ -31,8 +31,8 @@ export default function TarifsPage() {
               Promo : la 1ère heure de cours est gratuite pour tous les premiers arrivants
             </div>
 
-            <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
-              Des tarifs <span className="italic text-coral">transparents</span>
+            <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+              Des tarifs <span className="text-coral">transparents</span>
               <br />
               et accessibles
             </h1>
@@ -68,7 +68,7 @@ export default function TarifsPage() {
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink">
               Choisis ta formule
             </h2>
           </ScrollReveal>
@@ -148,7 +148,7 @@ export default function TarifsPage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-10">
             <div className="section-tag mb-4">Réservation</div>
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink">
               Réserve ton cours
             </h2>
             <p className="text-ink/70 mt-3">

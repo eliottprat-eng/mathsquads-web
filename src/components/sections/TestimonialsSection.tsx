@@ -48,7 +48,7 @@ function TestimonialCard({ t, delay }: { t: Testimonial; delay: number }) {
         </div>
 
         {/* Quote */}
-        <blockquote className="relative text-sm text-ink/70 leading-relaxed flex-1 italic">
+        <blockquote className="relative text-sm text-ink/70 leading-relaxed flex-1">
           &ldquo;{t.quote}&rdquo;
         </blockquote>
 
@@ -61,7 +61,7 @@ function TestimonialCard({ t, delay }: { t: Testimonial; delay: number }) {
             {t.avatar}
           </div>
           <div>
-            <div className="font-display font-semibold text-ink text-sm">{t.name}</div>
+            <div className="font-display font-bold text-ink text-sm">{t.name}</div>
             <div className="text-xs text-ink/70">{t.grade}</div>
           </div>
         </div>
@@ -76,8 +76,8 @@ export default function TestimonialsSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <SectionLabel number="04" label="Témoignages" />
-          <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink">
-            Ils ont <span className="italic text-coral">transformé leurs résultats</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ink">
+            Ils ont <span className="text-coral">transformé leurs résultats</span>
           </h2>
         </ScrollReveal>
 

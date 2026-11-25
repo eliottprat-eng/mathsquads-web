@@ -59,8 +59,8 @@ export default function CoursMathsLyonPage() {
       <section className="relative min-h-[50vh] flex items-center pt-32 pb-16 overflow-hidden bg-cream">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="section-tag mb-6">Cours de maths à Lyon</div>
-          <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
-            Cours de maths <span className="italic text-coral">en ligne à Lyon</span>
+          <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+            Cours de maths <span className="text-coral">en ligne à Lyon</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-2xl mx-auto mb-4">
             Progressez en maths avec des profs issus des meilleures grandes écoles, en visio
@@ -86,7 +86,7 @@ export default function CoursMathsLyonPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12 text-ink/70 leading-relaxed">
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Pourquoi choisir des cours de maths en ligne à Lyon ?
             </h2>
             <p className="mb-4">
@@ -107,7 +107,7 @@ export default function CoursMathsLyonPage() {
           </section>
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Du collège à la prépa : tous les niveaux couverts
             </h2>
             <p className="mb-4">
@@ -153,7 +153,7 @@ export default function CoursMathsLyonPage() {
           </section>
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Des profs issus des grandes écoles, dont emlyon à Lyon
             </h2>
             <p className="mb-4">
@@ -173,7 +173,7 @@ export default function CoursMathsLyonPage() {
           </section>
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Comment se déroule un cours en visio depuis Lyon ?
             </h2>
             <p className="mb-4">
@@ -192,7 +192,7 @@ export default function CoursMathsLyonPage() {
           </section>
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Un accompagnement pour tous les lycées lyonnais
             </h2>
             <p>
@@ -206,7 +206,7 @@ export default function CoursMathsLyonPage() {
           </section>
 
           <section>
-            <h2 className="font-display font-semibold text-3xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl text-ink mb-4">
               Des tarifs clairs, à partir de 20€/h
             </h2>
             <p>
@@ -226,7 +226,7 @@ export default function CoursMathsLyonPage() {
       {/* ── FAQ locale ── */}
       <section className="relative py-16 bg-cream-soft">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink text-center mb-10">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink text-center mb-10">
             Questions fréquentes : cours de maths à Lyon
           </h2>
           <div className="flex flex-col gap-3">

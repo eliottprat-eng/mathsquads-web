@@ -76,8 +76,8 @@ export default function FAQSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal className="text-center mb-14">
           <SectionLabel number="06" label="FAQ" />
-          <h2 className="font-display font-semibold text-4xl sm:text-5xl text-ink">
-            Questions <span className="italic text-coral">fréquentes</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ink">
+            Questions <span className="text-coral">fréquentes</span>
           </h2>
         </ScrollReveal>
 

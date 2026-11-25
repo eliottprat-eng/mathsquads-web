@@ -60,7 +60,7 @@ export default function PricingCard({
           >
             <Icon size={20} style={{ color }} />
           </div>
-          <h3 className="font-display font-semibold text-2xl text-ink">{title}</h3>
+          <h3 className="font-display font-bold text-2xl text-ink">{title}</h3>
         </div>
         <p className="text-base text-ink/70 mb-8">{description}</p>
 

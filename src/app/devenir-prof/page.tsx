@@ -86,10 +86,10 @@ export default function DevenirProfPage() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="section-tag mb-6">Rejoindre l&apos;équipe</div>
-            <h1 className="font-display font-semibold text-5xl sm:text-6xl text-ink leading-tight mb-6">
+            <h1 className="font-display font-bold text-5xl sm:text-6xl text-ink leading-tight mb-6">
               Devenir Prof
               <br />
-              <span className="italic text-coral">MathSquads</span>
+              <span className="text-coral">MathSquads</span>
             </h1>
             <p className="text-xl text-ink/70 max-w-2xl mx-auto">
               Tu es issu d&apos;une grande école ? Tu veux transmettre ta passion des maths tout en gagnant bien ta vie ?
@@ -103,7 +103,7 @@ export default function DevenirProfPage() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-14">
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink mb-4">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink mb-4">
               Pourquoi rejoindre MathSquads ?
             </h2>
           </ScrollReveal>
@@ -122,7 +122,7 @@ export default function DevenirProfPage() {
                   >
                     <b.icon size={20} style={{ color: b.color }} />
                   </div>
-                  <h3 className="font-display font-semibold text-base text-ink mb-2">{b.title}</h3>
+                  <h3 className="font-display font-bold text-base text-ink mb-2">{b.title}</h3>
                   <p className="text-sm text-ink/70 leading-relaxed">{b.desc}</p>
                 </motion.div>
               </ScrollReveal>
@@ -137,8 +137,8 @@ export default function DevenirProfPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <ScrollReveal direction="left">
               <div className="section-tag mb-6">Profil recherché</div>
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink leading-tight mb-6">
-                On recrute les <span className="italic text-coral">meilleurs</span>
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink leading-tight mb-6">
+                On recrute les <span className="text-coral">meilleurs</span>
               </h2>
               <p className="text-ink/70 mb-8 leading-relaxed">
                 Chez MathSquads, la qualité passe avant tout. On ne recrute pas massivement :
@@ -188,7 +188,7 @@ export default function DevenirProfPage() {
                       >
                         <CheckCircle size={28} className="text-sage" />
                       </motion.div>
-                      <h3 className="font-display font-semibold text-xl text-ink mb-2">
+                      <h3 className="font-display font-bold text-xl text-ink mb-2">
                         Candidature reçue !
                       </h3>
                       <p className="text-ink/70 text-sm">
@@ -197,7 +197,7 @@ export default function DevenirProfPage() {
                     </motion.div>
                   ) : (
                     <motion.form key="form" onSubmit={handleSubmit} exit={{ opacity: 0 }}>
-                      <h3 className="font-display font-semibold text-xl text-ink mb-2">
+                      <h3 className="font-display font-bold text-xl text-ink mb-2">
                         Candidater
                       </h3>
                       <p className="text-ink/70 text-xs mb-6">On étudie chaque candidature avec attention.</p>
@@ -286,7 +286,7 @@ export default function DevenirProfPage() {
       <section className="py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
-            <h2 className="font-display font-semibold text-2xl sm:text-3xl text-ink">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl text-ink">
               Le processus de recrutement
             </h2>
           </ScrollReveal>
@@ -297,7 +297,7 @@ export default function DevenirProfPage() {
                   <div className="w-9 h-9 rounded-xl bg-coral/10 flex items-center justify-center mx-auto mb-3">
                     <span className="text-xs font-bold text-coral-deep">{s.step}</span>
                   </div>
-                  <h3 className="font-display font-semibold text-sm text-ink mb-1">{s.title}</h3>
+                  <h3 className="font-display font-bold text-sm text-ink mb-1">{s.title}</h3>
                   <p className="text-xs text-ink/70">{s.desc}</p>
                 </div>
               </ScrollReveal>
