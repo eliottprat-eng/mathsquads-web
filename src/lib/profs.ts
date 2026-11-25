@@ -23,12 +23,12 @@ export interface Prof {
   /** Écoles dont le logo s'affiche sur la fiche. */
   logos: SchoolKey[];
   role: string;
-  /** 0 pour un prof qui démarre : la fiche affiche alors `highlights` à la place des stats. */
+  /** 0 pour un prof qui démarre (la fiche affiche alors « Nouveau »). */
   coursesCount: number;
   /** Absents tant que le prof n'a pas encore d'avis : rien n'est inventé. */
   rating?: number;
   satisfaction?: string;
-  /** Deux points forts affichés à la place des stats pour un nouveau prof. */
+  /** Points forts qui complètent les stats manquantes (pas de satisfaction connue, etc.). */
   highlights?: { value: string; label: string }[];
   /** Petit badge en plus du rôle (ex. « Ingénieur »). */
   badge?: string;
@@ -232,7 +232,7 @@ export const cities: City[] = [
         logos: ["mines", "emlyon"],
         role: "Prof parisien",
         badge: "Ingénieur",
-        coursesCount: 0,
+        coursesCount: 100,
         highlights: [
           { value: "Ingénieur-Manager", label: "double diplôme" },
           { value: "FR · EN · 中文", label: "trilingue" },

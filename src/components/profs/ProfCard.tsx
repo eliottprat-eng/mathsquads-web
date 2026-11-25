@@ -44,6 +44,25 @@ export default function ProfCard({
   // Couleur d'origine pour les aplats et les icônes, variante lisible pour le texte.
   const textColor = readableAccent(color);
 
+  // Tuiles de stats : on n'affiche que des chiffres réels, puis les points forts.
+  const tiles: { icon: React.ReactNode; value: string | number; label: string }[] = [];
+  if (coursesCount > 0)
+    tiles.push({ icon: <BookOpen size={14} style={{ color }} className="flex-shrink-0" />, value: coursesCount, label: "cours donnés" });
+  if (satisfaction)
+    tiles.push({ icon: <Star size={14} className="text-gold flex-shrink-0" />, value: satisfaction, label: "satisfaction" });
+  (highlights ?? []).forEach((h, i) =>
+    tiles.push({
+      icon:
+        i === 0 ? (
+          <GraduationCap size={14} style={{ color }} className="flex-shrink-0" />
+        ) : (
+          <Languages size={14} className="text-gold flex-shrink-0" />
+        ),
+      value: h.value,
+      label: h.label,
+    })
+  );
+
   return (
     <motion.div
       className="relative card overflow-hidden cursor-default"
@@ -113,46 +132,23 @@ export default function ProfCard({
                 <Star size={12} className="text-gold fill-gold" />
                 <span className="text-sm font-bold text-ink/70">{rating}.0</span>
               </div>
-            ) : (
+            ) : coursesCount === 0 ? (
               <div className="text-xs font-semibold text-coral-dark">Nouveau</div>
-            )}
+            ) : null}
           </div>
         </div>
 
-        {/* Stats row : vrais compteurs, ou points forts pour un prof qui démarre */}
+        {/* Stats row : vrais compteurs d'abord, complétés par les points forts du prof */}
         <div className="grid grid-cols-2 gap-3 mb-5">
-          {highlights && coursesCount === 0 ? (
-            highlights.slice(0, 2).map((h, i) => (
-              <div key={i} className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
-                {i === 0 ? (
-                  <GraduationCap size={14} style={{ color }} className="flex-shrink-0" />
-                ) : (
-                  <Languages size={14} className="text-gold flex-shrink-0" />
-                )}
-                <div>
-                  <div className="font-bold text-ink text-sm">{h.value}</div>
-                  <div className="text-xs text-ink/70">{h.label}</div>
-                </div>
+          {tiles.slice(0, 2).map((t, i) => (
+            <div key={i} className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
+              {t.icon}
+              <div>
+                <div className="font-bold text-ink text-sm">{t.value}</div>
+                <div className="text-xs text-ink/70">{t.label}</div>
               </div>
-            ))
-          ) : (
-            <>
-              <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
-                <BookOpen size={14} style={{ color }} />
-                <div>
-                  <div className="font-bold text-ink text-sm">{coursesCount}</div>
-                  <div className="text-xs text-ink/70">cours donnés</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 rounded-xl p-3 bg-ink/[0.03]">
-                <Star size={14} className="text-gold" />
-                <div>
-                  <div className="font-bold text-ink text-sm">{satisfaction}</div>
-                  <div className="text-xs text-ink/70">satisfaction</div>
-                </div>
-              </div>
-            </>
-          )}
+            </div>
+          ))}
         </div>
 
         {/* Bio */}
